@@ -1,0 +1,5478 @@
+[
+    {
+        "brand": "Apple",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Space Gray",
+                "colors": [
+                    "#A3AAAE",
+                    "#000000"
+                ]
+            },
+            {
+                "name": "Silver",
+                "colors": [
+                    "#E3E4E5",
+                    "#D0D1D2"
+                ]
+            },
+            {
+                "name": "Gold",
+                "colors": [
+                    "#FAD7BD",
+                    "#F9CA99"
+                ]
+            },
+            {
+                "name": "Rose Gold",
+                "colors": [
+                    "#FAD0C4",
+                    "#FFD1FF"
+                ]
+            },
+            {
+                "name": "Jet Black",
+                "colors": [
+                    "#4A4A4A",
+                    "#000000"
+                ]
+            },
+            {
+                "name": "Midnight Green",
+                "colors": [
+                    "#4E5851",
+                    "#2E3A23"
+                ]
+            },
+            {
+                "name": "Product Red",
+                "colors": [
+                    "#FF3B30",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "Pacific Blue",
+                "colors": [
+                    "#006E9C",
+                    "#00A3E0"
+                ]
+            },
+            {
+                "name": "Graphite",
+                "colors": [
+                    "#5F5F5F",
+                    "#232B2B"
+                ]
+            },
+            {
+                "name": "Sierra Blue",
+                "colors": [
+                    "#76AADE",
+                    "#A0C4E2"
+                ]
+            },
+            {
+                "name": "Midnight",
+                "colors": [
+                    "#1D1D1F",
+                    "#2C2C2E"
+                ]
+            },
+            {
+                "name": "Starlight",
+                "colors": [
+                    "#FAF7F2",
+                    "#F5E0D0"
+                ]
+            },
+            {
+                "name": "Deep Purple",
+                "colors": [
+                    "#735A7A",
+                    "#574466"
+                ]
+            },
+            {
+                "name": "Alpine Green",
+                "colors": [
+                    "#505F4E",
+                    "#3D4B3C"
+                ]
+            },
+            {
+                "name": "Aura",
+                "colors": [
+                    "#D1CDDB",
+                    "#B8B8C1"
+                ]
+            },
+            {
+                "name": "Blue",
+                "colors": [
+                    "#215E7C",
+                    "#134E67"
+                ]
+            },
+            {
+                "name": "Pink",
+                "colors": [
+                    "#FEC2EB",
+                    "#FFA6D5"
+                ]
+            },
+            {
+                "name": "Green",
+                "colors": [
+                    "#4FD2C2",
+                    "#3CC1B0"
+                ]
+            },
+            {
+                "name": "Yellow",
+                "colors": [
+                    "#FFE681",
+                    "#FFD60A"
+                ]
+            },
+            {
+                "name": "Coral",
+                "colors": [
+                    "#FF6A5F",
+                    "#FF4433"
+                ]
+            },
+            {
+                "name": "White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F2F2F7"
+                ]
+            },
+            {
+                "name": "Black",
+                "colors": [
+                    "#1D1D1F",
+                    "#000000"
+                ]
+            },
+            {
+                "name": "Purple",
+                "colors": [
+                    "#D1CDDB",
+                    "#9691B3"
+                ]
+            },
+            {
+                "name": "Orange",
+                "colors": [
+                    "#FF9500",
+                    "#FF5E3A"
+                ]
+            },
+            {
+                "name": "iMac Blue",
+                "colors": [
+                    "#5AC8FA",
+                    "#007AFF"
+                ]
+            },
+            {
+                "name": "iMac Green",
+                "colors": [
+                    "#34C759",
+                    "#30D158"
+                ]
+            },
+            {
+                "name": "iMac Pink",
+                "colors": [
+                    "#FF2D55",
+                    "#FF375F"
+                ]
+            },
+            {
+                "name": "iMac Purple",
+                "colors": [
+                    "#AF52DE",
+                    "#9F44D3"
+                ]
+            },
+            {
+                "name": "macOS Monterey",
+                "colors": [
+                    "#4D76FF",
+                    "#3868E0"
+                ]
+            },
+            {
+                "name": "iOS 15",
+                "colors": [
+                    "#FF9F0A",
+                    "#FF3B30"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Google",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Blue to Green",
+                "colors": [
+                    "#4285F4",
+                    "#34A853"
+                ]
+            },
+            {
+                "name": "Red to Yellow",
+                "colors": [
+                    "#EA4335",
+                    "#FBBC05"
+                ]
+            },
+            {
+                "name": "Blue to Red",
+                "colors": [
+                    "#4285F4",
+                    "#EA4335"
+                ]
+            },
+            {
+                "name": "Green to Yellow",
+                "colors": [
+                    "#34A853",
+                    "#FBBC05"
+                ]
+            },
+            {
+                "name": "Material Blue",
+                "colors": [
+                    "#2196F3",
+                    "#1976D2"
+                ]
+            },
+            {
+                "name": "Material Green",
+                "colors": [
+                    "#4CAF50",
+                    "#388E3C"
+                ]
+            },
+            {
+                "name": "Material Red",
+                "colors": [
+                    "#F44336",
+                    "#D32F2F"
+                ]
+            },
+            {
+                "name": "Material Yellow",
+                "colors": [
+                    "#FFEB3B",
+                    "#FBC02D"
+                ]
+            },
+            {
+                "name": "Material Purple",
+                "colors": [
+                    "#9C27B0",
+                    "#7B1FA2"
+                ]
+            },
+            {
+                "name": "Material Orange",
+                "colors": [
+                    "#FF9800",
+                    "#F57C00"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Microsoft",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Windows",
+                "colors": [
+                    "#00A4EF",
+                    "#FFB900"
+                ]
+            },
+            {
+                "name": "Office",
+                "colors": [
+                    "#7FBA00",
+                    "#F25022"
+                ]
+            },
+            {
+                "name": "Azure",
+                "colors": [
+                    "#0078D4",
+                    "#73C6FA"
+                ]
+            },
+            {
+                "name": "Visual Studio",
+                "colors": [
+                    "#68217A",
+                    "#9B4F96"
+                ]
+            },
+            {
+                "name": "Teams",
+                "colors": [
+                    "#464EB8",
+                    "#7B83EB"
+                ]
+            },
+            {
+                "name": "Xbox",
+                "colors": [
+                    "#107C10",
+                    "#5DC21E"
+                ]
+            },
+            {
+                "name": "Surface",
+                "colors": [
+                    "#979797",
+                    "#BFBFBF"
+                ]
+            },
+            {
+                "name": "Bing",
+                "colors": [
+                    "#008373",
+                    "#00B294"
+                ]
+            },
+            {
+                "name": "Skype",
+                "colors": [
+                    "#00AFF0",
+                    "#0078D4"
+                ]
+            },
+            {
+                "name": "PowerBI",
+                "colors": [
+                    "#F2C811",
+                    "#F28A22"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Amazon",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Orange to Navy",
+                "colors": [
+                    "#FF9900",
+                    "#232F3E"
+                ]
+            },
+            {
+                "name": "Charcoal to Orange",
+                "colors": [
+                    "#37475A",
+                    "#FF9900"
+                ]
+            },
+            {
+                "name": "Light Blue to Dark Blue",
+                "colors": [
+                    "#146EB4",
+                    "#004B91"
+                ]
+            },
+            {
+                "name": "Smile Orange",
+                "colors": [
+                    "#FF9900",
+                    "#FFC300"
+                ]
+            },
+            {
+                "name": "Fresh Green",
+                "colors": [
+                    "#00A8E1",
+                    "#39C3C3"
+                ]
+            },
+            {
+                "name": "Kindle Blue",
+                "colors": [
+                    "#002F36",
+                    "#016275"
+                ]
+            },
+            {
+                "name": "Prime Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FF1493"
+                ]
+            },
+            {
+                "name": "Alexa Blue",
+                "colors": [
+                    "#31C4F3",
+                    "#1E88E5"
+                ]
+            },
+            {
+                "name": "AWS Orange",
+                "colors": [
+                    "#FF9900",
+                    "#FFA726"
+                ]
+            },
+            {
+                "name": "IMDb Yellow",
+                "colors": [
+                    "#F5C518",
+                    "#E3B71D"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Facebook",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Classic Blue",
+                "colors": [
+                    "#1877F2",
+                    "#3B5998"
+                ]
+            },
+            {
+                "name": "Messenger",
+                "colors": [
+                    "#00B2FF",
+                    "#006AFF"
+                ]
+            },
+            {
+                "name": "Instagram",
+                "colors": [
+                    "#405DE6",
+                    "#5851DB",
+                    "#833AB4",
+                    "#C13584",
+                    "#E1306C",
+                    "#FD1D1D",
+                    "#F56040",
+                    "#F77737",
+                    "#FCAF45",
+                    "#FFDC80"
+                ]
+            },
+            {
+                "name": "WhatsApp",
+                "colors": [
+                    "#25D366",
+                    "#128C7E"
+                ]
+            },
+            {
+                "name": "Oculus",
+                "colors": [
+                    "#1C1E20",
+                    "#404040"
+                ]
+            },
+            {
+                "name": "Workplace",
+                "colors": [
+                    "#4326C4",
+                    "#6C5CDE"
+                ]
+            },
+            {
+                "name": "Groups",
+                "colors": [
+                    "#0D8CF0",
+                    "#4AD2F8"
+                ]
+            },
+            {
+                "name": "Gaming",
+                "colors": [
+                    "#005FED",
+                    "#0099FF"
+                ]
+            },
+            {
+                "name": "React Blue",
+                "colors": [
+                    "#61DAFB",
+                    "#2D91FF"
+                ]
+            },
+            {
+                "name": "Meta",
+                "colors": [
+                    "#0668E1",
+                    "#3578E5"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Linear",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Primary",
+                "colors": [
+                    "#5E6AD2",
+                    "#7983E6"
+                ]
+            },
+            {
+                "name": "Secondary",
+                "colors": [
+                    "#F2F3F5",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Success",
+                "colors": [
+                    "#2CB67D",
+                    "#4ADE80"
+                ]
+            },
+            {
+                "name": "Warning",
+                "colors": [
+                    "#F7B955",
+                    "#FFCA7A"
+                ]
+            },
+            {
+                "name": "Error",
+                "colors": [
+                    "#E5484D",
+                    "#FF6369"
+                ]
+            },
+            {
+                "name": "Dark",
+                "colors": [
+                    "#1A1A1A",
+                    "#2C2C2C"
+                ]
+            },
+            {
+                "name": "Light",
+                "colors": [
+                    "#F2F2F2",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Blue",
+                "colors": [
+                    "#3F51B5",
+                    "#5C6BC0"
+                ]
+            },
+            {
+                "name": "Purple",
+                "colors": [
+                    "#9C27B0",
+                    "#BA68C8"
+                ]
+            },
+            {
+                "name": "Teal",
+                "colors": [
+                    "#009688",
+                    "#4DB6AC"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Raycast",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Primary",
+                "colors": [
+                    "#FF6363",
+                    "#FF8F6B"
+                ]
+            },
+            {
+                "name": "Secondary",
+                "colors": [
+                    "#4D4D4D",
+                    "#6B6B6B"
+                ]
+            },
+            {
+                "name": "Dark",
+                "colors": [
+                    "#1C1C1C",
+                    "#2C2C2C"
+                ]
+            },
+            {
+                "name": "Light",
+                "colors": [
+                    "#F2F2F2",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Blue",
+                "colors": [
+                    "#007AFF",
+                    "#42A5F5"
+                ]
+            },
+            {
+                "name": "Green",
+                "colors": [
+                    "#34C759",
+                    "#66BB6A"
+                ]
+            },
+            {
+                "name": "Yellow",
+                "colors": [
+                    "#FFCC00",
+                    "#FFD54F"
+                ]
+            },
+            {
+                "name": "Orange",
+                "colors": [
+                    "#FF9500",
+                    "#FFA726"
+                ]
+            },
+            {
+                "name": "Purple",
+                "colors": [
+                    "#AF52DE",
+                    "#B39DDB"
+                ]
+            },
+            {
+                "name": "Pink",
+                "colors": [
+                    "#FF2D55",
+                    "#FF4081"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Adobe",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Creative Crimson",
+                "colors": [
+                    "#DA1F26",
+                    "#FFAEC9"
+                ]
+            },
+            {
+                "name": "Ocean Blue",
+                "colors": [
+                    "#001E36",
+                    "#31A8FF"
+                ]
+            },
+            {
+                "name": "Sunset Orange",
+                "colors": [
+                    "#330000",
+                    "#FF9A00"
+                ]
+            },
+            {
+                "name": "Magenta Fusion",
+                "colors": [
+                    "#49021F",
+                    "#FF3366"
+                ]
+            },
+            {
+                "name": "Electric Purple",
+                "colors": [
+                    "#2E001E",
+                    "#FF61F6"
+                ]
+            },
+            {
+                "name": "Midnight Indigo",
+                "colors": [
+                    "#00005B",
+                    "#9999FF"
+                ]
+            },
+            {
+                "name": "Mystic Violet",
+                "colors": [
+                    "#1F0040",
+                    "#D291FF"
+                ]
+            },
+            {
+                "name": "Sky Azure",
+                "colors": [
+                    "#001E36",
+                    "#31A8FF"
+                ]
+            },
+            {
+                "name": "Vibrant Ruby",
+                "colors": [
+                    "#C1001F",
+                    "#FF6F61"
+                ]
+            },
+            {
+                "name": "Electric Blue",
+                "colors": [
+                    "#0057FF",
+                    "#73DCFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Figma",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Coral Blaze",
+                "colors": [
+                    "#F24E1E",
+                    "#FF7262"
+                ]
+            },
+            {
+                "name": "Lavender Mist",
+                "colors": [
+                    "#A259FF",
+                    "#D7A8FF"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#1ABCFE",
+                    "#7ED2FE"
+                ]
+            },
+            {
+                "name": "Mint Fresh",
+                "colors": [
+                    "#0ACF83",
+                    "#6FEBB9"
+                ]
+            },
+            {
+                "name": "Charcoal Shadow",
+                "colors": [
+                    "#1E1E1E",
+                    "#2C2C2C"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#F0F0F0",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Peachy Sunset",
+                "colors": [
+                    "#FF8F6B",
+                    "#FFC2A9"
+                ]
+            },
+            {
+                "name": "Sapphire Glow",
+                "colors": [
+                    "#4B6FFF",
+                    "#92A5FF"
+                ]
+            },
+            {
+                "name": "Stone Gray",
+                "colors": [
+                    "#B3B3B3",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "Neon Fuchsia",
+                "colors": [
+                    "#FF00FF",
+                    "#FF8AFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Dribbble",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Bubblegum Pink",
+                "colors": [
+                    "#EA4C89",
+                    "#FF8CBA"
+                ]
+            },
+            {
+                "name": "Midnight Charcoal",
+                "colors": [
+                    "#1A1A1A",
+                    "#444444"
+                ]
+            },
+            {
+                "name": "Cotton Candy",
+                "colors": [
+                    "#F082AC",
+                    "#FFC0CB"
+                ]
+            },
+            {
+                "name": "Misty Gray",
+                "colors": [
+                    "#9BA2A8",
+                    "#C8CDD0"
+                ]
+            },
+            {
+                "name": "Spring Leaf",
+                "colors": [
+                    "#3DDC84",
+                    "#7AEEAD"
+                ]
+            },
+            {
+                "name": "Ocean Depths",
+                "colors": [
+                    "#0057FF",
+                    "#73ABFF"
+                ]
+            },
+            {
+                "name": "Royal Amethyst",
+                "colors": [
+                    "#6E5494",
+                    "#9C8AC9"
+                ]
+            },
+            {
+                "name": "Tangerine Dream",
+                "colors": [
+                    "#FF6E14",
+                    "#FFA366"
+                ]
+            },
+            {
+                "name": "Lemon Zest",
+                "colors": [
+                    "#FFCB00",
+                    "#FFE566"
+                ]
+            },
+            {
+                "name": "Turquoise Lagoon",
+                "colors": [
+                    "#00B8D9",
+                    "#5CE1E6"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Sketch",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Golden Sun",
+                "colors": [
+                    "#F9A52C",
+                    "#FFC666"
+                ]
+            },
+            {
+                "name": "Graphite Gray",
+                "colors": [
+                    "#3A3A3A",
+                    "#666666"
+                ]
+            },
+            {
+                "name": "Aqua Breeze",
+                "colors": [
+                    "#50E3C2",
+                    "#8AEEE1"
+                ]
+            },
+            {
+                "name": "Flame Red",
+                "colors": [
+                    "#F24E1E",
+                    "#FF8570"
+                ]
+            },
+            {
+                "name": "Lime Spark",
+                "colors": [
+                    "#A6E22E",
+                    "#C9F176"
+                ]
+            },
+            {
+                "name": "Lavender Haze",
+                "colors": [
+                    "#7E7FF3",
+                    "#B3B4F8"
+                ]
+            },
+            {
+                "name": "Obsidian Black",
+                "colors": [
+                    "#212121",
+                    "#424242"
+                ]
+            },
+            {
+                "name": "Snow White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Amber Glow",
+                "colors": [
+                    "#FF9A00",
+                    "#FFC266"
+                ]
+            },
+            {
+                "name": "Arctic Blue",
+                "colors": [
+                    "#00C9FF",
+                    "#66E3FF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Behance",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Electric Blue",
+                "colors": [
+                    "#0057FF",
+                    "#73ABFF"
+                ]
+            },
+            {
+                "name": "Midnight Charcoal",
+                "colors": [
+                    "#191919",
+                    "#333333"
+                ]
+            },
+            {
+                "name": "Golden Sun",
+                "colors": [
+                    "#FFC700",
+                    "#FFE066"
+                ]
+            },
+            {
+                "name": "Emerald Forest",
+                "colors": [
+                    "#20C073",
+                    "#66E0A3"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#FF3366",
+                    "#FF99B3"
+                ]
+            },
+            {
+                "name": "Royal Amethyst",
+                "colors": [
+                    "#8E43E7",
+                    "#B98FF3"
+                ]
+            },
+            {
+                "name": "Tangerine Dream",
+                "colors": [
+                    "#FF7F00",
+                    "#FFB366"
+                ]
+            },
+            {
+                "name": "Aqua Marine",
+                "colors": [
+                    "#00B8D9",
+                    "#66DBE8"
+                ]
+            },
+            {
+                "name": "Neon Pink",
+                "colors": [
+                    "#FF00FF",
+                    "#FF99FF"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#F2F2F2",
+                    "#FFFFFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Invision",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Coral Passion",
+                "colors": [
+                    "#FF3366",
+                    "#FF99B3"
+                ]
+            },
+            {
+                "name": "Slate Gray",
+                "colors": [
+                    "#2E3138",
+                    "#4A4F5A"
+                ]
+            },
+            {
+                "name": "Ocean Blue",
+                "colors": [
+                    "#1BAAE2",
+                    "#66CCEE"
+                ]
+            },
+            {
+                "name": "Mint Fresh",
+                "colors": [
+                    "#38D39F",
+                    "#7EEBC2"
+                ]
+            },
+            {
+                "name": "Sunflower Yellow",
+                "colors": [
+                    "#FFCC00",
+                    "#FFE066"
+                ]
+            },
+            {
+                "name": "Lavender Dream",
+                "colors": [
+                    "#7B61FF",
+                    "#ADA1FF"
+                ]
+            },
+            {
+                "name": "Pumpkin Spice",
+                "colors": [
+                    "#FF9900",
+                    "#FFCC66"
+                ]
+            },
+            {
+                "name": "Obsidian Black",
+                "colors": [
+                    "#1E1E1E",
+                    "#333333"
+                ]
+            },
+            {
+                "name": "Snow White",
+                "colors": [
+                    "#F4F4F4",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Stone Gray",
+                "colors": [
+                    "#808080",
+                    "#B3B3B3"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Framer",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Electric Blue",
+                "colors": [
+                    "#0055FF",
+                    "#66A3FF"
+                ]
+            },
+            {
+                "name": "Charcoal Black",
+                "colors": [
+                    "#222222",
+                    "#444444"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#FF3366",
+                    "#FF99B3"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#00CC66",
+                    "#66E6A3"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#9966FF",
+                    "#CCB3FF"
+                ]
+            },
+            {
+                "name": "Sunshine Yellow",
+                "colors": [
+                    "#FFCC00",
+                    "#FFE666"
+                ]
+            },
+            {
+                "name": "Turquoise Sea",
+                "colors": [
+                    "#00CCCC",
+                    "#66E6E6"
+                ]
+            },
+            {
+                "name": "Coral Sunset",
+                "colors": [
+                    "#FF6633",
+                    "#FFB399"
+                ]
+            },
+            {
+                "name": "Neon Pink",
+                "colors": [
+                    "#FF00CC",
+                    "#FF99E6"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Canva",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Aqua Fresh",
+                "colors": [
+                    "#00C4CC",
+                    "#66E2E6"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#7D2AE8",
+                    "#B375F3"
+                ]
+            },
+            {
+                "name": "Golden Sunrise",
+                "colors": [
+                    "#FFA400",
+                    "#FFD066"
+                ]
+            },
+            {
+                "name": "Spring Leaf",
+                "colors": [
+                    "#8BC34A",
+                    "#B3DE86"
+                ]
+            },
+            {
+                "name": "Bubblegum Pink",
+                "colors": [
+                    "#FF4081",
+                    "#FF99B3"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#2196F3",
+                    "#7ABFFF"
+                ]
+            },
+            {
+                "name": "Crimson Red",
+                "colors": [
+                    "#F44336",
+                    "#FF8A80"
+                ]
+            },
+            {
+                "name": "Charcoal Gray",
+                "colors": [
+                    "#403F4C",
+                    "#666666"
+                ]
+            },
+            {
+                "name": "Snow White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Stone Gray",
+                "colors": [
+                    "#9E9E9E",
+                    "#CFCFCF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Affinity",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Royal Blue",
+                "colors": [
+                    "#0056FF",
+                    "#7AA2FF"
+                ]
+            },
+            {
+                "name": "Crimson Fire",
+                "colors": [
+                    "#D41324",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Amethyst Purple",
+                "colors": [
+                    "#9966CC",
+                    "#C8A2C8"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#008A00",
+                    "#66C266"
+                ]
+            },
+            {
+                "name": "Sunset Orange",
+                "colors": [
+                    "#FF6600",
+                    "#FFAA66"
+                ]
+            },
+            {
+                "name": "Ocean Teal",
+                "colors": [
+                    "#008080",
+                    "#66B2B2"
+                ]
+            },
+            {
+                "name": "Midnight Black",
+                "colors": [
+                    "#1A1A1A",
+                    "#4D4D4D"
+                ]
+            },
+            {
+                "name": "Silver Gray",
+                "colors": [
+                    "#C0C0C0",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "Golden Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFEB99"
+                ]
+            },
+            {
+                "name": "Rose Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFADD2"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Procreate",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Indigo Night",
+                "colors": [
+                    "#3A0088",
+                    "#9966CC"
+                ]
+            },
+            {
+                "name": "Coral Sunrise",
+                "colors": [
+                    "#FF7F50",
+                    "#FFA07A"
+                ]
+            },
+            {
+                "name": "Forest Green",
+                "colors": [
+                    "#228B22",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Azure Sky",
+                "colors": [
+                    "#007FFF",
+                    "#87CEFA"
+                ]
+            },
+            {
+                "name": "Magenta Burst",
+                "colors": [
+                    "#FF00FF",
+                    "#FF99FF"
+                ]
+            },
+            {
+                "name": "Amber Glow",
+                "colors": [
+                    "#FFBF00",
+                    "#FFE5B4"
+                ]
+            },
+            {
+                "name": "Charcoal Shadow",
+                "colors": [
+                    "#36454F",
+                    "#708090"
+                ]
+            },
+            {
+                "name": "Lavender Mist",
+                "colors": [
+                    "#E6E6FA",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#E0115F",
+                    "#FF69B4"
+                ]
+            },
+            {
+                "name": "Turquoise Dream",
+                "colors": [
+                    "#40E0D0",
+                    "#AFEEEE"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Pixelmator",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Sapphire Blue",
+                "colors": [
+                    "#082567",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#50C878",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#E0115F",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Amethyst Purple",
+                "colors": [
+                    "#9966CC",
+                    "#DDA0DD"
+                ]
+            },
+            {
+                "name": "Golden Sunset",
+                "colors": [
+                    "#FFA500",
+                    "#FFDAB9"
+                ]
+            },
+            {
+                "name": "Aqua Marine",
+                "colors": [
+                    "#7FFFD4",
+                    "#E0FFFF"
+                ]
+            },
+            {
+                "name": "Charcoal Gray",
+                "colors": [
+                    "#36454F",
+                    "#778899"
+                ]
+            },
+            {
+                "name": "Snow White",
+                "colors": [
+                    "#FFFAFA",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Pink Blossom",
+                "colors": [
+                    "#FFC0CB",
+                    "#FFDDF4"
+                ]
+            },
+            {
+                "name": "Lemon Zest",
+                "colors": [
+                    "#FFFACD",
+                    "#FFFFE0"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Notion",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Ink Black",
+                "colors": [
+                    "#000000",
+                    "#2F3437"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F7F6F3"
+                ]
+            },
+            {
+                "name": "Coral Red",
+                "colors": [
+                    "#FF0000",
+                    "#FF7F7F"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#0000FF",
+                    "#7F7FFF"
+                ]
+            },
+            {
+                "name": "Mint Green",
+                "colors": [
+                    "#00FF00",
+                    "#7FFF7F"
+                ]
+            },
+            {
+                "name": "Lavender Purple",
+                "colors": [
+                    "#8A2BE2",
+                    "#BF5FFF"
+                ]
+            },
+            {
+                "name": "Sunshine Yellow",
+                "colors": [
+                    "#FFFF00",
+                    "#FFFF7F"
+                ]
+            },
+            {
+                "name": "Tangerine Orange",
+                "colors": [
+                    "#FFA500",
+                    "#FFD280"
+                ]
+            },
+            {
+                "name": "Slate Gray",
+                "colors": [
+                    "#708090",
+                    "#B0C4DE"
+                ]
+            },
+            {
+                "name": "Rose Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFC0CB"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Blender",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Orange Flame",
+                "colors": [
+                    "#E87D0D",
+                    "#FFA54F"
+                ]
+            },
+            {
+                "name": "Steel Blue",
+                "colors": [
+                    "#4682B4",
+                    "#87CEEB"
+                ]
+            },
+            {
+                "name": "Charcoal Black",
+                "colors": [
+                    "#1A1A1A",
+                    "#4D4D4D"
+                ]
+            },
+            {
+                "name": "Silver Gray",
+                "colors": [
+                    "#C0C0C0",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#50C878",
+                    "#98FB98"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#E0115F",
+                    "#FF4D4D"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#7851A9",
+                    "#9B59B6"
+                ]
+            },
+            {
+                "name": "Golden Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFFE0"
+                ]
+            },
+            {
+                "name": "Turquoise Blue",
+                "colors": [
+                    "#40E0D0",
+                    "#AFEEEE"
+                ]
+            },
+            {
+                "name": "Magenta Pink",
+                "colors": [
+                    "#FF00FF",
+                    "#FF99FF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Sketch Up",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Cherry Red",
+                "colors": [
+                    "#990000",
+                    "#FF6666"
+                ]
+            },
+            {
+                "name": "Forest Green",
+                "colors": [
+                    "#228B22",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Ocean Blue",
+                "colors": [
+                    "#0077BE",
+                    "#87CEEB"
+                ]
+            },
+            {
+                "name": "Sunflower Yellow",
+                "colors": [
+                    "#FFDA03",
+                    "#FFFF99"
+                ]
+            },
+            {
+                "name": "Slate Gray",
+                "colors": [
+                    "#708090",
+                    "#B0C4DE"
+                ]
+            },
+            {
+                "name": "Plum Purple",
+                "colors": [
+                    "#8E4585",
+                    "#DDA0DD"
+                ]
+            },
+            {
+                "name": "Tangerine Orange",
+                "colors": [
+                    "#FFA500",
+                    "#FFDAB9"
+                ]
+            },
+            {
+                "name": "Teal Green",
+                "colors": [
+                    "#008080",
+                    "#66CDAA"
+                ]
+            },
+            {
+                "name": "Midnight Blue",
+                "colors": [
+                    "#191970",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Salmon Pink",
+                "colors": [
+                    "#FA8072",
+                    "#FFA07A"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Autodesk",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Cobalt Blue",
+                "colors": [
+                    "#0000FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Charcoal Gray",
+                "colors": [
+                    "#36454F",
+                    "#708090"
+                ]
+            },
+            {
+                "name": "Lime Green",
+                "colors": [
+                    "#32CD32",
+                    "#98FB98"
+                ]
+            },
+            {
+                "name": "Burnt Orange",
+                "colors": [
+                    "#CC5500",
+                    "#FFA07A"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#7851A9",
+                    "#9B59B6"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#E0115F",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Turquoise Blue",
+                "colors": [
+                    "#40E0D0",
+                    "#AFEEEE"
+                ]
+            },
+            {
+                "name": "Golden Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFFE0"
+                ]
+            },
+            {
+                "name": "Silver Gray",
+                "colors": [
+                    "#C0C0C0",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "Magenta Pink",
+                "colors": [
+                    "#FF00FF",
+                    "#FF99FF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Corel",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#9B111E",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#50C878",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Sapphire Blue",
+                "colors": [
+                    "#0F52BA",
+                    "#6495ED"
+                ]
+            },
+            {
+                "name": "Amber Gold",
+                "colors": [
+                    "#FFBF00",
+                    "#FFE5B4"
+                ]
+            },
+            {
+                "name": "Amethyst Purple",
+                "colors": [
+                    "#9966CC",
+                    "#DDA0DD"
+                ]
+            },
+            {
+                "name": "Aquamarine",
+                "colors": [
+                    "#7FFFD4",
+                    "#E0FFFF"
+                ]
+            },
+            {
+                "name": "Charcoal Gray",
+                "colors": [
+                    "#36454F",
+                    "#778899"
+                ]
+            },
+            {
+                "name": "Coral Pink",
+                "colors": [
+                    "#FF7F50",
+                    "#FFA07A"
+                ]
+            },
+            {
+                "name": "Indigo Blue",
+                "colors": [
+                    "#4B0082",
+                    "#9370DB"
+                ]
+            },
+            {
+                "name": "Lime Green",
+                "colors": [
+                    "#32CD32",
+                    "#98FB98"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "IBM",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Deep Blue",
+                "colors": [
+                    "#000080",
+                    "#0043CE"
+                ]
+            },
+            {
+                "name": "Sky Gray",
+                "colors": [
+                    "#C0C0C0",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "Grass Green",
+                "colors": [
+                    "#006D5B",
+                    "#00BD9D"
+                ]
+            },
+            {
+                "name": "Magenta Burst",
+                "colors": [
+                    "#FF00FF",
+                    "#FF69B4"
+                ]
+            },
+            {
+                "name": "Sunburst Orange",
+                "colors": [
+                    "#FF7900",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#491D8B",
+                    "#785EF0"
+                ]
+            },
+            {
+                "name": "Teal Wave",
+                "colors": [
+                    "#007D79",
+                    "#00B8A9"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#FB4B53",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Gold Rush",
+                "colors": [
+                    "#FFB000",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Slate Blue",
+                "colors": [
+                    "#6EA5DE",
+                    "#9BCDFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Sony",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Midnight Black",
+                "colors": [
+                    "#000000",
+                    "#363636"
+                ]
+            },
+            {
+                "name": "Pearl White",
+                "colors": [
+                    "#F8F8FF",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Electric Blue",
+                "colors": [
+                    "#0000FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Emerald Green",
+                "colors": [
+                    "#50C878",
+                    "#00FF7F"
+                ]
+            },
+            {
+                "name": "Ruby Red",
+                "colors": [
+                    "#E0115F",
+                    "#FF3030"
+                ]
+            },
+            {
+                "name": "Amethyst Purple",
+                "colors": [
+                    "#9966CC",
+                    "#BF3EFF"
+                ]
+            },
+            {
+                "name": "Sunset Orange",
+                "colors": [
+                    "#FD5E53",
+                    "#FF7F50"
+                ]
+            },
+            {
+                "name": "Silver Mist",
+                "colors": [
+                    "#C0C0C0",
+                    "#DCDCDC"
+                ]
+            },
+            {
+                "name": "Golden Sun",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Aqua Breeze",
+                "colors": [
+                    "#00FFFF",
+                    "#7FFFD4"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Samsung",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Galaxy Blue",
+                "colors": [
+                    "#1428A0",
+                    "#5A7EE5"
+                ]
+            },
+            {
+                "name": "Aura Glow",
+                "colors": [
+                    "#C0C0C0",
+                    "#FAFAFA"
+                ]
+            },
+            {
+                "name": "Phantom Black",
+                "colors": [
+                    "#000000",
+                    "#2C2C2C"
+                ]
+            },
+            {
+                "name": "Bora Purple",
+                "colors": [
+                    "#A020F0",
+                    "#DA70D6"
+                ]
+            },
+            {
+                "name": "Cream Dream",
+                "colors": [
+                    "#FFFDD0",
+                    "#FFFFE0"
+                ]
+            },
+            {
+                "name": "Graphite Gray",
+                "colors": [
+                    "#4F4F4F",
+                    "#808080"
+                ]
+            },
+            {
+                "name": "Mystic Bronze",
+                "colors": [
+                    "#CD7F32",
+                    "#DEB887"
+                ]
+            },
+            {
+                "name": "Cloud Mint",
+                "colors": [
+                    "#98FF98",
+                    "#00FF7F"
+                ]
+            },
+            {
+                "name": "Lavender Mist",
+                "colors": [
+                    "#E6E6FA",
+                    "#D8BFD8"
+                ]
+            },
+            {
+                "name": "Flamingo Pink",
+                "colors": [
+                    "#FC8EAC",
+                    "#FFB6C1"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "IKEA",
+        "priority": 1,
+        "gradients": [
+            {
+                "name": "Swedish Blue",
+                "colors": [
+                    "#0058A3",
+                    "#4B96D4"
+                ]
+            },
+            {
+                "name": "Sunflower Yellow",
+                "colors": [
+                    "#FFCC00",
+                    "#FFE135"
+                ]
+            },
+            {
+                "name": "Scandinavian White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Pine Green",
+                "colors": [
+                    "#006F62",
+                    "#2E8B57"
+                ]
+            },
+            {
+                "name": "Birch Wood",
+                "colors": [
+                    "#F0E68C",
+                    "#FFFACD"
+                ]
+            },
+            {
+                "name": "Meatball Red",
+                "colors": [
+                    "#C41E3A",
+                    "#FF033E"
+                ]
+            },
+            {
+                "name": "Lagom Gray",
+                "colors": [
+                    "#808080",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Baltic Sea",
+                "colors": [
+                    "#3B9C9C",
+                    "#20B2AA"
+                ]
+            },
+            {
+                "name": "Autumn Leaf",
+                "colors": [
+                    "#D2691E",
+                    "#CD853F"
+                ]
+            },
+            {
+                "name": "Nordic Sky",
+                "colors": [
+                    "#87CEEB",
+                    "#B0E0E6"
+                ]
+            },
+            {
+                "name": "IKEA Orange",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Minimalist Beige",
+                "colors": [
+                    "#F5F5DC",
+                    "#E6E6FA"
+                ]
+            },
+            {
+                "name": "Fjord Blue",
+                "colors": [
+                    "#4682B4",
+                    "#5F9EA0"
+                ]
+            },
+            {
+                "name": "Lingonberry",
+                "colors": [
+                    "#8B0000",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "Spruce Forest",
+                "colors": [
+                    "#228B22",
+                    "#008000"
+                ]
+            },
+            {
+                "name": "Scandinavian Sunset",
+                "colors": [
+                    "#FF7F50",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Midnight Sun",
+                "colors": [
+                    "#FFD700",
+                    "#FFA07A"
+                ]
+            },
+            {
+                "name": "Teak Wood",
+                "colors": [
+                    "#8B4513",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "Nordic Lavender",
+                "colors": [
+                    "#E6E6FA",
+                    "#D8BFD8"
+                ]
+            },
+            {
+                "name": "Glacier Ice",
+                "colors": [
+                    "#E0FFFF",
+                    "#AFEEEE"
+                ]
+            },
+            {
+                "name": "Midsummer Green",
+                "colors": [
+                    "#98FB98",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Stockholm Slate",
+                "colors": [
+                    "#708090",
+                    "#778899"
+                ]
+            },
+            {
+                "name": "Scandinavian Rose",
+                "colors": [
+                    "#FFB6C1",
+                    "#FFC0CB"
+                ]
+            },
+            {
+                "name": "Nordic Night",
+                "colors": [
+                    "#191970",
+                    "#000080"
+                ]
+            },
+            {
+                "name": "Fika Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Netflix",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Netflix Red",
+                "colors": [
+                    "#E50914",
+                    "#FF3333"
+                ]
+            },
+            {
+                "name": "Midnight Black",
+                "colors": [
+                    "#000000",
+                    "#221F1F"
+                ]
+            },
+            {
+                "name": "Streaming Silver",
+                "colors": [
+                    "#B9090B",
+                    "#F5F5F1"
+                ]
+            },
+            {
+                "name": "Binge Orange",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Series Blue",
+                "colors": [
+                    "#00008B",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Documentary Green",
+                "colors": [
+                    "#006400",
+                    "#228B22"
+                ]
+            },
+            {
+                "name": "Comedy Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Drama Purple",
+                "colors": [
+                    "#800080",
+                    "#9370DB"
+                ]
+            },
+            {
+                "name": "Action Gray",
+                "colors": [
+                    "#696969",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Romance Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFC0CB"
+                ]
+            },
+            {
+                "name": "Thriller Red",
+                "colors": [
+                    "#8B0000",
+                    "#B22222"
+                ]
+            },
+            {
+                "name": "Sci-Fi Teal",
+                "colors": [
+                    "#008080",
+                    "#20B2AA"
+                ]
+            },
+            {
+                "name": "Period Drama Sepia",
+                "colors": [
+                    "#704214",
+                    "#8B4513"
+                ]
+            },
+            {
+                "name": "Animation Rainbow",
+                "colors": [
+                    "#FF69B4",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Horror Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Feel-Good Peach",
+                "colors": [
+                    "#FFDAB9",
+                    "#FFE4B5"
+                ]
+            },
+            {
+                "name": "Mystery Purple",
+                "colors": [
+                    "#4B0082",
+                    "#8A2BE2"
+                ]
+            },
+            {
+                "name": "Reality TV Gold",
+                "colors": [
+                    "#FFD700",
+                    "#DAA520"
+                ]
+            },
+            {
+                "name": "Indie Film Burgundy",
+                "colors": [
+                    "#800000",
+                    "#8B0000"
+                ]
+            },
+            {
+                "name": "Docuseries Navy",
+                "colors": [
+                    "#000080",
+                    "#191970"
+                ]
+            },
+            {
+                "name": "Stand-up Special Spotlight",
+                "colors": [
+                    "#FFFAFA",
+                    "#F0FFF0"
+                ]
+            },
+            {
+                "name": "True Crime Crimson",
+                "colors": [
+                    "#DC143C",
+                    "#B22222"
+                ]
+            },
+            {
+                "name": "Fantasy Emerald",
+                "colors": [
+                    "#008000",
+                    "#2E8B57"
+                ]
+            },
+            {
+                "name": "Teen Drama Turquoise",
+                "colors": [
+                    "#40E0D0",
+                    "#48D1CC"
+                ]
+            },
+            {
+                "name": "Cooking Show Sage",
+                "colors": [
+                    "#9ACD32",
+                    "#6B8E23"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Coca-Cola",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Classic Red",
+                "colors": [
+                    "#F40009",
+                    "#FF3333"
+                ]
+            },
+            {
+                "name": "Polar Bear White",
+                "colors": [
+                    "#F9F9F9",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Ribbon Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFDF00"
+                ]
+            },
+            {
+                "name": "Bottle Green",
+                "colors": [
+                    "#006A4E",
+                    "#00A86B"
+                ]
+            },
+            {
+                "name": "Ice Blue",
+                "colors": [
+                    "#A5F2F3",
+                    "#D0F0F0"
+                ]
+            },
+            {
+                "name": "Cherry Burst",
+                "colors": [
+                    "#7B0019",
+                    "#A50B5E"
+                ]
+            },
+            {
+                "name": "Vanilla Cream",
+                "colors": [
+                    "#FFFDD0",
+                    "#FFF8DC"
+                ]
+            },
+            {
+                "name": "Cinnamon Brown",
+                "colors": [
+                    "#8B4513",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "Lemon Zest",
+                "colors": [
+                    "#FFF700",
+                    "#FFFF66"
+                ]
+            },
+            {
+                "name": "Fizz Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#E6E6E6"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Nike",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Swoosh Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Just Do It White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Action Red",
+                "colors": [
+                    "#FF0000",
+                    "#FF4D4D"
+                ]
+            },
+            {
+                "name": "Volt Green",
+                "colors": [
+                    "#CEFF00",
+                    "#BFFF00"
+                ]
+            },
+            {
+                "name": "Royal Blue",
+                "colors": [
+                    "#0000FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Orange Blaze",
+                "colors": [
+                    "#FF6600",
+                    "#FF944D"
+                ]
+            },
+            {
+                "name": "Purple Dynasty",
+                "colors": [
+                    "#4B0082",
+                    "#8A2BE2"
+                ]
+            },
+            {
+                "name": "Hyper Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFB6C1"
+                ]
+            },
+            {
+                "name": "Metallic Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Turf Orange",
+                "colors": [
+                    "#FF5A00",
+                    "#FF7F50"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Lego",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Brick Red",
+                "colors": [
+                    "#D01012",
+                    "#FF4D4D"
+                ]
+            },
+            {
+                "name": "Classic Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Royal Blue",
+                "colors": [
+                    "#0047AB",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Lime Green",
+                "colors": [
+                    "#32CD32",
+                    "#7CFC00"
+                ]
+            },
+            {
+                "name": "Bright Orange",
+                "colors": [
+                    "#FF4F00",
+                    "#FF7F50"
+                ]
+            },
+            {
+                "name": "Dark Green",
+                "colors": [
+                    "#006400",
+                    "#228B22"
+                ]
+            },
+            {
+                "name": "Purple Dream",
+                "colors": [
+                    "#8E4585",
+                    "#C71585"
+                ]
+            },
+            {
+                "name": "Cool Gray",
+                "colors": [
+                    "#8C92AC",
+                    "#B6B6B4"
+                ]
+            },
+            {
+                "name": "Brown Brick",
+                "colors": [
+                    "#8B4513",
+                    "#CD853F"
+                ]
+            },
+            {
+                "name": "Teal Treasure",
+                "colors": [
+                    "#008080",
+                    "#20B2AA"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Spotify",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Spotify Green",
+                "colors": [
+                    "#1DB954",
+                    "#1ED760"
+                ]
+            },
+            {
+                "name": "Midnight Black",
+                "colors": [
+                    "#191414",
+                    "#121212"
+                ]
+            },
+            {
+                "name": "White Noise",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0F0F0"
+                ]
+            },
+            {
+                "name": "Neon Purple",
+                "colors": [
+                    "#AF2896",
+                    "#C62E90"
+                ]
+            },
+            {
+                "name": "Vibrant Orange",
+                "colors": [
+                    "#FF6437",
+                    "#FF8C4C"
+                ]
+            },
+            {
+                "name": "Electric Blue",
+                "colors": [
+                    "#2D46B9",
+                    "#4168E0"
+                ]
+            },
+            {
+                "name": "Coral Pink",
+                "colors": [
+                    "#F573A0",
+                    "#FF94B8"
+                ]
+            },
+            {
+                "name": "Sunny Yellow",
+                "colors": [
+                    "#FFC864",
+                    "#FFD880"
+                ]
+            },
+            {
+                "name": "Teal Wave",
+                "colors": [
+                    "#006450",
+                    "#008C69"
+                ]
+            },
+            {
+                "name": "Playlist Gray",
+                "colors": [
+                    "#B3B3B3",
+                    "#D9D9D9"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Twitter",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Twitter Blue",
+                "colors": [
+                    "#1DA1F2",
+                    "#4AB3F4"
+                ]
+            },
+            {
+                "name": "Night Mode",
+                "colors": [
+                    "#15202B",
+                    "#192734"
+                ]
+            },
+            {
+                "name": "Tweet White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F8FA"
+                ]
+            },
+            {
+                "name": "Verified Blue",
+                "colors": [
+                    "#1DA1F2",
+                    "#0D95E8"
+                ]
+            },
+            {
+                "name": "Like Red",
+                "colors": [
+                    "#E0245E",
+                    "#F91880"
+                ]
+            },
+            {
+                "name": "Retweet Green",
+                "colors": [
+                    "#17BF63",
+                    "#00BA7C"
+                ]
+            },
+            {
+                "name": "Mention Orange",
+                "colors": [
+                    "#FFAD1F",
+                    "#FFC400"
+                ]
+            },
+            {
+                "name": "Trend Purple",
+                "colors": [
+                    "#794BC4",
+                    "#9C6EEE"
+                ]
+            },
+            {
+                "name": "Link Blue",
+                "colors": [
+                    "#1B95E0",
+                    "#0C7ABF"
+                ]
+            },
+            {
+                "name": "Text Gray",
+                "colors": [
+                    "#657786",
+                    "#AAB8C2"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Starbucks",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Siren Green",
+                "colors": [
+                    "#00704A",
+                    "#00A862"
+                ]
+            },
+            {
+                "name": "Coffee Brown",
+                "colors": [
+                    "#4B2C20",
+                    "#6F4E37"
+                ]
+            },
+            {
+                "name": "Cream White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F1F8E9"
+                ]
+            },
+            {
+                "name": "Espresso Black",
+                "colors": [
+                    "#000000",
+                    "#1E1E1E"
+                ]
+            },
+            {
+                "name": "Apron Green",
+                "colors": [
+                    "#00B388",
+                    "#00D1A0"
+                ]
+            },
+            {
+                "name": "Caramel Latte",
+                "colors": [
+                    "#C3A17D",
+                    "#D4B59E"
+                ]
+            },
+            {
+                "name": "Berry Blend",
+                "colors": [
+                    "#B22222",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "Matcha Green",
+                "colors": [
+                    "#9ACD32",
+                    "#7CFC00"
+                ]
+            },
+            {
+                "name": "Cocoa Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            },
+            {
+                "name": "Whipped Cream",
+                "colors": [
+                    "#FFFDD0",
+                    "#FFFFF0"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Disney",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Magic Blue",
+                "colors": [
+                    "#0066CC",
+                    "#0077EA"
+                ]
+            },
+            {
+                "name": "Mickey Red",
+                "colors": [
+                    "#CC0000",
+                    "#FF0000"
+                ]
+            },
+            {
+                "name": "Castle Gray",
+                "colors": [
+                    "#4E5B31",
+                    "#6B7A44"
+                ]
+            },
+            {
+                "name": "Pixie Dust Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFDF00"
+                ]
+            },
+            {
+                "name": "Enchanted Forest",
+                "colors": [
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Royal Purple",
+                "colors": [
+                    "#4B0082",
+                    "#8A2BE2"
+                ]
+            },
+            {
+                "name": "Ocean Blue",
+                "colors": [
+                    "#0077BE",
+                    "#00A2E8"
+                ]
+            },
+            {
+                "name": "Sunset Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Fairy Tale Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFB6C1"
+                ]
+            },
+            {
+                "name": "Tomorrowland Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "McDonald's",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Golden Arches",
+                "colors": [
+                    "#FFC72C",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Ketchup Red",
+                "colors": [
+                    "#DA291C",
+                    "#FF0000"
+                ]
+            },
+            {
+                "name": "Sesame Seed",
+                "colors": [
+                    "#FFF5E1",
+                    "#FFFAF0"
+                ]
+            },
+            {
+                "name": "Pickle Green",
+                "colors": [
+                    "#267000",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Fry Box Yellow",
+                "colors": [
+                    "#FFC72C",
+                    "#FFE135"
+                ]
+            },
+            {
+                "name": "Big Mac Green",
+                "colors": [
+                    "#05500A",
+                    "#006400"
+                ]
+            },
+            {
+                "name": "Chocolate Brown",
+                "colors": [
+                    "#3E2723",
+                    "#5D4037"
+                ]
+            },
+            {
+                "name": "Milkshake White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Happy Meal Orange",
+                "colors": [
+                    "#FF9800",
+                    "#FFA726"
+                ]
+            },
+            {
+                "name": "McCafe Brown",
+                "colors": [
+                    "#4E342E",
+                    "#6D4C41"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "LUSH",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Fresh Green",
+                "colors": [
+                    "#00A86B",
+                    "#00C957"
+                ]
+            },
+            {
+                "name": "Bubble Gum Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFB6C1"
+                ]
+            },
+            {
+                "name": "Ocean Blue",
+                "colors": [
+                    "#0077BE",
+                    "#00A2E8"
+                ]
+            },
+            {
+                "name": "Citrus Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Lavender Purple",
+                "colors": [
+                    "#8E4585",
+                    "#B23AEE"
+                ]
+            },
+            {
+                "name": "Cocoa Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            },
+            {
+                "name": "Minty Fresh",
+                "colors": [
+                    "#98FF98",
+                    "#00FF7F"
+                ]
+            },
+            {
+                "name": "Charcoal Black",
+                "colors": [
+                    "#1C1C1C",
+                    "#363636"
+                ]
+            },
+            {
+                "name": "Rose Gold",
+                "colors": [
+                    "#B76E79",
+                    "#E7C7C0"
+                ]
+            },
+            {
+                "name": "Honey Orange",
+                "colors": [
+                    "#FFA500",
+                    "#FFD700"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Uber",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Uber Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Safety Blue",
+                "colors": [
+                    "#276EF1",
+                    "#4287F5"
+                ]
+            },
+            {
+                "name": "Rider White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F1F1F1"
+                ]
+            },
+            {
+                "name": "Eats Green",
+                "colors": [
+                    "#06C167",
+                    "#00E676"
+                ]
+            },
+            {
+                "name": "Surge Orange",
+                "colors": [
+                    "#FF5722",
+                    "#FF7043"
+                ]
+            },
+            {
+                "name": "Pool Blue",
+                "colors": [
+                    "#2196F3",
+                    "#42A5F5"
+                ]
+            },
+            {
+                "name": "Error Red",
+                "colors": [
+                    "#E31937",
+                    "#FF5252"
+                ]
+            },
+            {
+                "name": "Success Green",
+                "colors": [
+                    "#4CAF50",
+                    "#66BB6A"
+                ]
+            },
+            {
+                "name": "Warning Yellow",
+                "colors": [
+                    "#FFC107",
+                    "#FFD54F"
+                ]
+            },
+            {
+                "name": "Text Gray",
+                "colors": [
+                    "#757575",
+                    "#9E9E9E"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Twitch",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Twitch Purple",
+                "colors": [
+                    "#9146FF",
+                    "#B9A3E3"
+                ]
+            },
+            {
+                "name": "Stream Black",
+                "colors": [
+                    "#0E0E10",
+                    "#18181B"
+                ]
+            },
+            {
+                "name": "Chat White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F7F7F8"
+                ]
+            },
+            {
+                "name": "Live Red",
+                "colors": [
+                    "#E91916",
+                    "#FF4D4D"
+                ]
+            },
+            {
+                "name": "Prime Blue",
+                "colors": [
+                    "#00A0D6",
+                    "#33C1FF"
+                ]
+            },
+            {
+                "name": "Bits Cheer",
+                "colors": [
+                    "#FF1675",
+                    "#FF69B4"
+                ]
+            },
+            {
+                "name": "Mod Green",
+                "colors": [
+                    "#00D668",
+                    "#33FF99"
+                ]
+            },
+            {
+                "name": "Hype Train",
+                "colors": [
+                    "#FC7A00",
+                    "#FFA64D"
+                ]
+            },
+            {
+                "name": "Sub Badge Gold",
+                "colors": [
+                    "#FFB300",
+                    "#FFD54F"
+                ]
+            },
+            {
+                "name": "Whisper Gray",
+                "colors": [
+                    "#D3D3D3",
+                    "#EFEFEF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Tesla",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Electric Red",
+                "colors": [
+                    "#CC0000",
+                    "#E82127"
+                ]
+            },
+            {
+                "name": "Midnight Silver",
+                "colors": [
+                    "#393C41",
+                    "#5C5E62"
+                ]
+            },
+            {
+                "name": "Pearl White",
+                "colors": [
+                    "#E6E6E6",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Deep Blue",
+                "colors": [
+                    "#000033",
+                    "#1C2841"
+                ]
+            },
+            {
+                "name": "Autopilot Blue",
+                "colors": [
+                    "#00BFFF",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Solar Roof Black",
+                "colors": [
+                    "#000000",
+                    "#2C3E50"
+                ]
+            },
+            {
+                "name": "Cybertruck Steel",
+                "colors": [
+                    "#B0C4DE",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Roadster Red",
+                "colors": [
+                    "#8B0000",
+                    "#B22222"
+                ]
+            },
+            {
+                "name": "Powerwall Green",
+                "colors": [
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Model Y Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Zoom",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Zoom Blue",
+                "colors": [
+                    "#2D8CFF",
+                    "#4A8CFF"
+                ]
+            },
+            {
+                "name": "Meeting White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F8F8F8"
+                ]
+            },
+            {
+                "name": "Webinar Green",
+                "colors": [
+                    "#00CC66",
+                    "#00FF80"
+                ]
+            },
+            {
+                "name": "Chat Orange",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Recording Red",
+                "colors": [
+                    "#FF4136",
+                    "#FF6B6B"
+                ]
+            },
+            {
+                "name": "Background Gray",
+                "colors": [
+                    "#E5E5E5",
+                    "#F2F2F2"
+                ]
+            },
+            {
+                "name": "Security Shield",
+                "colors": [
+                    "#006400",
+                    "#008000"
+                ]
+            },
+            {
+                "name": "Virtual Purple",
+                "colors": [
+                    "#8A2BE2",
+                    "#9932CC"
+                ]
+            },
+            {
+                "name": "Phone Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Calendar Blue",
+                "colors": [
+                    "#4169E1",
+                    "#6495ED"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Nintendo",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Nintendo Red",
+                "colors": [
+                    "#E60012",
+                    "#FF3333"
+                ]
+            },
+            {
+                "name": "Switch Gray",
+                "colors": [
+                    "#828282",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Mario Blue",
+                "colors": [
+                    "#3C44AA",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Zelda Green",
+                "colors": [
+                    "#00A86B",
+                    "#3CB371"
+                ]
+            },
+            {
+                "name": "Pikachu Yellow",
+                "colors": [
+                    "#FCD000",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Donkey Kong Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            },
+            {
+                "name": "Kirby Pink",
+                "colors": [
+                    "#FFB7C5",
+                    "#FFC0CB"
+                ]
+            },
+            {
+                "name": "Yoshi Green",
+                "colors": [
+                    "#39FF14",
+                    "#7CFC00"
+                ]
+            },
+            {
+                "name": "Samus Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Luigi Green",
+                "colors": [
+                    "#3CB371",
+                    "#66CDAA"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Mastercard",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Mastercard Red",
+                "colors": [
+                    "#EB001B",
+                    "#FF3333"
+                ]
+            },
+            {
+                "name": "Mastercard Yellow",
+                "colors": [
+                    "#FF9900",
+                    "#FFC266"
+                ]
+            },
+            {
+                "name": "Mastercard Orange",
+                "colors": [
+                    "#F79E1B",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Secure Black",
+                "colors": [
+                    "#000000",
+                    "#2F2F2F"
+                ]
+            },
+            {
+                "name": "Debit Blue",
+                "colors": [
+                    "#0A5AA4",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Credit Gold",
+                "colors": [
+                    "#D4AF37",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Platinum Silver",
+                "colors": [
+                    "#A9A9A9",
+                    "#C0C0C0"
+                ]
+            },
+            {
+                "name": "World Elite Black",
+                "colors": [
+                    "#1A1A1A",
+                    "#4A4A4A"
+                ]
+            },
+            {
+                "name": "Contactless Green",
+                "colors": [
+                    "#00A651",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Priceless White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "LinkedIn",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "LinkedIn Blue",
+                "colors": [
+                    "#0077B5",
+                    "#0A66C2"
+                ]
+            },
+            {
+                "name": "InMail White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F3F6F8"
+                ]
+            },
+            {
+                "name": "Connection Green",
+                "colors": [
+                    "#0A9E01",
+                    "#2ECC71"
+                ]
+            },
+            {
+                "name": "Notification Red",
+                "colors": [
+                    "#D11124",
+                    "#E74C3C"
+                ]
+            },
+            {
+                "name": "Premium Gold",
+                "colors": [
+                    "#DBA506",
+                    "#F1C40F"
+                ]
+            },
+            {
+                "name": "Text Black",
+                "colors": [
+                    "#000000",
+                    "#2C3E50"
+                ]
+            },
+            {
+                "name": "Background Gray",
+                "colors": [
+                    "#E6E9EC",
+                    "#F3F6F8"
+                ]
+            },
+            {
+                "name": "Job Blue",
+                "colors": [
+                    "#0073B1",
+                    "#0E76A8"
+                ]
+            },
+            {
+                "name": "Messaging Orange",
+                "colors": [
+                    "#C37D16",
+                    "#E67E22"
+                ]
+            },
+            {
+                "name": "Profile Navy",
+                "colors": [
+                    "#004B7C",
+                    "#0E2F5A"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "TikTok",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "TikTok Aqua",
+                "colors": [
+                    "#25F4EE",
+                    "#69F4EE"
+                ]
+            },
+            {
+                "name": "TikTok Red",
+                "colors": [
+                    "#FE2C55",
+                    "#FF5374"
+                ]
+            },
+            {
+                "name": "For You Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Creator White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F1F1F1"
+                ]
+            },
+            {
+                "name": "Music Purple",
+                "colors": [
+                    "#7C2AE8",
+                    "#9933FF"
+                ]
+            },
+            {
+                "name": "Duet Blue",
+                "colors": [
+                    "#08FFF9",
+                    "#33FFFF"
+                ]
+            },
+            {
+                "name": "Trending Yellow",
+                "colors": [
+                    "#FFFC00",
+                    "#FFFF66"
+                ]
+            },
+            {
+                "name": "Live Pink",
+                "colors": [
+                    "#FF0050",
+                    "#FF3380"
+                ]
+            },
+            {
+                "name": "Hashtag Green",
+                "colors": [
+                    "#00F2EA",
+                    "#33FFEE"
+                ]
+            },
+            {
+                "name": "Effect Orange",
+                "colors": [
+                    "#FF9900",
+                    "#FFAD33"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Shopify",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Shopify Green",
+                "colors": [
+                    "#008060",
+                    "#00A780"
+                ]
+            },
+            {
+                "name": "Merchant Black",
+                "colors": [
+                    "#000000",
+                    "#212B36"
+                ]
+            },
+            {
+                "name": "Storefront White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F4F6F8"
+                ]
+            },
+            {
+                "name": "Discount Red",
+                "colors": [
+                    "#D82C0D",
+                    "#F44336"
+                ]
+            },
+            {
+                "name": "Shipping Blue",
+                "colors": [
+                    "#006FBB",
+                    "#2196F3"
+                ]
+            },
+            {
+                "name": "Product Yellow",
+                "colors": [
+                    "#FFC96B",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Analytics Purple",
+                "colors": [
+                    "#5C6AC4",
+                    "#9C27B0"
+                ]
+            },
+            {
+                "name": "Marketing Orange",
+                "colors": [
+                    "#F49342",
+                    "#FF9800"
+                ]
+            },
+            {
+                "name": "App Store Teal",
+                "colors": [
+                    "#47C1BF",
+                    "#00BCD4"
+                ]
+            },
+            {
+                "name": "Support Gray",
+                "colors": [
+                    "#637381",
+                    "#9E9E9E"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Boston Dynamics",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Robot Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Spot Black",
+                "colors": [
+                    "#1A1A1A",
+                    "#333333"
+                ]
+            },
+            {
+                "name": "Atlas Blue",
+                "colors": [
+                    "#0000FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Handle Red",
+                "colors": [
+                    "#8B0000",
+                    "#B22222"
+                ]
+            },
+            {
+                "name": "Wildcat Green",
+                "colors": [
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "BigDog Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            },
+            {
+                "name": "Laboratory White",
+                "colors": [
+                    "#F5F5F5",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Sensor Gray",
+                "colors": [
+                    "#708090",
+                    "#778899"
+                ]
+            },
+            {
+                "name": "Hydraulic Orange",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Circuit Board Green",
+                "colors": [
+                    "#006400",
+                    "#008000"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Nvidia",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Nvidia Green",
+                "colors": [
+                    "#76B900",
+                    "#9ACD32"
+                ]
+            },
+            {
+                "name": "GPU Black",
+                "colors": [
+                    "#000000",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "CUDA Blue",
+                "colors": [
+                    "#1E90FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "RTX Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "AI Purple",
+                "colors": [
+                    "#8A2BE2",
+                    "#9370DB"
+                ]
+            },
+            {
+                "name": "Tensor Core Gold",
+                "colors": [
+                    "#FFD700",
+                    "#DAA520"
+                ]
+            },
+            {
+                "name": "GeForce Red",
+                "colors": [
+                    "#FF0000",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "Quadro Teal",
+                "colors": [
+                    "#008080",
+                    "#20B2AA"
+                ]
+            },
+            {
+                "name": "DLSS Orange",
+                "colors": [
+                    "#FFA500",
+                    "#FF8C00"
+                ]
+            },
+            {
+                "name": "Shield Gray",
+                "colors": [
+                    "#696969",
+                    "#A9A9A9"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "DeepMind",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "DeepMind Blue",
+                "colors": [
+                    "#0F9D58",
+                    "#34A853"
+                ]
+            },
+            {
+                "name": "AlphaGo Black",
+                "colors": [
+                    "#000000",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "Neural Network Purple",
+                "colors": [
+                    "#8E44AD",
+                    "#9B59B6"
+                ]
+            },
+            {
+                "name": "AI Red",
+                "colors": [
+                    "#C0392B",
+                    "#E74C3C"
+                ]
+            },
+            {
+                "name": "Machine Learning Green",
+                "colors": [
+                    "#27AE60",
+                    "#2ECC71"
+                ]
+            },
+            {
+                "name": "Reinforcement Orange",
+                "colors": [
+                    "#D35400",
+                    "#E67E22"
+                ]
+            },
+            {
+                "name": "Algorithm White",
+                "colors": [
+                    "#ECF0F1",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Tensorflow Yellow",
+                "colors": [
+                    "#F1C40F",
+                    "#F39C12"
+                ]
+            },
+            {
+                "name": "Research Gray",
+                "colors": [
+                    "#95A5A6",
+                    "#BDC3C7"
+                ]
+            },
+            {
+                "name": "Ethics Teal",
+                "colors": [
+                    "#16A085",
+                    "#1ABC9C"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "SpaceX",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Rocket White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F2F2F2"
+                ]
+            },
+            {
+                "name": "Space Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Dragon Red",
+                "colors": [
+                    "#CC0000",
+                    "#FF0000"
+                ]
+            },
+            {
+                "name": "Falcon Blue",
+                "colors": [
+                    "#005288",
+                    "#0077BE"
+                ]
+            },
+            {
+                "name": "Mars Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Starlink Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Raptor Engine Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Launch Pad Gray",
+                "colors": [
+                    "#808080",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Solar Panel Blue",
+                "colors": [
+                    "#4169E1",
+                    "#6495ED"
+                ]
+            },
+            {
+                "name": "Crew Dragon White",
+                "colors": [
+                    "#F8F8FF",
+                    "#FFFFFF"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "OpenAI",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "OpenAI Teal",
+                "colors": [
+                    "#00A67E",
+                    "#00C9A7"
+                ]
+            },
+            {
+                "name": "GPT Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "DALL-E Rainbow",
+                "colors": [
+                    "#FF6B6B",
+                    "#4ECDC4"
+                ]
+            },
+            {
+                "name": "Codex Blue",
+                "colors": [
+                    "#3498DB",
+                    "#5DADE2"
+                ]
+            },
+            {
+                "name": "Robotics Silver",
+                "colors": [
+                    "#BDC3C7",
+                    "#ECF0F1"
+                ]
+            },
+            {
+                "name": "Research Purple",
+                "colors": [
+                    "#8E44AD",
+                    "#9B59B6"
+                ]
+            },
+            {
+                "name": "Ethics Gold",
+                "colors": [
+                    "#F1C40F",
+                    "#F39C12"
+                ]
+            },
+            {
+                "name": "Policy Gray",
+                "colors": [
+                    "#95A5A6",
+                    "#7F8C8D"
+                ]
+            },
+            {
+                "name": "Innovation Orange",
+                "colors": [
+                    "#E67E22",
+                    "#F39C12"
+                ]
+            },
+            {
+                "name": "Collaboration Green",
+                "colors": [
+                    "#27AE60",
+                    "#2ECC71"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Magic Leap",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Magic Purple",
+                "colors": [
+                    "#7B4397",
+                    "#DC2430"
+                ]
+            },
+            {
+                "name": "Leap Green",
+                "colors": [
+                    "#00FF00",
+                    "#7CFC00"
+                ]
+            },
+            {
+                "name": "Augmented Blue",
+                "colors": [
+                    "#4B0082",
+                    "#8A2BE2"
+                ]
+            },
+            {
+                "name": "Reality Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Lightfield Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Spatial Black",
+                "colors": [
+                    "#000000",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "Gesture Pink",
+                "colors": [
+                    "#FF69B4",
+                    "#FFB6C1"
+                ]
+            },
+            {
+                "name": "Immersive Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Computing Teal",
+                "colors": [
+                    "#008080",
+                    "#20B2AA"
+                ]
+            },
+            {
+                "name": "Digital Landscape",
+                "colors": [
+                    "#32CD32",
+                    "#00FF7F"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Stripe",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Stripe Blue",
+                "colors": [
+                    "#008CDD",
+                    "#0055D4"
+                ]
+            },
+            {
+                "name": "Stripe Purple",
+                "colors": [
+                    "#6772E5",
+                    "#4D5BD9"
+                ]
+            },
+            {
+                "name": "Stripe Green",
+                "colors": [
+                    "#3ECF8E",
+                    "#27AE60"
+                ]
+            },
+            {
+                "name": "Stripe Orange",
+                "colors": [
+                    "#F6A4EB",
+                    "#FF5E62"
+                ]
+            },
+            {
+                "name": "Stripe Coral",
+                "colors": [
+                    "#FF9190",
+                    "#FE6B8B"
+                ]
+            },
+            {
+                "name": "Stripe Midnight",
+                "colors": [
+                    "#32325D",
+                    "#1A1F36"
+                ]
+            },
+            {
+                "name": "Stripe Lagoon",
+                "colors": [
+                    "#00CFE6",
+                    "#00A3E6"
+                ]
+            },
+            {
+                "name": "Stripe Sunset",
+                "colors": [
+                    "#FFB13B",
+                    "#FF7A59"
+                ]
+            },
+            {
+                "name": "Stripe Forest",
+                "colors": [
+                    "#2ECC71",
+                    "#27AE60"
+                ]
+            },
+            {
+                "name": "Stripe Lavender",
+                "colors": [
+                    "#9B59B6",
+                    "#8E44AD"
+                ]
+            },
+            {
+                "name": "Stripe Sky",
+                "colors": [
+                    "#3498DB",
+                    "#2980B9"
+                ]
+            },
+            {
+                "name": "Stripe Ruby",
+                "colors": [
+                    "#E74C3C",
+                    "#C0392B"
+                ]
+            },
+            {
+                "name": "Stripe Emerald",
+                "colors": [
+                    "#1ABC9C",
+                    "#16A085"
+                ]
+            },
+            {
+                "name": "Stripe Amethyst",
+                "colors": [
+                    "#9B59B6",
+                    "#8E44AD"
+                ]
+            },
+            {
+                "name": "Stripe Gold",
+                "colors": [
+                    "#F1C40F",
+                    "#F39C12"
+                ]
+            },
+            {
+                "name": "Stripe Silver",
+                "colors": [
+                    "#BDC3C7",
+                    "#95A5A6"
+                ]
+            },
+            {
+                "name": "Stripe Graphite",
+                "colors": [
+                    "#34495E",
+                    "#2C3E50"
+                ]
+            },
+            {
+                "name": "Stripe Seafoam",
+                "colors": [
+                    "#1ABC9C",
+                    "#16A085"
+                ]
+            },
+            {
+                "name": "Stripe Plum",
+                "colors": [
+                    "#8E44AD",
+                    "#9B59B6"
+                ]
+            },
+            {
+                "name": "Stripe Charcoal",
+                "colors": [
+                    "#2C3E50",
+                    "#34495E"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Dropbox",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Dropbox Blue",
+                "colors": [
+                    "#0061FF",
+                    "#0044AA"
+                ]
+            },
+            {
+                "name": "Dropbox Cyan",
+                "colors": [
+                    "#00C6FF",
+                    "#0072FF"
+                ]
+            },
+            {
+                "name": "Dropbox Teal",
+                "colors": [
+                    "#00D1C1",
+                    "#00A3A3"
+                ]
+            },
+            {
+                "name": "Dropbox Navy",
+                "colors": [
+                    "#2B3A8C",
+                    "#1F2D6B"
+                ]
+            },
+            {
+                "name": "Dropbox Violet",
+                "colors": [
+                    "#7F5AF0",
+                    "#5B3ED6"
+                ]
+            },
+            {
+                "name": "Dropbox Slate",
+                "colors": [
+                    "#3D4B65",
+                    "#2D3748"
+                ]
+            },
+            {
+                "name": "Dropbox Crimson",
+                "colors": [
+                    "#E31C3D",
+                    "#B31B1B"
+                ]
+            },
+            {
+                "name": "Dropbox Mint",
+                "colors": [
+                    "#4CAF50",
+                    "#388E3C"
+                ]
+            },
+            {
+                "name": "Dropbox Amber",
+                "colors": [
+                    "#FFC107",
+                    "#FFA000"
+                ]
+            },
+            {
+                "name": "Dropbox Indigo",
+                "colors": [
+                    "#3F51B5",
+                    "#303F9F"
+                ]
+            },
+            {
+                "name": "Dropbox Coral",
+                "colors": [
+                    "#FF7F50",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Dropbox Lavender",
+                "colors": [
+                    "#E6E6FA",
+                    "#D8BFD8"
+                ]
+            },
+            {
+                "name": "Dropbox Olive",
+                "colors": [
+                    "#808000",
+                    "#556B2F"
+                ]
+            },
+            {
+                "name": "Dropbox Maroon",
+                "colors": [
+                    "#800000",
+                    "#8B0000"
+                ]
+            },
+            {
+                "name": "Dropbox Turquoise",
+                "colors": [
+                    "#40E0D0",
+                    "#48D1CC"
+                ]
+            },
+            {
+                "name": "Dropbox Sienna",
+                "colors": [
+                    "#A0522D",
+                    "#8B4513"
+                ]
+            },
+            {
+                "name": "Dropbox Plum",
+                "colors": [
+                    "#DDA0DD",
+                    "#D8BFD8"
+                ]
+            },
+            {
+                "name": "Dropbox Steel",
+                "colors": [
+                    "#4682B4",
+                    "#5F9EA0"
+                ]
+            },
+            {
+                "name": "Dropbox Rust",
+                "colors": [
+                    "#B7410E",
+                    "#A52A2A"
+                ]
+            },
+            {
+                "name": "Dropbox Khaki",
+                "colors": [
+                    "#F0E68C",
+                    "#BDB76B"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Airbnb",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Airbnb Coral",
+                "colors": [
+                    "#FF5A5F",
+                    "#FF385C"
+                ]
+            },
+            {
+                "name": "Airbnb Pink",
+                "colors": [
+                    "#FF80A0",
+                    "#FF5A5F"
+                ]
+            },
+            {
+                "name": "Airbnb Rausch",
+                "colors": [
+                    "#FF7E82",
+                    "#FF5A5F"
+                ]
+            },
+            {
+                "name": "Airbnb Babu",
+                "colors": [
+                    "#00A699",
+                    "#00827F"
+                ]
+            },
+            {
+                "name": "Airbnb Arches",
+                "colors": [
+                    "#FC642D",
+                    "#FF5A5F"
+                ]
+            },
+            {
+                "name": "Airbnb Hof",
+                "colors": [
+                    "#484848",
+                    "#2E2E2E"
+                ]
+            },
+            {
+                "name": "Airbnb Foggy",
+                "colors": [
+                    "#767676",
+                    "#606060"
+                ]
+            },
+            {
+                "name": "Airbnb Mint",
+                "colors": [
+                    "#008489",
+                    "#006C70"
+                ]
+            },
+            {
+                "name": "Airbnb Beach",
+                "colors": [
+                    "#FFB400",
+                    "#FFA700"
+                ]
+            },
+            {
+                "name": "Airbnb Sky",
+                "colors": [
+                    "#5AC0FF",
+                    "#4BAEFF"
+                ]
+            },
+            {
+                "name": "Airbnb Lavender",
+                "colors": [
+                    "#9966CC",
+                    "#8A4FCA"
+                ]
+            },
+            {
+                "name": "Airbnb Lime",
+                "colors": [
+                    "#7ACC00",
+                    "#65A800"
+                ]
+            },
+            {
+                "name": "Airbnb Ruby",
+                "colors": [
+                    "#D93900",
+                    "#B22D00"
+                ]
+            },
+            {
+                "name": "Airbnb Plum",
+                "colors": [
+                    "#A61D4C",
+                    "#8B1A41"
+                ]
+            },
+            {
+                "name": "Airbnb Denim",
+                "colors": [
+                    "#4D67A3",
+                    "#3D5280"
+                ]
+            },
+            {
+                "name": "Airbnb Olive",
+                "colors": [
+                    "#8C8C4C",
+                    "#737330"
+                ]
+            },
+            {
+                "name": "Airbnb Rust",
+                "colors": [
+                    "#D47B5A",
+                    "#C26647"
+                ]
+            },
+            {
+                "name": "Airbnb Seafoam",
+                "colors": [
+                    "#6ECEB2",
+                    "#59B89D"
+                ]
+            },
+            {
+                "name": "Airbnb Sangria",
+                "colors": [
+                    "#9C0F5F",
+                    "#850D50"
+                ]
+            },
+            {
+                "name": "Airbnb Terracotta",
+                "colors": [
+                    "#E07912",
+                    "#C46A10"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Slack",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Slack Aubergine",
+                "colors": [
+                    "#4A154B",
+                    "#3B0E3B"
+                ]
+            },
+            {
+                "name": "Slack Blue",
+                "colors": [
+                    "#36C5F0",
+                    "#2EB2E5"
+                ]
+            },
+            {
+                "name": "Slack Green",
+                "colors": [
+                    "#2EB67D",
+                    "#25A065"
+                ]
+            },
+            {
+                "name": "Slack Red",
+                "colors": [
+                    "#E01E5A",
+                    "#C41E52"
+                ]
+            },
+            {
+                "name": "Slack Yellow",
+                "colors": [
+                    "#ECB22E",
+                    "#D69E2E"
+                ]
+            },
+            {
+                "name": "Slack Lavender",
+                "colors": [
+                    "#8E6AC1",
+                    "#7C5AB0"
+                ]
+            },
+            {
+                "name": "Slack Tangerine",
+                "colors": [
+                    "#F6B042",
+                    "#E69F38"
+                ]
+            },
+            {
+                "name": "Slack Seafoam",
+                "colors": [
+                    "#44D3A7",
+                    "#3BB896"
+                ]
+            },
+            {
+                "name": "Slack Navy",
+                "colors": [
+                    "#1264A3",
+                    "#0F5187"
+                ]
+            },
+            {
+                "name": "Slack Plum",
+                "colors": [
+                    "#8B1A69",
+                    "#7A1660"
+                ]
+            },
+            {
+                "name": "Slack Coral",
+                "colors": [
+                    "#FF8B6A",
+                    "#FF7A55"
+                ]
+            },
+            {
+                "name": "Slack Slate",
+                "colors": [
+                    "#616061",
+                    "#4F4F4F"
+                ]
+            },
+            {
+                "name": "Slack Sky",
+                "colors": [
+                    "#70CAD1",
+                    "#62B7BD"
+                ]
+            },
+            {
+                "name": "Slack Mint",
+                "colors": [
+                    "#70B5A1",
+                    "#62A38F"
+                ]
+            },
+            {
+                "name": "Slack Berry",
+                "colors": [
+                    "#BB86FC",
+                    "#A56DE2"
+                ]
+            },
+            {
+                "name": "Slack Lemon",
+                "colors": [
+                    "#FFCF5C",
+                    "#FFB900"
+                ]
+            },
+            {
+                "name": "Slack Sapphire",
+                "colors": [
+                    "#007A5A",
+                    "#006A4D"
+                ]
+            },
+            {
+                "name": "Slack Ruby",
+                "colors": [
+                    "#E32072",
+                    "#C71D65"
+                ]
+            },
+            {
+                "name": "Slack Indigo",
+                "colors": [
+                    "#5B4C9D",
+                    "#4E418A"
+                ]
+            },
+            {
+                "name": "Slack Bronze",
+                "colors": [
+                    "#CD7F32",
+                    "#B16E2C"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Asana",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Asana Sunset",
+                "colors": [
+                    "#FF5263",
+                    "#FF7381"
+                ]
+            },
+            {
+                "name": "Asana Fog",
+                "colors": [
+                    "#F6F8F9",
+                    "#E8ECEE"
+                ]
+            },
+            {
+                "name": "Asana Cosmos",
+                "colors": [
+                    "#796eff",
+                    "#5B4ECC"
+                ]
+            },
+            {
+                "name": "Asana Flamingo",
+                "colors": [
+                    "#FE4D97",
+                    "#FF6CAB"
+                ]
+            },
+            {
+                "name": "Asana Aqua",
+                "colors": [
+                    "#40E0D0",
+                    "#4DD0E1"
+                ]
+            },
+            {
+                "name": "Asana Amethyst",
+                "colors": [
+                    "#9966CC",
+                    "#B39DDB"
+                ]
+            },
+            {
+                "name": "Asana Tangerine",
+                "colors": [
+                    "#FFAA00",
+                    "#FFB74D"
+                ]
+            },
+            {
+                "name": "Asana Emerald",
+                "colors": [
+                    "#50E3C2",
+                    "#4DB6AC"
+                ]
+            },
+            {
+                "name": "Asana Graphite",
+                "colors": [
+                    "#646F79",
+                    "#78909C"
+                ]
+            },
+            {
+                "name": "Asana Indigo",
+                "colors": [
+                    "#4A148C",
+                    "#6A1B9A"
+                ]
+            },
+            {
+                "name": "Asana Coral",
+                "colors": [
+                    "#FF6F61",
+                    "#FF8A80"
+                ]
+            },
+            {
+                "name": "Asana Sky",
+                "colors": [
+                    "#87CEEB",
+                    "#90CAF9"
+                ]
+            },
+            {
+                "name": "Asana Lime",
+                "colors": [
+                    "#CDDC39",
+                    "#D4E157"
+                ]
+            },
+            {
+                "name": "Asana Lavender",
+                "colors": [
+                    "#E6E6FA",
+                    "#D1C4E9"
+                ]
+            },
+            {
+                "name": "Asana Ruby",
+                "colors": [
+                    "#E0115F",
+                    "#E91E63"
+                ]
+            },
+            {
+                "name": "Asana Mint",
+                "colors": [
+                    "#98FF98",
+                    "#A5D6A7"
+                ]
+            },
+            {
+                "name": "Asana Sapphire",
+                "colors": [
+                    "#082567",
+                    "#0D47A1"
+                ]
+            },
+            {
+                "name": "Asana Amber",
+                "colors": [
+                    "#FFBF00",
+                    "#FFC107"
+                ]
+            },
+            {
+                "name": "Asana Slate",
+                "colors": [
+                    "#708090",
+                    "#78909C"
+                ]
+            },
+            {
+                "name": "Asana Peach",
+                "colors": [
+                    "#FFDAB9",
+                    "#FFCCBC"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "Xiaomi",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "Mi Orange",
+                "colors": [
+                    "#FF6900",
+                    "#FF9E00"
+                ]
+            },
+            {
+                "name": "Tech White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Minimal Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "MIUI Blue",
+                "colors": [
+                    "#0084FF",
+                    "#00B0FF"
+                ]
+            },
+            {
+                "name": "Ecosystem Green",
+                "colors": [
+                    "#4CAF50",
+                    "#8BC34A"
+                ]
+            },
+            {
+                "name": "Vibrant Red",
+                "colors": [
+                    "#F44336",
+                    "#FF5722"
+                ]
+            },
+            {
+                "name": "Smart Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFC107"
+                ]
+            },
+            {
+                "name": "Innovation Purple",
+                "colors": [
+                    "#9C27B0",
+                    "#673AB7"
+                ]
+            },
+            {
+                "name": "Efficient Gray",
+                "colors": [
+                    "#9E9E9E",
+                    "#BDBDBD"
+                ]
+            },
+            {
+                "name": "Fresh Cyan",
+                "colors": [
+                    "#00BCD4",
+                    "#03A9F4"
+                ]
+            },
+            {
+                "name": "AIoT Blue",
+                "colors": [
+                    "#2196F3",
+                    "#03A9F4"
+                ]
+            },
+            {
+                "name": "Mi Ecosystem",
+                "colors": [
+                    "#4CAF50",
+                    "#009688"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "OPPO",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "OPPO Green",
+                "colors": [
+                    "#008B45",
+                    "#00A86B"
+                ]
+            },
+            {
+                "name": "Starry Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Coral Orange",
+                "colors": [
+                    "#FF7F50",
+                    "#FFA07A"
+                ]
+            },
+            {
+                "name": "Aurora Blue",
+                "colors": [
+                    "#00BFFF",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Mint Green",
+                "colors": [
+                    "#98FB98",
+                    "#00FA9A"
+                ]
+            },
+            {
+                "name": "Sand Gold",
+                "colors": [
+                    "#FFD700",
+                    "#DAA520"
+                ]
+            },
+            {
+                "name": "Night Purple",
+                "colors": [
+                    "#483D8B",
+                    "#6A5ACD"
+                ]
+            },
+            {
+                "name": "Star White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0FFF0"
+                ]
+            },
+            {
+                "name": "ColorOS Blue",
+                "colors": [
+                    "#1E90FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Find Series Gold",
+                "colors": [
+                    "#FFD700",
+                    "#F0E68C"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "vivo",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "vivo Blue",
+                "colors": [
+                    "#0050FF",
+                    "#0080FF"
+                ]
+            },
+            {
+                "name": "Aurora White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0FFFF"
+                ]
+            },
+            {
+                "name": "Starry Black",
+                "colors": [
+                    "#000000",
+                    "#191970"
+                ]
+            },
+            {
+                "name": "Dream Pink",
+                "colors": [
+                    "#FFB6C1",
+                    "#FFC0CB"
+                ]
+            },
+            {
+                "name": "Aurora Blue",
+                "colors": [
+                    "#00BFFF",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Jade Green",
+                "colors": [
+                    "#00FA9A",
+                    "#3CB371"
+                ]
+            },
+            {
+                "name": "Sunshine Orange",
+                "colors": [
+                    "#FFA500",
+                    "#FF8C00"
+                ]
+            },
+            {
+                "name": "Deep Purple",
+                "colors": [
+                    "#8A2BE2",
+                    "#9400D3"
+                ]
+            },
+            {
+                "name": "Star Gold",
+                "colors": [
+                    "#FFD700",
+                    "#DAA520"
+                ]
+            },
+            {
+                "name": "Glacier Silver",
+                "colors": [
+                    "#E6E6FA",
+                    "#B0C4DE"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "DJI",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "DJI Red",
+                "colors": [
+                    "#FF2D1A",
+                    "#FF0000"
+                ]
+            },
+            {
+                "name": "Drone Silver",
+                "colors": [
+                    "#C0C0C0",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#4169E1",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Forest Green",
+                "colors": [
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Sunset Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Night Vision Purple",
+                "colors": [
+                    "#800080",
+                    "#8A2BE2"
+                ]
+            },
+            {
+                "name": "Horizon Orange",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0F8FF"
+                ]
+            },
+            {
+                "name": "FPV Black",
+                "colors": [
+                    "#000000",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "Camera Gray",
+                "colors": [
+                    "#696969",
+                    "#808080"
+                ]
+            },
+            {
+                "name": "Gimbal Cyan",
+                "colors": [
+                    "#40E0D0",
+                    "#48D1CC"
+                ]
+            },
+            {
+                "name": "Innovation Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            }
+        ]
+    },
+    {
+        "brand": "ByteDance",
+        "priority": 2,
+        "gradients": [
+            {
+                "name": "TikTok Red",
+                "colors": [
+                    "#FF0050",
+                    "#FF3B69"
+                ]
+            },
+            {
+                "name": "TikTok Cyan",
+                "colors": [
+                    "#00F2EA",
+                    "#00E8DE"
+                ]
+            },
+            {
+                "name": "Toutiao Red",
+                "colors": [
+                    "#D33C3C",
+                    "#FF4D4F"
+                ]
+            },
+            {
+                "name": "Xigua Video Red",
+                "colors": [
+                    "#FC2C54",
+                    "#FF4D4F"
+                ]
+            },
+            {
+                "name": "Lark Blue",
+                "colors": [
+                    "#1890FF",
+                    "#40A9FF"
+                ]
+            },
+            {
+                "name": "Tech Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Innovation White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Inspiration Purple",
+                "colors": [
+                    "#722ED1",
+                    "#9254DE"
+                ]
+            },
+            {
+                "name": "Energetic Orange",
+                "colors": [
+                    "#FA8C16",
+                    "#FFA940"
+                ]
+            },
+            {
+                "name": "Global Green",
+                "colors": [
+                    "#52C41A",
+                    "#73D13D"
+                ]
+            },
+            {
+                "name": "AI Blue",
+                "colors": [
+                    "#1890FF",
+                    "#40A9FF"
+                ]
+            },
+            {
+                "name": "Data Viz Yellow",
+                "colors": [
+                    "#FAAD14",
+                    "#FFC53D"
+                ]
+            },
+            {
+                "name": "Interactive Pink",
+                "colors": [
+                    "#EB2F96",
+                    "#F759AB"
+                ]
+            },
+            {
+                "name": "Efficiency Cyan",
+                "colors": [
+                    "#13C2C2",
+                    "#36CFC9"
+                ]
+            }
+        ]
+    }
+]
