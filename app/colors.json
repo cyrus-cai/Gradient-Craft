@@ -5474,5 +5474,67 @@
                 ]
             }
         ]
+    },
+    {
+        "brand": "Anthropic",
+        "priority": 3,
+        "gradients": [
+            {
+                "name": "Anthropic Orange",
+                "colors": [
+                    "#FF7F50",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Anthropic Blue",
+                "colors": [
+                    "#74B3F3",
+                    "#5BA4F0"
+                ]
+            },
+            {
+                "name": "Anthropic Black",
+                "colors": [
+                    "#000000",
+                    "#333333"
+                ]
+            },
+            {
+                "name": "Anthropic White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F8F8F8"
+                ]
+            },
+            {
+                "name": "Anthropic Beige",
+                "colors": [
+                    "#F5F3EF",
+                    "#EAE7E0"
+                ]
+            },
+            {
+                "name": "Anthropic Pink",
+                "colors": [
+                    "#F5D0C5",
+                    "#F0BBA8"
+                ]
+            },
+            {
+                "name": "Blue to White",
+                "colors": [
+                    "#74B3F3",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "Orange to Beige",
+                "colors": [
+                    "#FF7F50",
+                    "#F5F3EF"
+                ]
+            }
+        ]
     }
 ]
