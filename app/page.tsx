@@ -1,6 +1,6 @@
 'use client'
 
-import { Copy, Download, LucideIcon, Palette, Search } from 'lucide-react';
+import { Copy, Download, Github, LucideIcon, Palette, Search } from 'lucide-react';
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -272,18 +272,43 @@ function GradientCard({ gradient, index }: GradientCardProps): JSX.Element {
   );
 }
 
-function Footer(): JSX.Element {
+const Footer = () => {
   return (
     <footer className="bg-transparent py-8">
-      <div className="flex justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" onClick={() => window.open("https://x.com/gradientcraft")}>
-        <p className="text-sm text-black/50">&copy; 2024 GradientCraft. All rights reserved.</p>
-        <Image
-          src='/Icons/X.png'
-          width={24}
-          height={24}
-          alt='brandiconimage'
-        />
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+          {/* <p className="text-sm text-black/50">&copy; 2024 GradientCraft. All rights reserved.</p> */}
+          <div
+            className=" cursor-pointer flex items-center gap-2"
+            onClick={() => window.open("https://github.com/cyrus-cai/Gradient-Craft")}
+          >
+            <Image
+              src='/Icons/Github.svg'
+              width={20}
+              height={20}
+              alt='X icon'
+            />
+            <p className='text-sm'>
+              Gradient Craft is a Opensource Project under MIT license
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center space-x-6">
+          <div
+            className="cursor-pointer"
+            onClick={() => window.open("https://x.com/gradientcraft")}
+          >
+            <Image
+              src='/Icons/X.png'
+              width={24}
+              height={24}
+              alt='X icon'
+              style={{ width: 'auto', height: '24px' }}
+            />
+          </div>
+
+        </div>
       </div>
     </footer>
   );
-}
+};
