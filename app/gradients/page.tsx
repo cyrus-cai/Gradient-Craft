@@ -518,7 +518,7 @@ LinearGradient(
                 {/* Right Sidebar */}
                 {selectedGradientInfo && (
                     <div
-                        className="fixed top-96 right-12 h-96 w-96 bg-gradient-to-r from-white/75 to-white/100 shadow-md rounded-3xl overflow-hidden z-10 animate-fadeIn"
+                        className="fixed top-96 right-12 h-96 w-96 bg-gradient-to-r from-white/75 to-white/100 shadow-md rounded-3xl overflow-hidden z-10 animate-fadeIn hidden 2xl:block"
                         style={{
                             animation: 'fadeIn 0.5s ease-out'
                         }}
