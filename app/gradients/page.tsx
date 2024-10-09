@@ -7,6 +7,7 @@ import { Toast, ToastProvider } from "@/components/ui/toast"
 import { colorDifference, findClosestTailwindColor } from '../../lib/colorUtils';
 
 import ColorPicker from '@/components/color-picker';
+import ColorSwatchInfo from './ColorSwatchInfo';
 import FloatingFeedback from '@/components/feedback';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,25 +29,32 @@ interface BrandGradient {
 
 type BrandOption = BrandGradient | { brand: 'All' };
 
+interface SelectedGradientInfo extends Gradient {
+    brand: string;
+}
+
 const GradientShowcase = () => {
     const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
-    const [lastUsedOption, setLastUsedOption] = useState('Tailwind BG');
+    const [lastUsedOption, setLastUsedOption] = useState<string>('Tailwind BG');
     const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState<string>('');
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
-    const [pickerEnabled, setPickerEnabled] = useState(false);
+    const [pickerEnabled, setPickerEnabled] = useState<boolean>(false);
     const [selectedGradient, setSelectedGradient] = useState<string | null>(null);
     const { toast } = useToast()
     const [totalUniqueColors, setTotalUniqueColors] = useState<number | string>('');
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const contentRef = useRef<HTMLDivElement>(null);
     const switchRef = useRef<HTMLDivElement>(null);
-    const [contentHeight, setContentHeight] = useState(0);
-    const [isAnyPopoverOpen, setIsAnyPopoverOpen] = useState(false);
-
-
+    const [contentHeight, setContentHeight] = useState<number>(0);
+    const [isAnyPopoverOpen, setIsAnyPopoverOpen] = useState<boolean>(false);
     const [hoveredGradientId, setHoveredGradientId] = useState<string | null>(null);
     const hoverTimerRef = useRef<number | null>(null);
+    const [selectedGradientInfo, setSelectedGradientInfo] = useState<SelectedGradientInfo | null>(null);
+
+    const handleGradientSelect = useCallback((gradient: Gradient, brand: string) => {
+        setSelectedGradientInfo({ ...gradient, brand });
+    }, []);
 
     const handleCopyButtonMouseEnter = useCallback((gradientId: string) => {
         if (hoverTimerRef.current !== null) {
@@ -282,7 +290,7 @@ LinearGradient(
             ? brandGradients.find(brand =>
                 brand.gradients.some(g => g.name === gradient.name)
             )?.brand || 'Unknown'
-            : null;
+            : selectedBrand || 'All';
 
         const gradientId = `gradient-${index}`;
         const isSelected = selectedGradient === gradientId;
@@ -299,7 +307,16 @@ LinearGradient(
             { label: 'Color Array', action: () => copyToClipboard(generateColorArray(gradient), "Color Array", gradientId) },
         ];
         return (
-            <div key={index} className="flex flex-col items-center">
+            <div
+                key={index}
+                className={`relative w-full h-36 rounded-3xl bg-amber-400/10 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 `}
+                onMouseEnter={() => handleCopyButtonMouseEnter(gradientId)}
+                onMouseLeave={handleCopyButtonMouseLeave}
+                onClick={() => {
+                    setSelectedGradient(gradientId);
+                    handleGradientSelect(gradient, showCompany ? company : selectedBrand || 'Unknown');
+                }}
+            >
                 <Popover>
                     <PopoverTrigger asChild>
                         <div
@@ -372,9 +389,9 @@ LinearGradient(
 
     return (
         <ToastProvider>
-            <div className="flex bg-amber-50 min-h-screen overflow-hidden px-8 lg:px-24 xl:px-40 2xl:pl-96 2xl:pr-80">
+            <div className="flex bg-amber-50 min-h-screen overflow-hidden px-8 lg:px-24 xl:px-40 2xl:pl-80 2xl:pr-96">
                 {/* Floating Sidebar */}
-                <div className="fixed xl:left-32 2xl:left-80 top-8 bottom-8 w-72 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
+                <div className="fixed xl:left-32 2xl:left-72 top-8 bottom-8 w-72 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
                     <div className="h-full flex flex-col overflow-y-auto">
                         <div className="p-6">
                             <div className="w-full max-w-md">
@@ -460,7 +477,7 @@ LinearGradient(
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 flex flex-col overflow-hidden ml-72">
+                <div className="flex-1 flex flex-col overflow-hidden ml-80 mr-24">
                     {/* Search Bar */}
                     <div className="px-6 pt-10 pb-4 fixed z-50 backdrop:blur-2xl">
                         <div className="relative mb-4">
@@ -497,6 +514,18 @@ LinearGradient(
                         </div>
                     </div>
                 </div>
+
+                {/* Right Sidebar */}
+                {selectedGradientInfo && (
+                    <div
+                        className="fixed top-96 right-12 h-96 w-96 bg-gradient-to-r from-white/75 to-white/100 shadow-md rounded-3xl overflow-hidden z-10 animate-fadeIn"
+                        style={{
+                            animation: 'fadeIn 0.5s ease-out'
+                        }}
+                    >
+                        <ColorSwatchInfo selectedGradientInfo={selectedGradientInfo} />
+                    </div>
+                )}
 
                 <Toast />
             </div>

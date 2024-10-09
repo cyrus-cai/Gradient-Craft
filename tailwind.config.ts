@@ -60,8 +60,14 @@ const config: Config = {
 				'gradient-x': 'gradient-x 15s ease infinite',
 				'gradient-y': 'gradient-y 15s ease infinite',
 				'gradient-xy': 'gradient-xy 15s ease infinite',
+				'slide-left': 'slide-left 0.3s ease-out forwards',
 			},
 			keyframes: {
+				'slide-left': {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(-8px)' },
+					'100%': { transform: 'translateX(-4px)' },
+				},
 				'gradient-y': {
 					'0%, 100%': {
 						'background-size': '400% 400%',
