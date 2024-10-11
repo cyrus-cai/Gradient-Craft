@@ -134,7 +134,7 @@ const GradientShowcase = () => {
                 />
 
                 {/* Main Content */}
-                <div className="flex-1 flex flex-col overflow-hidden 2xl:mx-64">
+                <div className="flex-1 flex flex-col overflow-hidden xl:mx-80">
                     {/* Search Bar */}
                     <div className="px-6 pt-10 pb-4 fixed z-50 backdrop:blur-2xl">
                         <div className="relative mb-4">
