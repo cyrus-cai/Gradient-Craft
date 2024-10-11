@@ -1,4 +1,4 @@
-import { ChevronDown, Copy, Download, X } from 'lucide-react';
+import { ChevronDown, Copy, Download, Images, Type, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
@@ -275,18 +275,18 @@ LinearGradient(
         switch (selectedFramework) {
             case 'tailwind':
                 return [
-                    { label: 'Tailwind Text', action: () => generateTailwindText(selectedGradientInfo) },
-                    { label: 'Tailwind Background', action: () => generateTailwindBackground(selectedGradientInfo) },
+                    { label: 'Text', action: () => generateTailwindText(selectedGradientInfo) },
+                    { label: 'Background', action: () => generateTailwindBackground(selectedGradientInfo) },
                 ];
             case 'css':
                 return [
-                    { label: 'CSS Text', action: () => generateCSSGradient(selectedGradientInfo, 'text') },
-                    { label: 'CSS Background', action: () => generateCSSGradient(selectedGradientInfo, 'background') },
+                    { label: 'Text', action: () => generateCSSGradient(selectedGradientInfo, 'text') },
+                    { label: 'Background', action: () => generateCSSGradient(selectedGradientInfo, 'background') },
                 ];
             case 'swiftui':
                 return [
-                    { label: 'SwiftUI Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground') },
-                    { label: 'SwiftUI Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background') },
+                    { label: 'Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground') },
+                    { label: 'Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background') },
                 ];
             default:
                 return [];
@@ -328,7 +328,7 @@ LinearGradient(
                             <h4 className="font-semibold font-serif text-gray-600 mb-3 text-sm">Colors</h4>
                             <div className="grid grid-cols-2 gap-2">
                                 {colors.map((color, index) => (
-                                    <div key={index} className="flex items-center rounded-xl p-2 bg-amber-100/25 text-gray-700">
+                                    <div key={index} className="flex items-center rounded-xl text-gray-700">
                                         <div className="w-6 h-6 rounded-full mr-3 shadow-inner" style={{ backgroundColor: color }} />
                                         <span className="text-xs font-mono">{color}</span>
                                     </div>
@@ -355,14 +355,16 @@ LinearGradient(
                                             } font-serif focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500`}
                                         onClick={() => copyToClipboard(option.action(), option.label)}
                                     >
-                                        <span className="flex items-center">
-                                            <Image
+                                        <span className="flex items-center gap-2">
+                                            {option.label === 'Text' || option.label === 'Foreground' && <Type className='w-4' />}
+                                            {option.label === 'Background' && <Images className='w-4' />}
+                                            {/* <Image
                                                 src={`/Icons/${option.label}.svg`}
                                                 height={16}
                                                 width={16}
                                                 alt=''
                                                 className="mr-2"
-                                            />
+                                            /> */}
                                             {copiedStates[option.label] ? 'Copied!' : option.label}
                                         </span>
                                         <Copy className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
