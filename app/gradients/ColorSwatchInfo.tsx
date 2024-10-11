@@ -1,5 +1,5 @@
-import { Copy, X } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { ChevronDown, Copy, Download, X } from 'lucide-react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
@@ -19,9 +19,76 @@ interface ColorSwatchInfoProps {
     onClose: () => void;
 }
 
+interface FrameworkOption {
+    value: string;
+    label: string;
+}
+
+interface CustomSelectProps {
+    options: FrameworkOption[];
+    value: string;
+    onChange: (value: string) => void;
+}
+
+const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const selectRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    return (
+        <div ref={selectRef} className="relative">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full px-4 py-2 text-xs rounded-xl font-mono bg-amber-100/25 text-gray-700 hover:bg-amber-100/50 transition-all duration-200 flex justify-between items-center border border-transparent focus:outline-none focus:ring-2 focus:ring-amber-300"
+            >
+                <span className="truncate">
+                    {options.find(option => option.value === value)?.label}
+                </span>
+                <ChevronDown size={14} className={`ml-2 flex-shrink-0 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />
+            </button>
+            {isOpen && (
+                <div className="absolute z-10 w-full mt-1 bg-white rounded-xl shadow-lg max-h-64 overflow-auto border border-amber-100">
+                    {options.map((option) => (
+                        <button
+                            key={option.value}
+                            className={`w-full px-4 py-2 text-xs font-mono text-left hover:bg-amber-100/50 transition-colors duration-200 ${option.value === value ? 'bg-amber-100/25 font-semibold' : ''}`}
+                            onClick={() => {
+                                onChange(option.value);
+                                setIsOpen(false);
+                            }}
+                        >
+                            {option.label}
+                        </button>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
+
 const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo, onClose }) => {
     const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
     const [isVisible, setIsVisible] = useState(false);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
+    const [lastCopied, setLastCopied] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (selectedGradientInfo) {
+            setIsVisible(true);
+        }
+    }, [selectedGradientInfo]);
+
 
     useEffect(() => {
         if (selectedGradientInfo) {
@@ -33,7 +100,47 @@ const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo,
         return null;
     }
 
-    const { name, colors, brand } = selectedGradientInfo;
+    const copyBackgroundStyle = () => {
+        let style = '';
+        switch (selectedFramework) {
+            case 'tailwind':
+                style = generateTailwindBackground(selectedGradientInfo);
+                break;
+            case 'css':
+                style = generateCSSGradient(selectedGradientInfo, 'background');
+                break;
+            case 'swiftui':
+                style = generateSwiftUIGradient(selectedGradientInfo, 'background');
+                break;
+        }
+        copyToClipboard(style, 'Background Style');
+    };
+
+    const copyTextStyle = () => {
+        let style = '';
+        switch (selectedFramework) {
+            case 'tailwind':
+                style = generateTailwindText(selectedGradientInfo);
+                break;
+            case 'css':
+                style = generateCSSGradient(selectedGradientInfo, 'text');
+                break;
+            case 'swiftui':
+                style = generateSwiftUIGradient(selectedGradientInfo, 'foreground');
+                break;
+        }
+        copyToClipboard(style, 'Text Style');
+    };
+
+    const copyToClipboard = useCallback((text: string, label: string) => {
+        navigator.clipboard.writeText(text);
+        setCopiedStates(prev => ({ ...prev, [label]: true }));
+        setLastCopied(label);
+        setTimeout(() => {
+            setCopiedStates(prev => ({ ...prev, [label]: false }));
+            setLastCopied(null);
+        }, 2000);
+    }, []);
 
     const generateTailwindText = (gradient: Gradient) => {
         const gradientClasses = gradient.colors.map((color, index) => {
@@ -106,27 +213,90 @@ LinearGradient(
         }
     };
 
+
+    useEffect(() => {
+        const handleKeyPress = (event: KeyboardEvent) => {
+            if (!selectedGradientInfo) return;
+
+            if (event.key === 'b' || event.key === 'B') {
+                copyBackgroundStyle();
+            } else if (event.key === 't' || event.key === 'T') {
+                copyTextStyle();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyPress);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [selectedGradientInfo, selectedFramework]);
+
+    if (!selectedGradientInfo) {
+        return null;
+    }
+
+
+    const { name, colors, brand } = selectedGradientInfo;
+
+
     const generateColorArray = (gradient: Gradient) => {
         return `const colors = [${gradient.colors.map(color => `'${color}'`).join(', ')}];`;
     };
 
-    const copyOptions = [
-        { label: 'Tailwind Text', action: () => generateTailwindText(selectedGradientInfo) },
-        { label: 'Tailwind Background', action: () => generateTailwindBackground(selectedGradientInfo) },
-        { label: 'CSS Text', action: () => generateCSSGradient(selectedGradientInfo, 'text') },
-        { label: 'CSS Background', action: () => generateCSSGradient(selectedGradientInfo, 'background') },
-        { label: 'SwiftUI Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground') },
-        { label: 'SwiftUI Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background') },
-        { label: 'Color Array', action: () => generateColorArray(selectedGradientInfo) },
+    const exportImage = () => {
+        if (canvasRef.current) {
+            const canvas = canvasRef.current;
+            const ctx = canvas.getContext('2d');
+            if (ctx) {
+                const gradient = ctx.createLinearGradient(0, 0, 400, 0);
+                colors.forEach((color, index) => {
+                    gradient.addColorStop(index / (colors.length - 1), color);
+                });
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 400, 400);
+
+                const dataUrl = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.href = dataUrl;
+                link.download = `${name.replace(/\s+/g, '-').toLowerCase()}-gradient.png`;
+                link.click();
+            }
+        }
+    };
+
+    const frameworkOptions = [
+        { value: 'tailwind', label: 'Tailwind' },
+        { value: 'css', label: 'CSS' },
+        { value: 'swiftui', label: 'SwiftUI' },
     ];
 
-    const copyToClipboard = (text: string, label: string) => {
-        navigator.clipboard.writeText(text);
-        setCopiedStates(prev => ({ ...prev, [label]: true }));
-        setTimeout(() => {
-            setCopiedStates(prev => ({ ...prev, [label]: false }));
-        }, 2000);
+    const getCopyOptions = () => {
+        switch (selectedFramework) {
+            case 'tailwind':
+                return [
+                    { label: 'Tailwind Text', action: () => generateTailwindText(selectedGradientInfo) },
+                    { label: 'Tailwind Background', action: () => generateTailwindBackground(selectedGradientInfo) },
+                ];
+            case 'css':
+                return [
+                    { label: 'CSS Text', action: () => generateCSSGradient(selectedGradientInfo, 'text') },
+                    { label: 'CSS Background', action: () => generateCSSGradient(selectedGradientInfo, 'background') },
+                ];
+            case 'swiftui':
+                return [
+                    { label: 'SwiftUI Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground') },
+                    { label: 'SwiftUI Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background') },
+                ];
+            default:
+                return [];
+        }
     };
+
+    const copyOptions = [
+        ...getCopyOptions(),
+        // { label: 'Color Array', action: () => generateColorArray(selectedGradientInfo) },
+    ];
 
     const handleClose = () => {
         setIsVisible(false);
@@ -134,7 +304,7 @@ LinearGradient(
     };
 
     return (
-        <div className={`fixed right-4 top-4 bottom-4 w-1/5 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10 transition-all duration-300 ease-in-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+        <div className={`fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 shadow-lg rounded-3xl overflow-hidden z-10 transition-all duration-300 ease-in-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <div className="w-full max-w-md">
@@ -155,7 +325,7 @@ LinearGradient(
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <div className="space-y-6">
                         <div>
-                            <h4 className="font-semibold font-serif text-gray-600 mb-3 text-xs">Colors</h4>
+                            <h4 className="font-semibold font-serif text-gray-600 mb-3 text-sm">Colors</h4>
                             <div className="grid grid-cols-2 gap-2">
                                 {colors.map((color, index) => (
                                     <div key={index} className="flex items-center rounded-xl p-2 bg-amber-100/25 text-gray-700">
@@ -165,8 +335,16 @@ LinearGradient(
                                 ))}
                             </div>
                         </div>
+
                         <div>
-                            <h4 className="font-semibold font-serif text-gray-600 mb-3 text-xs">Copy Options</h4>
+                            <div className='flex items-center justify-between py-4'>
+                                <h3 className="font-semibold font-serif text-gray-600 text-sm items-center">Copy Options</h3>
+                                <CustomSelect
+                                    options={frameworkOptions}
+                                    value={selectedFramework}
+                                    onChange={setSelectedFramework}
+                                />
+                            </div>
                             <div className="grid grid-cols-1 gap-2">
                                 {copyOptions.map((option, idx) => (
                                     <button
@@ -190,13 +368,26 @@ LinearGradient(
                                         <Copy className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
                                     </button>
                                 ))}
+                                {/* <button
+                                    className="w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 bg-amber-100/25 text-gray-700 hover:bg-amber-100 font-serif focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+                                    onClick={exportImage}
+                                >
+                                    <span className="flex items-center gap-2">
+                                        <div className='w-4 h-4 rounded-full bg-gradient-to-r from-amber-500/75 to-orange-300/75 gap-4'></div>
+                                        Export 400x400 Image
+                                    </span>
+                                    <Download className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
+                                </button> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <canvas ref={canvasRef} width="400" height="400" style={{ display: 'none' }} />
         </div>
     );
 };
+
+
 
 export default ColorSwatchInfo;

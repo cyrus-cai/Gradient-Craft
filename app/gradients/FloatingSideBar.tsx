@@ -87,7 +87,7 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
     }, {} as Record<string, BrandOption[]>);
 
     return (
-        <div className="fixed left-4 2xl:left-96 top-4 bottom-4 w-1/5 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
+        <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <div className="w-full max-w-md">
