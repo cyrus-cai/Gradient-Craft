@@ -356,7 +356,8 @@ LinearGradient(
                                         onClick={() => copyToClipboard(option.action(), option.label)}
                                     >
                                         <span className="flex items-center gap-2">
-                                            {option.label === 'Text' || option.label === 'Foreground' && <Type className='w-4' />}
+                                            {option.label === 'Text' && <Type className='w-4' />}
+                                            {option.label === 'Foreground' && <Type className='w-4' />}
                                             {option.label === 'Background' && <Images className='w-4' />}
                                             {/* <Image
                                                 src={`/Icons/${option.label}.svg`}
