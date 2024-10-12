@@ -4,9 +4,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { Toast, ToastProvider } from "@/components/ui/toast"
 
-import ColorSwatchInfo from './ColorSwatchInfo';
+import ColorSwatchInfo from './RBar';
 import FloatingFeedback from '@/components/feedback';
-import FloatingSidebar from './FloatingSideBar';
+import FloatingSidebar from './LBar';
 import brandGradients from '../colors.json';
 import { colorDifference } from '../../lib/colorUtils';
 import countUniqueColors from '@/lib/uniqueColors';

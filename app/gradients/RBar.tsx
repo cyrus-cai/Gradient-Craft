@@ -1,6 +1,7 @@
-import { ChevronDown, Copy, Download, Images, Type, X } from 'lucide-react';
+import { ArrowDownToLine, ChevronDown, Copy, Download, Images, Type, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { findClosestTailwindColor } from '@/lib/colorUtils';
@@ -96,6 +97,7 @@ const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo,
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
     const [lastCopied, setLastCopied] = useState<string | null>(null);
+    const [colorCardHovering, setColorCardHovering] = useState(false)
 
     useEffect(() => {
         if (selectedGradientInfo) {
@@ -250,13 +252,8 @@ LinearGradient(
         return null;
     }
 
-
     const { name, colors, brand } = selectedGradientInfo;
 
-
-    const generateColorArray = (gradient: Gradient) => {
-        return `const colors = [${gradient.colors.map(color => `'${color}'`).join(', ')}];`;
-    };
 
     const exportImage = () => {
         if (canvasRef.current) {
@@ -321,18 +318,32 @@ LinearGradient(
         <div className={`fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 shadow-lg rounded-3xl overflow-hidden z-10 transition-all duration-300 ease-in-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
-                    <div className="w-full max-w-md">
-                        <div className='mb-4 w-full flex items-center justify-between'>
-                            <h2 className="text-2xl font-serif font-semibold text-gray-800">{name}</h2>
-                            <button
-                                onClick={handleClose}
-                                className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
-                            >
-                                <X size={24} />
-                            </button>
+                    <div className='mb-4 w-full flex items-center justify-between'>
+                        <h2 className="text-2xl font-serif font-semibold text-gray-800">{name}</h2>
+                        <button
+                            onClick={handleClose}
+                            className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                        >
+                            <X size={24} />
+                        </button>
+                    </div>
+                    <p className="text-xs text-gray-500 mb-4 font-serif">from {brand}</p>
+                    <div className="w-full max-w-md"
+                        onMouseEnter={() => setColorCardHovering(true)}
+                        onMouseLeave={() => setColorCardHovering(false)}
+                    >
+
+                        <div className='flex flex-col'>
+                            <div className="h-28 rounded-xl shadow-inner"
+                                style={{ background: `linear-gradient(to right, ${colors.join(', ')})` }} />
+                            <div className='w-full flex justify-end -mt-10 -ml-2'>
+                                {colorCardHovering ? <Button onClick={exportImage} size='icon'>
+                                    <ArrowDownToLine className='w-4' />
+                                </Button> :
+                                    <div className='h-8 w-8'></div>
+                                }
+                            </div>
                         </div>
-                        <p className="text-xs text-gray-500 mb-4 font-serif">from {brand}</p>
-                        <div className="h-28 rounded-xl mb-6 shadow-inner" style={{ background: `linear-gradient(to right, ${colors.join(', ')})` }} />
                     </div>
                 </div>
                 <Separator className="bg-gray-200" />

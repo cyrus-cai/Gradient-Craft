@@ -227,30 +227,6 @@ function FeatureCard({ icon: Icon, title, description, index }: FeatureCardProps
   );
 }
 
-function Showcase(): JSX.Element {
-  const gradients: string[] = [
-    "linear-gradient(to right, #ff6e7f, #bfe9ff)",
-    "linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4)",
-    "linear-gradient(to right, #654ea3, #eaafc8)",
-    "linear-gradient(to right, #00b09b, #96c93d)",
-    "linear-gradient(to right, #EECDA3, #EF629F)",
-    "linear-gradient(to right, #43C6AC, #191654)",
-  ];
-
-  return (
-    <section id="showcase" className="py-20 bg-amber-50 text-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 tracking-tighter">Gradient Showcase</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          {gradients.map((gradient, index) => (
-            <GradientCard key={index} gradient={gradient} index={index} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 interface GradientCardProps {
   gradient: string;
   index: number;
