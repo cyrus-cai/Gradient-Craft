@@ -51,6 +51,13 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full px-4 py-2 text-xs rounded-xl font-mono bg-amber-100/25 text-gray-700 hover:bg-amber-100/50 transition-all duration-200 flex justify-between items-center border border-transparent focus:outline-none focus:ring-2 focus:ring-amber-300"
             >
+                <Image
+                    src={`/Icons/${options.find(option => option.value === value)?.label}.svg`}
+                    height={16}
+                    width={16}
+                    alt=''
+                    className="mr-2"
+                />
                 <span className="truncate">
                     {options.find(option => option.value === value)?.label}
                 </span>
@@ -61,12 +68,19 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
                     {options.map((option) => (
                         <button
                             key={option.value}
-                            className={`w-full px-4 py-2 text-xs font-mono text-left hover:bg-amber-100/50 transition-colors duration-200 ${option.value === value ? 'bg-amber-100/25 font-semibold' : ''}`}
+                            className={`w-full px-4 py-2 flex items-center text-xs font-mono text-left hover:bg-amber-100/50 transition-colors duration-200 ${option.value === value ? 'bg-amber-100/25 font-semibold' : ''}`}
                             onClick={() => {
                                 onChange(option.value);
                                 setIsOpen(false);
                             }}
                         >
+                            {/* <Image
+                                src={`/Icons/${option.label}.svg`}
+                                height={16}
+                                width={16}
+                                alt=''
+                                className="mr-2"
+                            /> */}
                             {option.label}
                         </button>
                     ))}

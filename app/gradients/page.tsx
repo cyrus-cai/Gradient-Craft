@@ -125,7 +125,7 @@ const GradientShowcase = () => {
 
     return (
         <ToastProvider>
-            <div className="flex bg-amber-50 min-h-screen overflow-hidden lg:px:56 2xl:px-96">
+            <div className="flex bg-amber-50 min-h-screen overflow-hidden px-96">
                 <FloatingSidebar
                     brandGradients={brandGradients}
                     selectedBrand={selectedBrand}
@@ -134,7 +134,7 @@ const GradientShowcase = () => {
                 />
 
                 {/* Main Content */}
-                <div className="flex-1 flex flex-col overflow-hidden xl:mx-80">
+                <div className="flex-1 flex flex-col overflow-hidden">
                     {/* Search Bar */}
                     <div className="px-6 pt-10 pb-4 fixed z-50 backdrop:blur-2xl">
                         <div className="relative mb-4">
