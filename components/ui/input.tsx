@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Search } from 'lucide-react';
+import { Shortcut } from './shortcut';
 
 const EnhancedInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, type, ...props }, ref) => {
@@ -27,12 +28,8 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttribut
           ref={ref}
           {...props}
         />
-        <div className="absolute px-2 py-1 right-4 top-1/2 rounded-sm font-mono transform -translate-y-1/2 text-xs text-amber-800 bg-amber-500/10">
-          /
-        </div>
-        <div className="absolute px-2 py-1 right-12 top-1/2 rounded-sm font-mono transform -translate-y-1/2 text-xs text-amber-800 bg-amber-500/10">
-          ⌘+k
-        </div>
+        <Shortcut className='absolute right-4 top-1/2 -translate-y-1/2'>/</Shortcut>
+        {/* <Shortcut className='absolute right-12 top-1/2 -translate-y-1/2'> ⌘+k </Shortcut> */}
       </div>
     );
   }

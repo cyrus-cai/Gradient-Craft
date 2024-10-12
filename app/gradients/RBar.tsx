@@ -1,9 +1,11 @@
-import { ArrowDownToLine, ChevronDown, Copy, Download, Images, Type, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowDownToLine, ChevronDown, CircleDashed, Copy, Images, Square, Type, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
+import { Shortcut } from '@/components/ui/shortcut';
 import { findClosestTailwindColor } from '@/lib/colorUtils';
 
 interface Gradient {
@@ -75,13 +77,6 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
                                 setIsOpen(false);
                             }}
                         >
-                            {/* <Image
-                                src={`/Icons/${option.label}.svg`}
-                                height={16}
-                                width={16}
-                                alt=''
-                                className="mr-2"
-                            /> */}
                             {option.label}
                         </button>
                     ))}
@@ -97,6 +92,7 @@ const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo,
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
     const [lastCopied, setLastCopied] = useState<string | null>(null);
+    const [hoveredOption, setHoveredOption] = useState<string | null>(null);
     const [colorCardHovering, setColorCardHovering] = useState(false)
 
     useEffect(() => {
@@ -104,6 +100,43 @@ const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo,
             setIsVisible(true);
         }
     }, [selectedGradientInfo]);
+
+    useEffect(() => {
+        const handleKeyPress = (event: KeyboardEvent) => {
+            if (!selectedGradientInfo) return;
+
+            const copyOptions = getCopyOptions();
+            const keyToIndex: { [key: string]: number } = {
+                'Enter': 0,
+                '1': 0,
+                '2': 1,
+                '3': 2,
+                '4': 3,
+                '5': 4,
+                '6': 5,
+                '7': 6,
+                '8': 7,
+                '9': 8,
+            };
+
+            let index = keyToIndex[event.key];
+
+            if (event.key === 'Enter' && event.metaKey) {
+                index = 1;
+            }
+
+            if (index !== undefined && index < copyOptions.length) {
+                const option = copyOptions[index];
+                copyToClipboard(option.action(), option.label);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyPress);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [selectedGradientInfo, selectedFramework]);
 
 
     useEffect(() => {
@@ -177,6 +210,17 @@ const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo,
         }).join(' ');
         return `bg-gradient-to-r ${gradientClasses}`;
     };
+
+    const generateTailwindBorder = (gradient: Gradient) => {
+        const borderColor = findClosestTailwindColor(gradient.colors[0]);
+        return `border border-${borderColor}`;
+    };
+
+    const generateTailwindRing = (gradient: Gradient) => {
+        const ringColor = findClosestTailwindColor(gradient.colors[0]);
+        return `ring-1 ring-${ringColor}`;
+    };
+
 
     const generateCSSGradient = (gradient: Gradient, type: 'background' | 'text' | 'both' = 'both') => {
         const backgroundCode = `background: linear-gradient(to right, ${gradient.colors.join(', ')});`;
@@ -286,28 +330,27 @@ LinearGradient(
         switch (selectedFramework) {
             case 'tailwind':
                 return [
-                    { label: 'Text', action: () => generateTailwindText(selectedGradientInfo) },
-                    { label: 'Background', action: () => generateTailwindBackground(selectedGradientInfo) },
+                    { label: 'Text', action: () => generateTailwindText(selectedGradientInfo), shortcut: 'Enter' },
+                    { label: 'Background', action: () => generateTailwindBackground(selectedGradientInfo), shortcut: '⌘+Enter' },
+                    { label: 'Border', action: () => generateTailwindBorder(selectedGradientInfo), shortcut: '3' },
+                    { label: 'Ring', action: () => generateTailwindRing(selectedGradientInfo), shortcut: '4' },
                 ];
             case 'css':
                 return [
-                    { label: 'Text', action: () => generateCSSGradient(selectedGradientInfo, 'text') },
-                    { label: 'Background', action: () => generateCSSGradient(selectedGradientInfo, 'background') },
+                    { label: 'Text', action: () => generateCSSGradient(selectedGradientInfo, 'text'), shortcut: 'Enter' },
+                    { label: 'Background', action: () => generateCSSGradient(selectedGradientInfo, 'background'), shortcut: '⌘+Enter' },
                 ];
             case 'swiftui':
                 return [
-                    { label: 'Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground') },
-                    { label: 'Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background') },
+                    { label: 'Foreground', action: () => generateSwiftUIGradient(selectedGradientInfo, 'foreground'), shortcut: 'Enter' },
+                    { label: 'Background', action: () => generateSwiftUIGradient(selectedGradientInfo, 'background'), shortcut: '⌘+Enter' },
                 ];
             default:
                 return [];
         }
     };
 
-    const copyOptions = [
-        ...getCopyOptions(),
-        // { label: 'Color Array', action: () => generateColorArray(selectedGradientInfo) },
-    ];
+    const copyOptions = getCopyOptions();
 
     const handleClose = () => {
         setIsVisible(false);
@@ -350,20 +393,53 @@ LinearGradient(
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <div className="space-y-6">
                         <div>
-                            <h4 className="font-semibold font-serif text-gray-600 mb-3 text-sm">Colors</h4>
-                            <div className="grid grid-cols-2 gap-2">
+                            <h4 className="font-semibold font-serif text-gray-600 text-sm">Colors</h4>
+                            <div className="grid grid-cols-2 gap-2 mt-2">
                                 {colors.map((color, index) => (
-                                    <div key={index} className="flex items-center rounded-xl text-gray-700">
+                                    <motion.div
+                                        key={index}
+                                        className="flex items-center rounded-xl text-gray-700 cursor-pointer hover:bg-amber-100/50 p-2 relative overflow-hidden"
+                                        onClick={() => copyToClipboard(color, `Color ${index + 1}`)}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
                                         <div className="w-6 h-6 rounded-full mr-3 shadow-inner" style={{ backgroundColor: color }} />
-                                        <span className="text-xs font-mono">{color}</span>
-                                    </div>
+                                        <AnimatePresence>
+                                            {copiedStates[`Color ${index + 1}`] ? (
+                                                <motion.span
+                                                    initial={{ opacity: 0, y: 20 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -20 }}
+                                                    className="text-xs font-mono text-amber-600 font-semibold"
+                                                >
+                                                    Copied!
+                                                </motion.span>
+                                            ) : (
+                                                <motion.span
+                                                    initial={{ opacity: 0, y: -20 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 20 }}
+                                                    className="text-xs font-mono"
+                                                >
+                                                    {color}
+                                                </motion.span>
+                                            )}
+                                        </AnimatePresence>
+                                        <motion.div
+                                            className="absolute right-2 top-1/2 transform -translate-y-1/2"
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }}
+                                        >
+                                            <Copy className="w-4 h-4 text-amber-600" />
+                                        </motion.div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
 
                         <div>
                             <div className='flex items-center justify-between py-4'>
-                                <h3 className="font-semibold font-serif text-gray-600 text-sm items-center">Copy Options</h3>
+                                <h3 className="font-semibold font-serif text-gray-600 text-sm">Copy Options</h3>
                                 <CustomSelect
                                     options={frameworkOptions}
                                     value={selectedFramework}
@@ -372,40 +448,52 @@ LinearGradient(
                             </div>
                             <div className="grid grid-cols-1 gap-2">
                                 {copyOptions.map((option, idx) => (
-                                    <button
+                                    <motion.button
                                         key={idx}
-                                        className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 ${copiedStates[option.label]
-                                            ? 'bg-amber-100 text-gray-800 font-medium'
-                                            : 'bg-amber-100/25 text-gray-700 hover:bg-amber-100'
-                                            } font-serif focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500`}
+                                        className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 relative ${copiedStates[option.label]
+                                            ? 'bg-amber-200 text-amber-800 font-medium'
+                                            : 'bg-amber-100/25 text-amber-700 hover:bg-amber-100'
+                                            } font-serif focus:outline-none outline-none`}
                                         onClick={() => copyToClipboard(option.action(), option.label)}
+                                        onMouseEnter={() => setHoveredOption(option.label)}
+                                        onMouseLeave={() => setHoveredOption(null)}
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
                                     >
                                         <span className="flex items-center gap-2">
-                                            {option.label === 'Text' && <Type className='w-4' />}
-                                            {option.label === 'Foreground' && <Type className='w-4' />}
-                                            {option.label === 'Background' && <Images className='w-4' />}
-                                            {/* <Image
-                                                src={`/Icons/${option.label}.svg`}
-                                                height={16}
-                                                width={16}
-                                                alt=''
-                                                className="mr-2"
-                                            /> */}
-                                            {copiedStates[option.label] ? 'Copied!' : option.label}
+                                            {option.label === 'Text' && <Type className='w-4 text-amber-600' />}
+                                            {option.label === 'Foreground' && <Type className='w-4 text-amber-600' />}
+                                            {option.label === 'Background' && <Images className='w-4 text-amber-600' />}
+                                            {option.label === 'Border' && <Square className='w-4 text-amber-600' />}
+                                            {option.label === 'Ring' && <CircleDashed className='w-4 text-amber-600' />}
+                                            <AnimatePresence>
+                                                {copiedStates[option.label] ? (
+                                                    <motion.span
+                                                        initial={{ opacity: 0, y: 10 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        exit={{ opacity: 0, y: -10 }}
+                                                        className="text-amber-800 font-semibold"
+                                                    >
+                                                        Copied!
+                                                    </motion.span>
+                                                ) : (
+                                                    <motion.span
+                                                        initial={{ opacity: 0, y: -10 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        exit={{ opacity: 0, y: 10 }}
+                                                    >
+                                                        {option.label}
+                                                    </motion.span>
+                                                )}
+                                            </AnimatePresence>
                                         </span>
-                                        <Copy className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
-                                    </button>
+                                        {hoveredOption === option.label && !copiedStates[option.label] ? (
+                                            <Copy className="w-4 h-4 text-amber-600 absolute right-4 transition-colors duration-300" />
+                                        ) : (
+                                            <Shortcut>{option.shortcut}</Shortcut>
+                                        )}
+                                    </motion.button>
                                 ))}
-                                {/* <button
-                                    className="w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 bg-amber-100/25 text-gray-700 hover:bg-amber-100 font-serif focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
-                                    onClick={exportImage}
-                                >
-                                    <span className="flex items-center gap-2">
-                                        <div className='w-4 h-4 rounded-full bg-gradient-to-r from-amber-500/75 to-orange-300/75 gap-4'></div>
-                                        Export 400x400 Image
-                                    </span>
-                                    <Download className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
-                                </button> */}
                             </div>
                         </div>
                     </div>
@@ -415,7 +503,5 @@ LinearGradient(
         </div>
     );
 };
-
-
 
 export default ColorSwatchInfo;
