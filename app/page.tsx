@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import brandGradients from './colors.json';
+import brandGradients from './brandColors.json';
 import countUniqueColors from '@/lib/uniqueColors';
 
 const RefinedFlowingBackground: React.FC = () => {
@@ -119,19 +119,19 @@ function Hero(): JSX.Element {
           <div className='flex items-center font-serif gap-2'>
             Works with
             <Image
-              src='/Icons/Tailwind Background.svg'
+              src='/Icons/Tailwind.svg'
               width={32}
               height={32}
               alt='brandiconimage'
             />
             <Image
-              src='/Icons/CSS Background.svg'
+              src='/Icons/CSS.svg'
               width={32}
               height={32}
               alt='brandiconimage'
             />
             <Image
-              src='/Icons/SwiftUI Background.svg'
+              src='/Icons/SwiftUI.svg'
               width={32}
               height={32}
               alt='brandiconimage'
