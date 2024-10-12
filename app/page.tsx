@@ -165,11 +165,9 @@ function Hero(): JSX.Element {
             >
               <div className="relative mb-4">
                 <EnhancedInput
-                  // ref={searchInputRef}
+                  // autoFocus
                   type="text"
                   placeholder={`Search ${totalUniqueColors} gradients...`}
-                // value={searchTerm}
-                // onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
             </motion.div>
@@ -225,27 +223,6 @@ function FeatureCard({ icon: Icon, title, description, index }: FeatureCardProps
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </motion.div>
-  );
-}
-
-interface GradientCardProps {
-  gradient: string;
-  index: number;
-}
-
-function GradientCard({ gradient, index }: GradientCardProps): JSX.Element {
-  return (
-    <Link href="/gradients" passHref legacyBehavior>
-      <motion.a
-        className="h-48 rounded-2xl overflow-hidden cursor-pointer block"
-        style={{ background: gradient }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
-        whileTap={{ scale: 0.95 }}
-      />
-    </Link>
   );
 }
 

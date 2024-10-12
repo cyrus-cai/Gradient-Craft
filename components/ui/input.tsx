@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { Shortcut } from './shortcut';
 
-const EnhancedInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
-  ({ className, type, ...props }, ref) => {
+interface EnhancedInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  shortcut?: string;
+}
+
+const EnhancedInput = React.forwardRef<HTMLInputElement, EnhancedInputProps>(
+  ({ className, type, shortcut, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
@@ -20,7 +24,7 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttribut
             focus:outline-none focus:ring-2
             bg-stone-100/50 backdrop-blur-3xl
             disabled:cursor-not-allowed disabled:opacity-50
-          border-orange-600/50 ring-orange-400/50
+            border-orange-600/50 ring-orange-400/50
             ${className}
           `}
           onFocus={() => setIsFocused(true)}
@@ -28,8 +32,11 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttribut
           ref={ref}
           {...props}
         />
-        <Shortcut className='absolute right-4 top-1/2 -translate-y-1/2'>/</Shortcut>
-        {/* <Shortcut className='absolute right-12 top-1/2 -translate-y-1/2'> ⌘+k </Shortcut> */}
+        {shortcut && (
+          <Shortcut className='absolute right-4 top-1/2 -translate-y-1/2'>
+            {shortcut}
+          </Shortcut>
+        )}
       </div>
     );
   }

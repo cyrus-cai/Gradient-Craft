@@ -195,6 +195,7 @@ const GradientShowcase = () => {
                 <div className="px-6 pt-10 pb-4 fixed z-50 backdrop:blur-2xl">
                     <EnhancedInput
                         autoFocus
+                        shortcut="/"
                         ref={searchInputRef}
                         type="text"
                         placeholder={`Search ${totalUniqueColors} gradients...`}
