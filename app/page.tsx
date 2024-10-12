@@ -4,6 +4,7 @@ import { Copy, Download, Github, LucideIcon, Palette, Search } from 'lucide-reac
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
+import { EnhancedInput } from '@/components/ui/input';
 import Image from 'next/image';
 import Link from 'next/link';
 import brandGradients from './brandColors.json';
@@ -163,14 +164,14 @@ function Hero(): JSX.Element {
               whileTap={{ scale: 0.95 }}
             >
               <div className="relative mb-4">
-                <input
+                <EnhancedInput
+                  // ref={searchInputRef}
                   type="text"
                   placeholder={`Search ${totalUniqueColors} gradients...`}
-                  className="w-full pl-8 pr-32 py-3 text-sm bg-gradient-to-r from-amber-500/15 to-amber-200/25 rounded-full shadow-sm border border-orange-300 text-orange-700 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-300 transition-all duration-300"
+                // value={searchTerm}
+                // onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-amber-400 w-4 h-4" />
               </div>
-              {/* Explore Now <ArrowRight className="ml-2 w-5 h-5" /> */}
             </motion.div>
           </Link>
         </motion.div>
