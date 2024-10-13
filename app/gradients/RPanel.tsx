@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { generateCSSGradient, generateSwiftUIGradient } from './components/gradientUtils';
-import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './components/gradientUtils';
+import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
+import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './RPanelComponents/gradientUtils';
 
-import { ColorPalette } from './components/ColorPalette';
-import { CopyOptions } from './components/CopyOptions';
-import { GradientDisplay } from './components/GradientDisplay';
+import { ColorPalette } from './RPanelComponents/ColorPalette';
+import { CopyOptions } from './RPanelComponents/CopyOptions';
+import { GradientDisplay } from './RPanelComponents/GradientDisplay';
 import { Separator } from '@/components/ui/separator';
 import { X } from 'lucide-react';
 import { motion } from 'framer-motion';
