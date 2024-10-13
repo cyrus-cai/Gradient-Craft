@@ -27,14 +27,13 @@ const CentreMobile = () => {
     const [totalUniqueColors, setTotalUniqueColors] = useState<number | string>('');
     const [selectedGradientInfo, setSelectedGradientInfo] = useState<SelectedGradientInfo | null>(null);
     const [desktopUrl] = useState<string>('https://www.gcraft.site/gradients');
-    const [themeColors, setThemeColors] = useState<[string, string]>(['#F59E0B', '#F97316']);
     const [currentBanner, setCurrentBanner] = useState(0);
     const [copiedColor, setCopiedColor] = useState<string | null>(null);
     const { toast } = useToast();
 
     const banners = [
         {
-            text: " Full features in desktop",
+            text: " Full features on desktop",
             className: "bg-gradient-to-r from-sky-600 to-sky-300 text-white text-sm font-bold px-4 py-3 flex items-center justify-center w-full transition-all duration-300",
             onClick: () => copyDesktopUrl()
         },
@@ -65,7 +64,6 @@ const CentreMobile = () => {
     useEffect(() => {
         const uniqueColorCount = countUniqueColors(brandGradients);
         setTotalUniqueColors(uniqueColorCount);
-        setThemeColors([getRandomColor(), getRandomColor()]);
     }, []);
 
     const allGradients = brandGradients.flatMap(b => b.gradients);
@@ -234,12 +232,11 @@ const CentreMobile = () => {
                                 className="w-full rounded-none bg-gradient-to-r from-sky-600 to-sky-300 text-white font-bold py-3"
                                 onClick={copyDesktopUrl}
                             >
-                                Full features in desktop
+                                Full features on desktop
                             </Button>
                         </motion.div>
                     )}
                 </div>
-
                 <Toast />
             </div>
         </ToastProvider>

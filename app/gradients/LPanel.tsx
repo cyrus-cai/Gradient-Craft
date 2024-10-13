@@ -1,4 +1,5 @@
-import { ChevronDown, ExternalLink, FlaskConical } from 'lucide-react';
+import { ChevronDown, Ellipsis, ExternalLink, FlaskConical, Scale } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
@@ -13,14 +14,14 @@ interface BrandOption {
     gradients?: { colors: string[] }[];
 }
 
-interface FloatingSidebarProps {
+interface LPanelProps {
     brandGradients: BrandOption[];
     selectedBrand: string | null;
     onBrandSelect: (brand: string | null) => void;
     onColorSelect: (color: string) => void;
 }
 
-const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
+const LPanel: React.FC<LPanelProps> = ({
     brandGradients,
     selectedBrand,
     onBrandSelect,
@@ -31,6 +32,7 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
     const contentRef = useRef<HTMLDivElement>(null);
     const switchRef = useRef<HTMLDivElement>(null);
     const [contentHeight, setContentHeight] = useState<number>(0);
+    const [isEllipsisHovered, setIsEllipsisHovered] = useState<boolean>(false);
 
     useEffect(() => {
         if (contentRef.current && switchRef.current) {
@@ -92,7 +94,7 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <div className="w-full max-w-md">
-                        <div className='mb-12 w-full flex items-center justify-start gap-2'>
+                        <div className='mb-12 w-full flex items-center justify-between gap-2'>
                             <Link href="/">
                                 <div className='flex items-center gap-1'>
                                     <Image
@@ -103,6 +105,32 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
                                     />
                                 </div>
                             </Link>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <div
+                                        className={`rounded-full p-1 transition-colors duration-200 ${isEllipsisHovered ? 'bg-gradient-to-r from-zinc-50 to-zinc-100' : ''
+                                            }`}
+                                        onMouseEnter={() => setIsEllipsisHovered(true)}
+                                        onMouseLeave={() => setIsEllipsisHovered(false)}
+                                    >
+                                        <Ellipsis className='text-neutral-400' />
+                                    </div>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent align="end">
+                                    <DropdownMenuItem asChild>
+                                        <Link href="/license" className="flex items-center gap-2 w-full">
+                                            <Scale className="w-4 h-4" />
+                                            <span>License</span>
+                                        </Link>
+                                    </DropdownMenuItem>
+                                    {/* <DropdownMenuItem asChild>
+                                        <Link href="https://example.com" className="flex items-center gap-2 w-full">
+                                            <ExternalLink className="w-4 h-4" />
+                                            <span>External Link</span>
+                                        </Link>
+                                    </DropdownMenuItem> */}
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                         </div>
 
                         <div
@@ -179,4 +207,4 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
     );
 };
 
-export default FloatingSideBar;
+export default LPanel;

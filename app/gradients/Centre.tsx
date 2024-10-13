@@ -3,10 +3,10 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Toast, ToastProvider } from "@/components/ui/toast"
 
-import ColorSwatchInfo from './RBar';
+import ColorSwatchInfo from './RPanel';
 import { EnhancedInput } from '@/components/ui/input';
 import FloatingFeedback from '@/components/feedback';
-import FloatingSidebar from './LBar';
+import FloatingSidebar from './LPanel';
 import brandGradients from '../brandColors.json';
 import { colorDifference } from '../../lib/colorUtils';
 import countUniqueColors from '@/lib/uniqueColors';

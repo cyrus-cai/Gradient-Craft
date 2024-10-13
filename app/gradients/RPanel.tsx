@@ -17,7 +17,7 @@ interface SelectedGradientInfo extends Gradient {
     brand: string;
 }
 
-interface ColorSwatchInfoProps {
+interface RPanelProps {
     selectedGradientInfo: SelectedGradientInfo | null;
     onClose: () => void;
 }
@@ -86,7 +86,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
     );
 };
 
-const ColorSwatchInfo: React.FC<ColorSwatchInfoProps> = ({ selectedGradientInfo, onClose }) => {
+const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
     const [isVisible, setIsVisible] = useState(false);
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -504,4 +504,4 @@ LinearGradient(
     );
 };
 
-export default ColorSwatchInfo;
+export default RPanel;
