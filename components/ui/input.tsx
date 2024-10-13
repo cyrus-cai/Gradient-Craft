@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { Search } from 'lucide-react';
 import { Shortcut } from './shortcut';
@@ -10,6 +10,31 @@ interface EnhancedInputProps extends React.InputHTMLAttributes<HTMLInputElement>
 const EnhancedInput = React.forwardRef<HTMLInputElement, EnhancedInputProps>(
   ({ className, type, shortcut, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
+    const innerRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+      const input = innerRef.current;
+      if (input) {
+        input.addEventListener('focus', setEnglishInputMethod);
+        return () => {
+          input.removeEventListener('focus', setEnglishInputMethod);
+        };
+      }
+    }, []);
+
+    const setEnglishInputMethod = () => {
+      if (innerRef.current && 'inputMode' in innerRef.current) {
+        innerRef.current.inputMode = 'none';
+        setTimeout(() => {
+          if (innerRef.current) {
+            innerRef.current.inputMode = 'text';
+          }
+        }, 1);
+      }
+    };
+
+    // 使用 React.useImperativeHandle 来正确地转发 ref
+    React.useImperativeHandle(ref, () => innerRef.current!, []);
 
     return (
       <div className="relative w-80">
@@ -27,9 +52,12 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, EnhancedInputProps>(
             border-orange-600/50 ring-orange-400/50
             ${className}
           `}
-          onFocus={() => setIsFocused(true)}
+          onFocus={() => {
+            setIsFocused(true);
+            setEnglishInputMethod();
+          }}
           onBlur={() => setIsFocused(false)}
-          ref={ref}
+          ref={innerRef}
           {...props}
         />
         {shortcut && (

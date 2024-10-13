@@ -1,6 +1,7 @@
-import { ChevronDown, FlaskConical } from 'lucide-react';
+import { ChevronDown, ExternalLink, FlaskConical } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
+import { Badge } from '@/components/ui/badge';
 import ColorPicker from '@/components/color-picker';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -166,6 +167,12 @@ const FloatingSideBar: React.FC<FloatingSidebarProps> = ({
                             </div>
                         ))}
                     </div>
+                    <Link className='flex pt-12 w-full items-center justify-center' href={'https://x.com/gradientcraft/status/1845187126847209554'}>
+                        <Badge variant="secondary">
+                            v0.1.1
+                            <ExternalLink className='w-3' />
+                        </Badge>
+                    </Link>
                 </div>
             </div>
         </div>

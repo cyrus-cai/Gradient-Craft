@@ -1,6 +1,6 @@
 'use client'
 
-import { Copy, Download, Github, LucideIcon, Palette, Search } from 'lucide-react';
+import { Copy, Download, LucideIcon, Palette } from 'lucide-react';
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -84,7 +84,6 @@ function Header(): JSX.Element {
 }
 
 function Hero(): JSX.Element {
-
   useEffect(() => {
     const uniqueColorCount = countUniqueColors(brandGradients);
     setTotalUniqueColors(uniqueColorCount);
