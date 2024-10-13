@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
+import React, { useCallback, useEffect } from 'react';
 
 import { CustomSelect } from './CustomSelect';
-import React from 'react';
 import { Shortcut } from '@/components/ui/shortcut';
 
 interface CopyOption {
@@ -29,6 +29,41 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     onFrameworkChange
 }) => {
     const [hoveredOption, setHoveredOption] = React.useState<string | null>(null);
+
+    const handleKeyPress = useCallback((event: KeyboardEvent) => {
+        if (!copyOptions.length) return;
+
+        const keyToIndex: { [key: string]: number } = {
+            'Enter': 0,
+            '1': 0,
+            '2': 1,
+            '3': 2,
+            '4': 3,
+            '5': 4,
+            '6': 5,
+            '7': 6,
+            '8': 7,
+            '9': 8,
+        };
+
+        let index = keyToIndex[event.key];
+
+        if (event.key === 'Enter' && event.metaKey) {
+            index = 1;
+        }
+
+        if (index !== undefined && index < copyOptions.length) {
+            const option = copyOptions[index];
+            onCopy(option.action(), option.label);
+        }
+    }, [copyOptions, onCopy]);
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyPress);
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [handleKeyPress]);
 
     return (
         <div>
