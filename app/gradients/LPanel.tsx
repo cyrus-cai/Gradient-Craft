@@ -1,35 +1,38 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
-import BetaFeature from './LPanelComponents/BetaFeature';
 import BrandList from './LPanelComponents/BrandList';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import PannelHeader from './LPanelComponents/PannelHeader';
 import { Separator } from '@/components/ui/separator';
+import { pinyin } from 'pinyin-pro';
 
-interface BrandOption {
-    brand: string;
+interface ColorOption {
+    type: 'brand' | 'album';
+    name: string;
     gradients?: { colors: string[] }[];
+    artist?: string;
+    tags?: string[];
 }
 
 interface LPanelProps {
-    brandGradients: BrandOption[];
-    selectedBrand: string | null;
-    onBrandSelect: (brand: string | null) => void;
+    colorOptions: ColorOption[];
+    selectedCategory: string | null;
+    onCategorySelect: (category: string | null) => void;
     onColorSelect: (color: string) => void;
 }
 
 const LPanel: React.FC<LPanelProps> = ({
-    brandGradients,
-    selectedBrand,
-    onBrandSelect,
-    onColorSelect
-}) => {
-    const getBrandColor = useCallback((brand: BrandOption) => {
-        if (brand.brand === 'All') return '#FFD700';
-        if (brand.gradients && brand.gradients.length > 0) {
-            return brand.gradients[0].colors[0];
+    colorOptions,
+    selectedCategory,
+    onCategorySelect }) => {
+    const [selectedType, setSelectedType] = useState<'all' | 'brands' | 'albums'>('all');
+
+    const getOptionColor = useCallback((option: ColorOption) => {
+        if (option.name === 'All') return '#FFD700';
+        if (option.gradients && option.gradients.length > 0) {
+            return option.gradients[0].colors[0];
         }
         return '#000000';
     }, []);
@@ -42,36 +45,50 @@ const LPanel: React.FC<LPanelProps> = ({
         return brightness > 160 ? 'text-gray-900' : 'text-white';
     }, []);
 
-    const sortedBrands: BrandOption[] = [...brandGradients].sort((a, b) => a.brand.localeCompare(b.brand));
+    const getPinyinFirstLetter = (str: string): string => {
+        const pinyinResult = pinyin(str, { pattern: 'first', toneType: 'none' });
+        return pinyinResult[0].toUpperCase();
+    };
 
-    const groupedBrands = sortedBrands.reduce((acc, brand) => {
-        const firstLetter = brand.brand[0].toUpperCase();
+    const filteredOptions = selectedType === 'all'
+        ? colorOptions
+        : colorOptions.filter(option => option.type === selectedType.slice(0, -1));
+
+    const sortedOptions = [...filteredOptions].sort((a, b) => {
+        const pinyinA = pinyin(a.name, { pattern: 'first', toneType: 'none' });
+        const pinyinB = pinyin(b.name, { pattern: 'first', toneType: 'none' });
+        return pinyinA.localeCompare(pinyinB);
+    });
+
+    const groupedOptions = sortedOptions.reduce((acc, option) => {
+        const firstLetter = getPinyinFirstLetter(option.name);
         if (!acc[firstLetter]) {
             acc[firstLetter] = [];
         }
-        acc[firstLetter].push(brand);
+        acc[firstLetter].push(option);
         return acc;
-    }, {} as Record<string, BrandOption[]>);
+    }, {} as Record<string, ColorOption[]>);
 
     return (
         <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <PannelHeader />
-                    <BetaFeature onColorSelect={onColorSelect} />
                 </div>
                 <Separator />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <BrandList
-                        groupedBrands={groupedBrands}
-                        selectedBrand={selectedBrand}
-                        onBrandSelect={onBrandSelect}
-                        getBrandColor={getBrandColor}
+                        groupedOptions={groupedOptions}
+                        selectedCategory={selectedCategory}
+                        selectedType={selectedType}
+                        onCategorySelect={onCategorySelect}
+                        onTypeSelect={setSelectedType}
+                        getOptionColor={getOptionColor}
                         getTextColor={getTextColor}
                     />
                     <Link className='flex pt-12 w-full items-center justify-center' href={'https://x.com/gradientcraft/status/1845187126847209554'}>
                         <Badge variant="secondary">
-                            v0.1.1
+                            v0.1.2
                             <ExternalLink className='w-3' />
                         </Badge>
                     </Link>
@@ -80,6 +97,5 @@ const LPanel: React.FC<LPanelProps> = ({
         </div>
     );
 };
-
 
 export default LPanel;

@@ -1,13 +1,13 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { Check, ChevronUp, Clipboard, Copy, RefreshCw, Twitter, X } from 'lucide-react';
+import { Check, Copy, Twitter, X } from 'lucide-react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Toast, ToastProvider } from "@/components/ui/toast"
 
 import { Button } from '@/components/ui/button';
 import { EnhancedInput } from '@/components/ui/input';
-import brandGradients from '../brandColors.json';
+import brandGradients from '../data/brandColors.json';
 import { colorDifference } from '../../lib/colorUtils';
 import countUniqueColors from '@/lib/uniqueColors';
 import { useToast } from "@/hooks/use-toast"

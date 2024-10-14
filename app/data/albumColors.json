@@ -1,0 +1,405 @@
+[
+    {
+        "album": "I'm OK",
+        "artist": "David Tao",
+        "labels": "EMI Group",
+        "priority": 2,
+        "tags": [
+            "Mandopop",
+            "R&B",
+            "Pop Rock",
+            "Urban Contemporary",
+            "Yellow",
+            "Black",
+            "Red",
+            "High Contrast",
+            "Pop Art",
+            "Halftone",
+            "Minimalist",
+            "Bold Typography"
+        ],
+        "gradients": [
+            {
+                "name": "Sunshine Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFC30B"
+                ]
+            },
+            {
+                "name": "Midnight Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Crimson Accent",
+                "colors": [
+                    "#DC143C",
+                    "#C41E3A"
+                ]
+            },
+            {
+                "name": "Golden Warmth",
+                "colors": [
+                    "#FFD700",
+                    "#FFAA33"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Black Tangerine",
+        "artist": "David Tao",
+        "labels": "EMI Group",
+        "priority": 2,
+        "tags": [
+            "Mandopop",
+            "R&B",
+            "Soul",
+            "Monochrome",
+            "Selective Color",
+            "Eye Imagery",
+            "Reflection",
+            "Introspective",
+            "Dramatic Contrast"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Charcoal",
+                "colors": [
+                    "#1C1C1C",
+                    "#2C2C2C"
+                ]
+            },
+            {
+                "name": "Silver Lining",
+                "colors": [
+                    "#C0C0C0",
+                    "#A9A9A9"
+                ]
+            },
+            {
+                "name": "Amber Reflection",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Soft Focus",
+                "colors": [
+                    "#F5F5F5",
+                    "#D3D3D3"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Great Leap 2005",
+        "artist": "David Tao",
+        "labels": "EMI Group",
+        "priority": 2,
+        "tags": [
+            "Mandopop",
+            "Rock",
+            "Alternative",
+            "Urban",
+            "Warm Tones",
+            "Shadow Play",
+            "Dramatic Lighting",
+            "Hand Gesture",
+            "Intensity"
+        ],
+        "gradients": [
+            {
+                "name": "Sunset Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FF6347"
+                ]
+            },
+            {
+                "name": "Deep Shadow",
+                "colors": [
+                    "#1C1C1C",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "Skin Tone",
+                "colors": [
+                    "#FFE4B5",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "Warm Highlight",
+                "colors": [
+                    "#FFA07A",
+                    "#FF7F50"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "David Tao",
+        "artist": "David Tao",
+        "labels": "EMI Group",
+        "priority": 2,
+        "tags": [
+            "Mandopop",
+            "R&B",
+            "Soul",
+            "Debut Album",
+            "Blue",
+            "Monochrome",
+            "Water Reflection",
+            "Mysterious",
+            "Atmospheric"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Ocean",
+                "colors": [
+                    "#00008B",
+                    "#000080"
+                ]
+            },
+            {
+                "name": "Midnight Sky",
+                "colors": [
+                    "#191970",
+                    "#000033"
+                ]
+            },
+            {
+                "name": "Azure Waves",
+                "colors": [
+                    "#4169E1",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Twilight Blue",
+                "colors": [
+                    "#4682B4",
+                    "#5F9EA0"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "之乎者也",
+        "artist": "羅大佑",
+        "labels": "滾石唱片",
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "民謠搖滾",
+            "社會評論",
+            "復古風格",
+            "紅色",
+            "綠色",
+            "黑白照片",
+            "太陽眼鏡",
+            "中文書法"
+        ],
+        "gradients": [
+            {
+                "name": "復古紅",
+                "colors": [
+                    "#8B0000",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "暗夜綠",
+                "colors": [
+                    "#006400",
+                    "#228B22"
+                ]
+            },
+            {
+                "name": "經典黑白",
+                "colors": [
+                    "#2F4F4F",
+                    "#696969"
+                ]
+            },
+            {
+                "name": "懷舊褐",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "未來的主人翁",
+        "artist": "羅大佑",
+        "labels": "滾石唱片",
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "社會批判",
+            "城市夜景",
+            "皮衣造型",
+            "復古照片",
+            "棕色調",
+            "綠色光影",
+            "太陽眼鏡"
+        ],
+        "gradients": [
+            {
+                "name": "都市棕",
+                "colors": [
+                    "#8B4513",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "夜幕綠",
+                "colors": [
+                    "#006400",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "深邃黑",
+                "colors": [
+                    "#000000",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "懷舊米",
+                "colors": [
+                    "#F4A460",
+                    "#DEB887"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "愛人同志",
+        "artist": "羅大佑",
+        "labels": "滾石唱片",
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "另類搖滾",
+            "黑白攝影",
+            "特寫肖像",
+            "藝術風格",
+            "強烈對比",
+            "書法元素"
+        ],
+        "gradients": [
+            {
+                "name": "銀幕灰",
+                "colors": [
+                    "#2F4F4F",
+                    "#708090"
+                ]
+            },
+            {
+                "name": "純粹黑",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "柔和白",
+                "colors": [
+                    "#F5F5F5",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "墨水黑",
+                "colors": [
+                    "#1A1A1A",
+                    "#363636"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "告別的年代",
+        "artist": "羅大佑",
+        "labels": "滾石唱片",
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "藝術搖滾",
+            "繪畫風格",
+            "拼貼藝術",
+            "綠色主題",
+            "多彩元素",
+            "星星裝飾",
+            "中文書法"
+        ],
+        "gradients": [
+            {
+                "name": "翡翠綠",
+                "colors": [
+                    "#00FF7F",
+                    "#3CB371"
+                ]
+            },
+            {
+                "name": "天空藍",
+                "colors": [
+                    "#87CEEB",
+                    "#4682B4"
+                ]
+            },
+            {
+                "name": "檸檬黃",
+                "colors": [
+                    "#FFFACD",
+                    "#F0E68C"
+                ]
+            },
+            {
+                "name": "薄荷綠",
+                "colors": [
+                    "#98FB98",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "午夜黑",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "耀眼黃",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "深邃灰",
+                "colors": [
+                    "#2F4F4F",
+                    "#4F4F4F"
+                ]
+            },
+            {
+                "name": "暗夜藍",
+                "colors": [
+                    "#191970",
+                    "#000080"
+                ]
+            }
+        ]
+    }
+]

@@ -1,3 +1,4 @@
+import { Music, Tag, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
 import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './RPanelComponents/gradientUtils';
@@ -6,7 +7,6 @@ import { ColorPalette } from './RPanelComponents/ColorPalette';
 import { CopyOptions } from './RPanelComponents/CopyOptions';
 import { GradientDisplay } from './RPanelComponents/GradientDisplay';
 import { Separator } from '@/components/ui/separator';
-import { X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface Gradient {
@@ -15,7 +15,10 @@ interface Gradient {
 }
 
 interface SelectedGradientInfo extends Gradient {
-    brand: string;
+    type: 'brand' | 'album';
+    parentName: string;
+    artist?: string;
+    tags?: string[];
 }
 
 interface RPanelProps {
@@ -123,7 +126,22 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             <X size={24} />
                         </button>
                     </div>
-                    <p className="text-xs text-gray-500 mb-4 font-serif">from {selectedGradientInfo.brand}</p>
+                    <p className="text-xs text-gray-500 mb-2 font-serif">
+                        {selectedGradientInfo.type === 'album' ? (
+                            <span className="flex items-center">
+                                <Music size={12} className="mr-1" />
+                                {selectedGradientInfo.artist} - {selectedGradientInfo.parentName}
+                            </span>
+                        ) : (
+                            `from ${selectedGradientInfo.parentName}`
+                        )}
+                    </p>
+                    {selectedGradientInfo.type === 'album' && selectedGradientInfo.tags && (
+                        <p className="text-xs text-gray-500 mb-4 font-serif flex items-center">
+                            <Tag size={12} className="mr-1" />
+                            {selectedGradientInfo.tags.join(', ')}
+                        </p>
+                    )}
                     <GradientDisplay colors={selectedGradientInfo.colors} onExport={exportImage} />
                 </div>
                 <Separator className="bg-gray-200" />

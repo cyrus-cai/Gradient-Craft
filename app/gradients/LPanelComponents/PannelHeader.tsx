@@ -9,7 +9,7 @@ const PannelHeader: React.FC = () => {
     const [isEllipsisHovered, setIsEllipsisHovered] = React.useState(false);
 
     return (
-        <div className='mb-12 w-full flex items-center justify-between gap-2'>
+        <div className='w-full flex items-center justify-between gap-2'>
             <Link href="/">
                 <div className='flex items-center gap-1'>
                     <Image

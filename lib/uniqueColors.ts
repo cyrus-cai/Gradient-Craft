@@ -5,15 +5,26 @@ interface Gradient {
 
 interface BrandGradient {
     brand: string;
+    priority: number;
     gradients: Gradient[];
 }
 
+interface AlbumGradient {
+    album: string;
+    artist: string;
+    labels: string;
+    priority: number;
+    tags: string[];
+    gradients: Gradient[];
+}
 
-const countUniqueColors = (brandGradients: BrandGradient[]): number => {
+type MixedGradient = BrandGradient | AlbumGradient;
+
+const countUniqueColors = (mixedGradients: MixedGradient[]): number => {
     const uniqueColors = new Set<string>();
 
-    brandGradients.forEach(brand => {
-        brand.gradients.forEach((gradient: { colors: any[]; }) => {
+    mixedGradients.forEach(item => {
+        item.gradients.forEach(gradient => {
             gradient.colors.forEach(color => {
                 uniqueColors.add(color.toLowerCase()); // 转换为小写以避免大小写导致的重复
             });
@@ -23,4 +34,4 @@ const countUniqueColors = (brandGradients: BrandGradient[]): number => {
     return uniqueColors.size;
 };
 
-export default countUniqueColors
+export default countUniqueColors;

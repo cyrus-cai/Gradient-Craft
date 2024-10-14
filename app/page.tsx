@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { EnhancedInput } from '@/components/ui/input';
 import Image from 'next/image';
 import Link from 'next/link';
-import brandGradients from './brandColors.json';
+import brandGradients from './data/brandColors.json';
 import countUniqueColors from '@/lib/uniqueColors';
 
 const RefinedFlowingBackground: React.FC = () => {
@@ -230,7 +230,6 @@ const Footer = () => {
     <footer className="bg-transparent py-8">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          {/* <p className="text-sm text-black/50">&copy; 2024 GradientCraft. All rights reserved.</p> */}
           <div
             className=" cursor-pointer flex items-center gap-2"
             onClick={() => window.open("https://github.com/cyrus-cai/Gradient-Craft")}
