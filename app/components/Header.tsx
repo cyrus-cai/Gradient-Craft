@@ -24,24 +24,36 @@ const Header: React.FC = () => {
                         href="https://github.com/cyrus-cai/Gradient-Craft"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative flex items-center space-x-1 bg-gradient-to-r from-purple-800 to-red-600 text-white py-2 pl-2 pr-4 rounded-2xl transition-all duration-300 hover:scale-105 overflow-hidden font-mono"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                        <div className="relative z-10 flex items-center space-x-2">
-                            {isHovered ? (
-                                <Github className="w-5 h-5 animate-bounce" />
-                            ) : (
-                                <Star className="w-5 h-5 animate-pulse" />
-                            )}
-                            <span className="text-sm font-medium whitespace-nowrap">
-                                {isHovered ? "Let's paint the Web !" : "Star us on GitHub"}
-                            </span>
+                        <div className='flex items-center '>
+                            <Image
+                                src={`/Icons/Github.svg`}
+                                height={24}
+                                width={24}
+                                alt=''
+                                className="mr-2"
+                            />
+                            <div className="text-sm font-mono text-white bg-gradient-to-r from-sky-500 to-teal-400 px-2 py-1 rounded-tr-full rounded-tl-full rounded-br-full">
+                                it's opensource!
+                            </div>
                         </div>
-                        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                            <div className="w-64 h-64 bg-white opacity-10 rounded-full scale-0 group-hover:scale-110 transition-all duration-300 ease-out"></div>
-                        </div>
+                    </Link>
+                    <Link
+                        href="https://github.com/cyrus-cai/Gradient-Craft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        <Image
+                            src={`/Icons/X.png`}
+                            height={20}
+                            width={20}
+                            alt=''
+                            className="mr-2"
+                        />
                     </Link>
                 </div>
             </nav>

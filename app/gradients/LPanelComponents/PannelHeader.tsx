@@ -1,6 +1,7 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Ellipsis, Scale } from 'lucide-react';
+import { Ellipsis, Github, Scale, Twitter } from 'lucide-react';
 
+import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -35,6 +36,20 @@ const PannelHeader: React.FC = () => {
                         <Link href="/license" className="flex items-center gap-2 w-full">
                             <Scale className="w-4 h-4" />
                             <span>License</span>
+                        </Link>
+
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                        <Link href="https://github.com/cyrus-cai/Gradient-Craft" className="flex items-center gap-2 w-full">
+                            <Github className="w-4 h-4" />
+                            <span>Github</span>
+                            <Badge variant='secondary'>Opensource</Badge>
+                        </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                        <Link href="https://x.com/gradientcraft" className="flex items-center gap-2 w-full">
+                            <Twitter className="w-4 h-4" />
+                            <span>Follow us on X</span>
                         </Link>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
