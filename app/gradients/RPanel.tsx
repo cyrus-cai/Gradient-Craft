@@ -1,10 +1,11 @@
-import { Music, Tag, X } from 'lucide-react';
+import { Layout, Monitor, Music, Smartphone, Tablet, Tag, User, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
 import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './RPanelComponents/gradientUtils';
 
 import { ColorPalette } from './RPanelComponents/ColorPalette';
 import { CopyOptions } from './RPanelComponents/CopyOptions';
+import { ExportOptions } from './RPanelComponents/ExportOptions';
 import { GradientDisplay } from './RPanelComponents/GradientDisplay';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
@@ -46,22 +47,24 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         }, 2000);
     }, []);
 
-    const exportImage = useCallback(() => {
+    const exportImage = useCallback((width: number, height: number, fileName: string) => {
         if (canvasRef.current && selectedGradientInfo) {
             const canvas = canvasRef.current;
+            canvas.width = width;
+            canvas.height = height;
             const ctx = canvas.getContext('2d');
             if (ctx) {
-                const gradient = ctx.createLinearGradient(0, 0, 400, 0);
+                const gradient = ctx.createLinearGradient(0, 0, width, 0);
                 selectedGradientInfo.colors.forEach((color, index) => {
                     gradient.addColorStop(index / (selectedGradientInfo.colors.length - 1), color);
                 });
                 ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, 400, 400);
+                ctx.fillRect(0, 0, width, height);
 
                 const dataUrl = canvas.toDataURL('image/png');
                 const link = document.createElement('a');
                 link.href = dataUrl;
-                link.download = `${selectedGradientInfo.name.replace(/\s+/g, '-').toLowerCase()}-gradient.png`;
+                link.download = `${selectedGradientInfo.name.replace(/\s+/g, '-').toLowerCase()}-${fileName}.png`;
                 link.click();
             }
         }
@@ -98,6 +101,15 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                 return [];
         }
     }, [selectedGradientInfo, selectedFramework]);
+
+
+    const getExportOptions = [
+        { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-amber-600' /> },
+        { label: 'iPad', action: () => exportImage(2048, 2732, 'ipad'), icon: <Tablet className='w-4 text-amber-600' /> },
+        { label: 'Mac', action: () => exportImage(2560, 1600, 'mac'), icon: <Monitor className='w-4 text-amber-600' /> },
+        { label: 'PPT', action: () => exportImage(1920, 1080, 'ppt'), icon: <Layout className='w-4 text-amber-600' /> },
+        { label: 'Avatar', action: () => exportImage(500, 500, 'avatar'), icon: <User className='w-4 text-amber-600' /> },
+    ];
 
     const handleClose = useCallback(() => {
         setIsVisible(false);
@@ -142,7 +154,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             {selectedGradientInfo.tags.join(', ')}
                         </p>
                     )}
-                    <GradientDisplay colors={selectedGradientInfo.colors} onExport={exportImage} />
+                    <GradientDisplay colors={selectedGradientInfo.colors} />
                 </div>
                 <Separator className="bg-gray-200" />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
@@ -160,10 +172,13 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             onCopy={copyToClipboard}
                             onFrameworkChange={setSelectedFramework}
                         />
+                        <ExportOptions
+                            exportOptions={getExportOptions}
+                        />
                     </div>
                 </div>
             </div>
-            <canvas ref={canvasRef} width="400" height="400" style={{ display: 'none' }} />
+            <canvas ref={canvasRef} style={{ display: 'none' }} />
         </motion.div>
     );
 };
