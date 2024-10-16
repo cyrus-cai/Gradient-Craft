@@ -47,7 +47,7 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, EnhancedInputProps>(
             file:border-0 file:bg-transparent file:text-sm file:font-medium
             placeholder:text-amber-800/50
             focus:outline-none focus:ring-2
-            bg-stone-100/50 backdrop-blur-3xl
+            bg-white/25 backdrop-blur-3xl
             disabled:cursor-not-allowed disabled:opacity-50
             border-orange-600/50 ring-orange-400/50
             ${className}

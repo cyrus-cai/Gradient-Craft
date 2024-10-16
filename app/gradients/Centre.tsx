@@ -239,10 +239,10 @@ const Centre = () => {
                 </div>
                 <div className="flex-1 flex flex-col overflow-hidden">
                     <div className="flex-1 overflow-y-auto pt-40 pb-96 overflow-hidden">
-                        <h3 className="text-xl font-serif font-semibold mb-4 px-12">
+                        <h3 className="text-xl font-serif font-semibold mb-4 px-4">
                             {selectedColor
                                 ? 'Similar Gradients'
-                                : (selectedCategory ? `${selectedCategory} Gradients` : 'All Gradients')}
+                                : (selectedCategory ? `${selectedCategory} ` : 'All Gradients')}
                         </h3>
                         <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7 gap-4 px-4">
                             {(selectedColor ? findSimilarGradients(selectedColor) : searchFilteredGradients).map((gradient, index) =>
