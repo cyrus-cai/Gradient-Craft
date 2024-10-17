@@ -15,7 +15,7 @@ const FloatingFeedback = () => {
 
     useEffect(() => {
         if (rating > 0) {
-            const message = `New feedback rating received: ${rating} stars`;
+            const message = `New insight received: ${rating} stars`;
             sendTextToFeishuBot(message)
                 .then(() => console.log('Rating sent to Feishu'))
                 .catch(error => console.error('Error sending rating to Feishu:', error));
@@ -37,10 +37,10 @@ const FloatingFeedback = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Feedback submitted:', { rating, feedback });
+        console.log('Insight shared:', { rating, feedback });
         toast({
-            title: "Feedback Received",
-            description: "Thank you for your valuable feedback!",
+            title: "Insight Received",
+            description: "Thank you for sharing your profound thoughts.",
             duration: 3000,
         });
         setFeedback('');
@@ -54,22 +54,22 @@ const FloatingFeedback = () => {
             ref={containerRef}
         >
             {isOpen ? (
-                <div className="bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl shadow-2xl p-6 w-80 transition-all duration-300 ease-in-out animate-fadeIn">
+                <div className="bg-gradient-to-br from-amber-900/90 via-amber-800/95 to-amber-700/90 rounded-2xl shadow-2xl p-6 w-80 transition-all duration-300 ease-in-out animate-fadeIn backdrop-blur-sm">
                     <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-xl font-semibold text-amber-800">Your Feedback</h3>
+                        <h3 className="text-xl font-semibold text-amber-100">Reflect</h3>
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="text-amber-600 hover:text-amber-800 transition-colors duration-200"
+                            className="text-amber-300 hover:text-amber-100 transition-colors duration-200"
                         >
                             <X className="w-5 h-5" />
                         </button>
                     </div>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-amber-700 mb-2">
-                                How would you rate your experience?
+                            <label className="block text-sm font-medium text-amber-200 mb-2">
+                                How would you rate this experience?
                             </label>
-                            <div >
+                            <div className="flex justify-center">
                                 {[1, 2, 3, 4, 5].map((star) => (
                                     <button
                                         key={star}
@@ -81,8 +81,8 @@ const FloatingFeedback = () => {
                                     >
                                         <Star
                                             className={`w-8 h-8 ${(hoveredRating || rating) >= star
-                                                ? 'text-amber-500 fill-amber-500'
-                                                : 'text-amber-300'
+                                                ? 'text-amber-400 fill-amber-400'
+                                                : 'text-amber-700'
                                                 } transition-colors duration-200`}
                                         />
                                     </button>
@@ -92,22 +92,22 @@ const FloatingFeedback = () => {
                         <Textarea
                             value={feedback}
                             onChange={(e) => setFeedback(e.target.value)}
-                            placeholder="Tell us about your experience..."
-                            className="w-full p-3 rounded-lg border-amber-300 focus:ring-amber-500 focus:border-amber-500 bg-white/20 placeholder-amber-400"
+                            placeholder="Share your profound thoughts..."
+                            className="w-full p-3 rounded-lg border-amber-600 focus:ring-amber-500 focus:border-amber-500 bg-amber-800/50 placeholder-amber-400 text-amber-100"
                         />
                         <button
                             type="submit"
-                            className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+                            className="w-full rounded-2xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-amber-100 font-semibold py-2 px-4 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg"
                             onClick={() => { sendTextToFeishuBot(feedback.toString()) }}
                         >
-                            Submit Feedback
+                            Share Insight
                         </button>
                     </form>
                 </div>
             ) : (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 p-4"
+                    className="rounded-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-amber-100 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 p-4"
                 >
                     <MessageSquare className="w-6 h-6" />
                 </button>

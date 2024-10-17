@@ -31,7 +31,7 @@ const BrandButton: React.FC<BrandButtonProps> = ({ option, isSelected, onSelect,
                         <button
                             className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 ${isSelected
                                 ? `${textColor} font-serif`
-                                : 'bg-amber-100/25 text-gray-700 hover:bg-amber-100 font-serif'
+                                : 'bg-amber-100/25 text-gray-700 hover:bg-amber-100 dark:bg-gray-800/25 dark:text-gray-300 dark:hover:bg-gray-700 font-serif'
                                 }`}
                             style={isSelected ? { backgroundColor: optionColor } : {}}
                             onClick={onSelect}

@@ -1,4 +1,4 @@
-import { Album, Boxes, ChartArea, Globe, Search, Tag, Twitter } from 'lucide-react';
+import { Album, Globe, Search, Twitter } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
 import BrandButton from './BrandButton';
@@ -41,7 +41,6 @@ const BrandList: React.FC<BrandListProps> = ({
         Object.entries(groupedOptions).forEach(([letter, options]) => {
             let matchingOptions = options;
 
-            // Filter by type (all, brands, albums)
             if (selectedType !== 'all') {
                 matchingOptions = matchingOptions.filter(option =>
                     (selectedType === 'brands' && option.type === 'brand') ||
@@ -49,7 +48,6 @@ const BrandList: React.FC<BrandListProps> = ({
                 );
             }
 
-            // Apply search filter only if a category is selected or we're not in 'albums' mode
             if (searchTerm && (selectedCategory !== null || selectedType !== 'albums')) {
                 matchingOptions = matchingOptions.filter(option =>
                     option.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -66,16 +64,6 @@ const BrandList: React.FC<BrandListProps> = ({
     return (
         <div className="space-y-4">
             <div className="mb-4">
-                {/* <div className="relative mb-4">
-                    <input
-                        type="text"
-                        placeholder="Search by name..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full px-4 py-2 rounded-xl text-sm border bg-amber-50  focus:outline-none focus:ring-2 focus:ring-amber-400"
-                    />
-                    <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-                </div> */}
                 <div className="flex justify-between mb-4">
                     {(['all', 'brands', 'albums'] as const).map((type) => {
                         const Icon = type === 'all' ? Globe : type === 'brands' ? Twitter : Album;
@@ -83,8 +71,8 @@ const BrandList: React.FC<BrandListProps> = ({
                             <button
                                 key={type}
                                 className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 flex items-center space-x-2 ${selectedType === type
-                                    ? 'bg-amber-400 text-white'
-                                    : 'bg-amber-100 text-gray-700'
+                                    ? 'bg-amber-400 text-white dark:bg-amber-600'
+                                    : 'bg-amber-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
                                     }`}
                                 onClick={() => onTypeSelect(type)}
                             >
@@ -104,7 +92,7 @@ const BrandList: React.FC<BrandListProps> = ({
             </div>
             {Object.entries(filteredOptions).map(([letter, options]) => (
                 <div key={letter}>
-                    <h4 className="font-semibold font-serif text-gray-600 mb-2">{letter}</h4>
+                    <h4 className="font-semibold font-serif text-gray-600 dark:text-gray-400 mb-2">{letter}</h4>
                     <div className="grid grid-cols-1 gap-2">
                         {options.map((option) => (
                             <BrandButton

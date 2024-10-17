@@ -196,7 +196,7 @@ const Centre = () => {
         return (
             <div
                 key={index}
-                className={`relative w-full h-36 rounded-3xl bg-amber-400/10 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-amber-500 bg-amber-400/20' : ''} ${isFocused ? 'ring-2 ring-amber-500' : ''}`}
+                className={`relative w-full h-36 rounded-3xl bg-amber-400/10 dark:bg-amber-600/10 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-amber-500 bg-amber-400/20 dark:bg-amber-600/20' : ''} ${isFocused ? 'ring-2 ring-amber-500 dark:ring-amber-400' : ''}`}
                 onClick={() => handleGradientSelect(gradient, gradient.type, gradient.parentName, index, gradient.artist)}
             >
                 <div
@@ -206,8 +206,8 @@ const Centre = () => {
                     }}
                 />
                 <div className="mt-2 text-center">
-                    <span className="text-gray-600 block text-sm font-serif font-semibold">{gradient.name}</span>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <span className="text-gray-600 dark:text-gray-300 block text-sm font-serif font-semibold">{gradient.name}</span>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         {gradient.type === 'album' ? `${gradient.artist} - ${gradient.parentName}` : `from ${gradient.parentName}`}
                     </p>
                 </div>
@@ -217,7 +217,7 @@ const Centre = () => {
 
     return (
         <ToastProvider>
-            <div className="flex bg-amber-50 min-h-screen overflow-hidden px-96">
+            <div className="flex bg-amber-50 dark:bg-gray-900 min-h-screen overflow-hidden px-96">
                 <LPanel
                     colorOptions={colorOptions}
                     selectedCategory={selectedCategory}
@@ -235,11 +235,12 @@ const Centre = () => {
                         placeholder={`Search ${totalUniqueColors} gradients...`}
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
+                        className="dark:bg-gray-800 dark:text-white"
                     />
                 </div>
                 <div className="flex-1 flex flex-col overflow-hidden">
                     <div className="flex-1 overflow-y-auto pt-40 pb-96 overflow-hidden">
-                        <h3 className="text-xl font-serif font-semibold mb-4 px-4">
+                        <h3 className="text-xl font-serif font-semibold mb-4 px-4 text-gray-800 dark:text-gray-200">
                             {selectedColor
                                 ? 'Similar Gradients'
                                 : (selectedCategory ? `${selectedCategory} ` : 'All Gradients')}

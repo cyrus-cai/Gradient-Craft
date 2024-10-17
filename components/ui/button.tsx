@@ -5,20 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors   disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-primary/25 text-primary-foreground hover:bg-primary/50",
+          "bg-amber-500/25 text-amber-900 hover:bg-amber-500/50 dark:bg-amber-700/25 dark:text-amber-100 dark:hover:bg-amber-700/50",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          "bg-red-500 text-white shadow-sm hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-amber-200 bg-transparent shadow-sm hover:bg-amber-100 hover:text-amber-900 dark:border-amber-700 dark:hover:bg-amber-900 dark:hover:text-amber-100",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-amber-200 text-amber-900 shadow-sm hover:bg-amber-300 dark:bg-amber-800 dark:text-amber-100 dark:hover:bg-amber-700",
+        ghost:
+          "hover:bg-amber-100 hover:text-amber-900 dark:hover:bg-amber-900 dark:hover:text-amber-100",
+        link:
+          "text-amber-600 underline-offset-4 hover:underline dark:text-amber-400",
       },
       size: {
         default: "h-9 px-4 py-2",

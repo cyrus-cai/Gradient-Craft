@@ -42,7 +42,7 @@ const LPanel: React.FC<LPanelProps> = ({
         const g = parseInt(bgColor.slice(3, 5), 16);
         const b = parseInt(bgColor.slice(5, 7), 16);
         const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        return brightness > 160 ? 'text-gray-900' : 'text-white';
+        return `text-${brightness > 160 ? 'gray-900 dark:gray-900' : 'white dark:white'}`;
     }, []);
 
     const getPinyinFirstLetter = (str: string): string => {
@@ -70,12 +70,12 @@ const LPanel: React.FC<LPanelProps> = ({
     }, {} as Record<string, ColorOption[]>);
 
     return (
-        <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 shadow-lg rounded-3xl overflow-hidden z-10">
+        <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 dark:from-gray-900/100 dark:to-gray-800/75 shadow-lg rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <PannelHeader />
                 </div>
-                <Separator />
+                <Separator className="dark:bg-gray-700" />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <BrandList
                         groupedOptions={groupedOptions}
@@ -87,7 +87,7 @@ const LPanel: React.FC<LPanelProps> = ({
                         getTextColor={getTextColor}
                     />
                     <Link className='flex pt-12 w-full items-center justify-center' href={'https://x.com/gradientcraft/status/1845187126847209554'}>
-                        <Badge variant="secondary">
+                        <Badge variant="secondary" className="dark:bg-gray-700 dark:text-gray-200">
                             v0.1.2
                             <ExternalLink className='w-3' />
                         </Badge>

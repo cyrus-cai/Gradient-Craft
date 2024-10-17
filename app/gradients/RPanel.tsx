@@ -30,8 +30,30 @@ interface RPanelProps {
 const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
     const [isVisible, setIsVisible] = useState(false);
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
+    const isMounted = useRef(true);
+
+    useEffect(() => {
+        // 创建 canvas 元素
+        const canvas = document.createElement('canvas');
+        canvas.style.display = 'none';
+        document.body.appendChild(canvas);
+        canvasRef.current = canvas;
+
+        // 清理函数
+        return () => {
+            isMounted.current = false;
+            if (canvasRef.current && document.body.contains(canvasRef.current)) {
+                try {
+                    document.body.removeChild(canvasRef.current);
+                } catch (error) {
+                    console.error('Error removing canvas:', error);
+                }
+            }
+            canvasRef.current = null;
+        };
+    }, []);
 
     useEffect(() => {
         if (selectedGradientInfo) {
@@ -42,9 +64,12 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     const copyToClipboard = useCallback((text: string, label: string) => {
         navigator.clipboard.writeText(text);
         setCopiedStates(prev => ({ ...prev, [label]: true }));
-        setTimeout(() => {
-            setCopiedStates(prev => ({ ...prev, [label]: false }));
+        const timer = setTimeout(() => {
+            if (isMounted.current) {
+                setCopiedStates(prev => ({ ...prev, [label]: false }));
+            }
         }, 2000);
+        return () => clearTimeout(timer);
     }, []);
 
     const exportImage = useCallback((width: number, height: number, fileName: string) => {
@@ -66,6 +91,12 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                 link.href = dataUrl;
                 link.download = `${selectedGradientInfo.name.replace(/\s+/g, '-').toLowerCase()}-${fileName}.png`;
                 link.click();
+
+                setTimeout(() => {
+                    if (isMounted.current) {
+                        URL.revokeObjectURL(link.href);
+                    }
+                }, 100);
             }
         }
     }, [selectedGradientInfo]);
@@ -102,7 +133,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         }
     }, [selectedGradientInfo, selectedFramework]);
 
-
     const getExportOptions = [
         { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-amber-600' /> },
         { label: 'iPad', action: () => exportImage(2048, 2732, 'ipad'), icon: <Tablet className='w-4 text-amber-600' /> },
@@ -122,7 +152,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
 
     return (
         <motion.div
-            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 shadow-lg rounded-3xl overflow-hidden z-10"
+            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 dark:from-gray-800/75 dark:to-gray-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: isVisible ? 0 : '100%', opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -130,15 +160,15 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <div className='mb-4 w-full flex items-center justify-between'>
-                        <h2 className="text-2xl font-serif font-semibold text-gray-800">{selectedGradientInfo.name}</h2>
+                        <h2 className="text-2xl font-serif font-semibold text-gray-800 dark:text-gray-200">{selectedGradientInfo.name}</h2>
                         <button
                             onClick={handleClose}
-                            className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                            className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200"
                         >
                             <X size={24} />
                         </button>
                     </div>
-                    <p className="text-xs text-gray-500 mb-2 font-serif">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 font-serif">
                         {selectedGradientInfo.type === 'album' ? (
                             <span className="flex items-center">
                                 <Music size={12} className="mr-1" />
@@ -149,14 +179,14 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                         )}
                     </p>
                     {selectedGradientInfo.type === 'album' && selectedGradientInfo.tags && (
-                        <p className="text-xs text-gray-500 mb-4 font-serif flex items-center">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 font-serif flex items-center">
                             <Tag size={12} className="mr-1" />
                             {selectedGradientInfo.tags.join(', ')}
                         </p>
                     )}
                     <GradientDisplay colors={selectedGradientInfo.colors} />
                 </div>
-                <Separator className="bg-gray-200" />
+                <Separator className="bg-gray-200 dark:bg-gray-700" />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <div className="space-y-6">
                         <ColorPalette
@@ -178,7 +208,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                     </div>
                 </div>
             </div>
-            <canvas ref={canvasRef} style={{ display: 'none' }} />
         </motion.div>
     );
 };

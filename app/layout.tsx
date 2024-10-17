@@ -5,6 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head';
 import type { Metadata } from "next";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import localFont from "next/font/local";
 
@@ -37,7 +38,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
         <SpeedInsights />
         <Analytics />

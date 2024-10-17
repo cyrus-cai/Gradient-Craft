@@ -68,7 +68,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     return (
         <div>
             <div className='flex items-center justify-between py-4'>
-                <h3 className="font-semibold font-serif text-gray-600 text-sm">Copy Options</h3>
+                <h3 className="font-semibold font-serif text-gray-600 dark:text-gray-300 text-sm">Copy Options</h3>
                 <CustomSelect
                     options={frameworkOptions}
                     value={selectedFramework}
@@ -80,8 +80,8 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                     <motion.button
                         key={idx}
                         className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 relative ${copiedStates[option.label]
-                            ? 'bg-amber-200 text-amber-800 font-medium'
-                            : 'bg-amber-100/25 text-amber-700 hover:bg-amber-100'
+                            ? 'bg-amber-200 text-amber-800 dark:bg-amber-800 dark:text-amber-200 font-medium'
+                            : 'bg-amber-100/25 text-amber-700 hover:bg-amber-100 dark:bg-amber-900/25 dark:text-amber-300 dark:hover:bg-amber-800/50'
                             } font-serif focus:outline-none outline-none`}
                         onClick={() => onCopy(option.action(), option.label)}
                         onMouseEnter={() => setHoveredOption(option.label)}
@@ -90,18 +90,18 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                         whileTap={{ scale: 0.98 }}
                     >
                         <span className="flex items-center gap-2">
-                            {option.label === 'Text' && <Type className='w-4 text-amber-600' />}
-                            {option.label === 'Foreground' && <Type className='w-4 text-amber-600' />}
-                            {option.label === 'Background' && <Images className='w-4 text-amber-600' />}
-                            {option.label === 'Border' && <Square className='w-4 text-amber-600' />}
-                            {option.label === 'Ring' && <CircleDashed className='w-4 text-amber-600' />}
+                            {option.label === 'Text' && <Type className='w-4 text-amber-600 dark:text-amber-400' />}
+                            {option.label === 'Foreground' && <Type className='w-4 text-amber-600 dark:text-amber-400' />}
+                            {option.label === 'Background' && <Images className='w-4 text-amber-600 dark:text-amber-400' />}
+                            {option.label === 'Border' && <Square className='w-4 text-amber-600 dark:text-amber-400' />}
+                            {option.label === 'Ring' && <CircleDashed className='w-4 text-amber-600 dark:text-amber-400' />}
                             <AnimatePresence>
                                 {copiedStates[option.label] ? (
                                     <motion.span
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
-                                        className="text-amber-800 font-semibold"
+                                        className="text-amber-800 dark:text-amber-200 font-semibold"
                                     >
                                         Copied!
                                     </motion.span>
@@ -117,7 +117,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                             </AnimatePresence>
                         </span>
                         {hoveredOption === option.label && !copiedStates[option.label] ? (
-                            <Copy className="w-4 h-4 text-amber-600 absolute right-4 transition-colors duration-300" />
+                            <Copy className="w-4 h-4 text-amber-600 dark:text-amber-400 absolute right-4 transition-colors duration-300" />
                         ) : (
                             <Shortcut>{option.shortcut}</Shortcut>
                         )}
