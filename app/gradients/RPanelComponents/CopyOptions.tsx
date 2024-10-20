@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { CustomSelect } from './CustomSelect';
 import { Shortcut } from '@/components/ui/shortcut';
@@ -15,7 +15,6 @@ interface CopyOptionsProps {
     selectedFramework: string;
     frameworkOptions: { value: string; label: string; }[];
     copyOptions: CopyOption[];
-    copiedStates: { [key: string]: boolean };
     onCopy: (text: string, label: string) => void;
     onFrameworkChange: (value: string) => void;
 }
@@ -24,11 +23,21 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     selectedFramework,
     frameworkOptions,
     copyOptions,
-    copiedStates,
     onCopy,
     onFrameworkChange
 }) => {
-    const [hoveredOption, setHoveredOption] = React.useState<string | null>(null);
+    const [hoveredOption, setHoveredOption] = useState<string | null>(null);
+    const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
+
+    const handleCopy = useCallback((text: string, label: string) => {
+        onCopy(text, label);
+        setCopiedStates(prev => ({ ...prev, [label]: true }));
+
+        // Set a timer to clear the "Copied!" state after 3 seconds
+        setTimeout(() => {
+            setCopiedStates(prev => ({ ...prev, [label]: false }));
+        }, 1500);
+    }, [onCopy]);
 
     const handleKeyPress = useCallback((event: KeyboardEvent) => {
         if (!copyOptions.length) return;
@@ -54,9 +63,9 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
 
         if (index !== undefined && index < copyOptions.length) {
             const option = copyOptions[index];
-            onCopy(option.action(), option.label);
+            handleCopy(option.action(), option.label);
         }
-    }, [copyOptions, onCopy]);
+    }, [copyOptions, handleCopy]);
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyPress);
@@ -83,7 +92,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                             ? 'bg-amber-200 text-amber-800 dark:bg-amber-800 dark:text-amber-200 font-medium'
                             : 'bg-amber-100/25 text-amber-700 hover:bg-amber-100 dark:bg-amber-900/25 dark:text-amber-300 dark:hover:bg-amber-800/50'
                             } font-serif focus:outline-none outline-none`}
-                        onClick={() => onCopy(option.action(), option.label)}
+                        onClick={() => handleCopy(option.action(), option.label)}
                         onMouseEnter={() => setHoveredOption(option.label)}
                         onMouseLeave={() => setHoveredOption(null)}
                         whileHover={{ scale: 1.02 }}
