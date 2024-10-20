@@ -109,8 +109,8 @@ const CentreMobile = () => {
                     }}
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-2">
-                    <span className="text-gray-800 block text-xs font-serif font-semibold truncate">{gradient.name}</span>
-                    <p className="text-xs text-gray-600 truncate">{company}</p>
+                    <span className="text-zinc-800 block text-xs font-serif font-semibold truncate">{gradient.name}</span>
+                    <p className="text-xs text-zinc-600 truncate">{company}</p>
                 </div>
             </motion.div>
         );
@@ -146,7 +146,7 @@ const CentreMobile = () => {
 
     return (
         <ToastProvider>
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col">
+            <div className="bg-gradient-to-br from-zinc-50 to-zinc-100 min-h-screen flex flex-col">
                 {/* Top banner carousel */}
 
 
@@ -172,10 +172,10 @@ const CentreMobile = () => {
                             placeholder={`Explore ${totalUniqueColors} unique gradients...`}
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="bg-gray-50 border-gray-200 focus:border-gray-400"
-                        // startAdornment={<RefreshCw className="text-gray-400" size={18} />}
+                            className="bg-zinc-50 border-gray-200 focus:border-gray-400"
+                        // startAdornment={<RefreshCw className="text-zinc-400" size={18} />}
                         // endAdornment={searchTerm && (
-                        //     <X className="text-gray-400 cursor-pointer" size={18} onClick={() => setSearchTerm('')} />
+                        //     <X className="text-zinc-400 cursor-pointer" size={18} onClick={() => setSearchTerm('')} />
                         // )}
                         />
                     </div>
@@ -183,7 +183,7 @@ const CentreMobile = () => {
 
                 {/* Main content */}
                 <div className="flex-1 p-4 pb-24">
-                    <h3 className="text-xl font-serif font-semibold mb-4 text-gray-800">
+                    <h3 className="text-xl font-serif font-semibold mb-4 text-zinc-800">
                         {selectedColor ? 'Similar Palettes' : 'Curated Gradients'}
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -200,10 +200,10 @@ const CentreMobile = () => {
                             className="fixed bottom-0 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-sm shadow-lg rounded-t-3xl"
                         >
                             <div className="flex justify-between items-center mb-3 pt-4 px-4">
-                                <h4 className="font-serif font-semibold text-gray-800">{selectedGradientInfo.name}</h4>
-                                <X className="text-gray-500 cursor-pointer" onClick={() => setSelectedGradientInfo(null)} />
+                                <h4 className="font-serif font-semibold text-zinc-800">{selectedGradientInfo.name}</h4>
+                                <X className="text-zinc-500 cursor-pointer" onClick={() => setSelectedGradientInfo(null)} />
                             </div>
-                            <p className="text-sm text-gray-600 mb-4 px-4">from {selectedGradientInfo.brand}</p>
+                            <p className="text-sm text-zinc-600 mb-4 px-4">from {selectedGradientInfo.brand}</p>
                             <div className="flex space-x-6 mb-5 px-4">
                                 {selectedGradientInfo.colors.map((color, index) => (
                                     <div key={index} className="relative">

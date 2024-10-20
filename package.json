@@ -35,7 +35,8 @@
     "react-dom": "^18",
     "react-spring": "^9.7.4",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vercel": "^37.11.0"
   },
   "devDependencies": {
     "@types/culori": "^2.1.1",

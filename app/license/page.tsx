@@ -27,10 +27,10 @@ const LicensePage = () => {
         <div className="min-h-screen bg-amber-50 p-8">
             <Header />
             <div className="max-w-6xl mx-auto py-16">
-                {/* <h1 className="text-4xl font-bold text-gray-800 mb-8">All Licenses</h1> */}
+                {/* <h1 className="text-4xl font-bold text-zinc-800 mb-8">All Licenses</h1> */}
                 <div className="bg-white rounded-3xl p-16">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-serif">Gradient Craft License</h2>
-                    <div className="space-y-6 text-gray-600 font-serif">
+                    <h2 className="text-2xl font-semibold text-zinc-800 mb-6 font-serif">Gradient Craft License</h2>
+                    <div className="space-y-6 text-zinc-600 font-serif">
                         <p className="font-semibold text-lg">MIT License</p>
                         <p>
                             Copyright (c) 2024 Gradient Craft

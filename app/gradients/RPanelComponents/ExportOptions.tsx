@@ -25,7 +25,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
     return (
         <div>
             <div className='flex items-center justify-between py-4'>
-                <h3 className="font-semibold font-serif text-gray-600 dark:text-gray-300 text-sm">Export Options</h3>
+                <h3 className="font-semibold font-serif text-zinc-600 dark:text-zinc-300 text-sm">Export Options</h3>
             </div>
             <div className="grid grid-cols-1 gap-2">
                 {exportOptions.map((option, idx) => (

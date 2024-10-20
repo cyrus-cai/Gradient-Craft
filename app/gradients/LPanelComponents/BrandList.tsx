@@ -72,7 +72,7 @@ const BrandList: React.FC<BrandListProps> = ({
                                 key={type}
                                 className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 flex items-center space-x-2 ${selectedType === type
                                     ? 'bg-amber-400 text-white dark:bg-amber-600'
-                                    : 'bg-amber-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
+                                    : 'bg-amber-100 text-zinc-700 dark:bg-zinc-700 dark:text-zinc-300'
                                     }`}
                                 onClick={() => onTypeSelect(type)}
                             >
@@ -92,7 +92,7 @@ const BrandList: React.FC<BrandListProps> = ({
             </div>
             {Object.entries(filteredOptions).map(([letter, options]) => (
                 <div key={letter}>
-                    <h4 className="font-semibold font-serif text-gray-600 dark:text-gray-400 mb-2">{letter}</h4>
+                    <h4 className="font-semibold font-serif text-zinc-600 dark:text-zinc-400 mb-2">{letter}</h4>
                     <div className="grid grid-cols-1 gap-2">
                         {options.map((option) => (
                             <BrandButton

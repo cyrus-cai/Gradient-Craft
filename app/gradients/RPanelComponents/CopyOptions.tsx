@@ -68,7 +68,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     return (
         <div>
             <div className='flex items-center justify-between py-4'>
-                <h3 className="font-semibold font-serif text-gray-600 dark:text-gray-300 text-sm">Copy Options</h3>
+                <h3 className="font-semibold font-serif text-zinc-600 dark:text-zinc-300 text-sm">Copy Options</h3>
                 <CustomSelect
                     options={frameworkOptions}
                     value={selectedFramework}

@@ -206,8 +206,8 @@ const Centre = () => {
                     }}
                 />
                 <div className="mt-2 text-center">
-                    <span className="text-gray-600 dark:text-gray-300 block text-sm font-serif font-semibold">{gradient.name}</span>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    <span className="text-zinc-600 dark:text-zinc-300 block text-sm font-serif font-semibold">{gradient.name}</span>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
                         {gradient.type === 'album' ? `${gradient.artist} - ${gradient.parentName}` : `from ${gradient.parentName}`}
                     </p>
                 </div>
@@ -217,7 +217,7 @@ const Centre = () => {
 
     return (
         <ToastProvider>
-            <div className="flex bg-amber-50 dark:bg-gray-900 min-h-screen overflow-hidden px-96">
+            <div className="flex bg-amber-50 dark:bg-zinc-900 min-h-screen overflow-hidden px-96">
                 <LPanel
                     colorOptions={colorOptions}
                     selectedCategory={selectedCategory}
@@ -235,12 +235,12 @@ const Centre = () => {
                         placeholder={`Search ${totalUniqueColors} gradients...`}
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="dark:bg-gray-800 dark:text-white"
+                        className="dark:bg-zinc-800 dark:text-white"
                     />
                 </div>
                 <div className="flex-1 flex flex-col overflow-hidden">
                     <div className="flex-1 overflow-y-auto pt-40 pb-96 overflow-hidden">
-                        <h3 className="text-xl font-serif font-semibold mb-4 px-4 text-gray-800 dark:text-gray-200">
+                        <h3 className="text-xl font-serif font-semibold mb-4 px-4 text-zinc-800 dark:text-zinc-200">
                             {selectedColor
                                 ? 'Similar Gradients'
                                 : (selectedCategory ? `${selectedCategory} ` : 'All Gradients')}

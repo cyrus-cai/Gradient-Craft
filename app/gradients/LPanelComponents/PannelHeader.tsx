@@ -18,36 +18,39 @@ const PannelHeader: React.FC = () => {
                         width={144}
                         height={24}
                         alt='brandiconimage'
+                        className="dark:invert" // Invert colors for dark mode
                     />
                 </div>
             </Link>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <div
-                        className={`rounded-full p-1 transition-colors duration-200 ${isEllipsisHovered ? 'bg-gradient-to-r from-zinc-50 to-zinc-100' : ''}`}
+                        className={`rounded-full p-1 transition-colors duration-200 ${isEllipsisHovered
+                            ? 'bg-gradient-to-r from-zinc-50 to-zinc-100 dark:from-zinc-800 dark:to-zinc-700'
+                            : ''
+                            }`}
                         onMouseEnter={() => setIsEllipsisHovered(true)}
                         onMouseLeave={() => setIsEllipsisHovered(false)}
                     >
-                        <Ellipsis className='text-neutral-400' />
+                        <Ellipsis className='text-neutral-400 dark:text-neutral-500' />
                     </div>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="end" className="bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
                     <DropdownMenuItem asChild>
-                        <Link href="/license" className="flex items-center gap-2 w-full">
+                        <Link href="/license" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
                             <Scale className="w-4 h-4" />
                             <span>License</span>
                         </Link>
-
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                        <Link href="https://github.com/cyrus-cai/Gradient-Craft" className="flex items-center gap-2 w-full">
+                        <Link href="https://github.com/cyrus-cai/Gradient-Craft" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
                             <Github className="w-4 h-4" />
                             <span>Github</span>
-                            <Badge variant='secondary'>Opensource</Badge>
+                            <Badge variant='secondary' className="dark:bg-zinc-700 dark:text-zinc-300">Opensource</Badge>
                         </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                        <Link href="https://x.com/gradientcraft" className="flex items-center gap-2 w-full">
+                        <Link href="https://x.com/gradientcraft" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
                             <Twitter className="w-4 h-4" />
                             <span>Follow us on X</span>
                         </Link>
@@ -58,4 +61,4 @@ const PannelHeader: React.FC = () => {
     );
 };
 
-export default PannelHeader
+export default PannelHeader;

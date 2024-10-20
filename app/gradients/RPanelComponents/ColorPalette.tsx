@@ -12,12 +12,12 @@ interface ColorPaletteProps {
 export const ColorPalette: React.FC<ColorPaletteProps> = ({ colors, copiedStates, onCopy }) => {
     return (
         <div>
-            <h4 className="font-semibold font-serif text-gray-600 dark:text-gray-300 text-sm">Colors</h4>
+            <h4 className="font-semibold font-serif text-zinc-600 dark:text-zinc-300 text-sm">Colors</h4>
             <div className="grid grid-cols-2 gap-2 mt-2">
                 {colors.map((color, index) => (
                     <motion.div
                         key={index}
-                        className="flex items-center rounded-xl text-gray-700 dark:text-gray-200 cursor-pointer hover:bg-amber-100/50 dark:hover:bg-amber-800/30 p-2 relative overflow-hidden"
+                        className="flex items-center rounded-xl text-zinc-700 dark:text-zinc-200 cursor-pointer hover:bg-amber-100/50 dark:hover:bg-amber-800/30 p-2 relative overflow-hidden"
                         onClick={() => onCopy(color, `Color ${index + 1}`)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}

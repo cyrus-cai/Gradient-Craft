@@ -32,12 +32,12 @@ const Hero: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className='text-black/100'>Gradient Craft</span>
-                    <span className='text-black/60'>is a gradients library</span>
-                    <span className='text-black/60'>for Front-End.</span>
+                    <span className='text-black dark:text-white'>Gradient Craft</span>
+                    <span className='text-black/60 dark:text-white/80'>is a gradients library</span>
+                    <span className='text-black/60 dark:text-white/80'>for Front-End.</span>
                 </motion.h1>
                 <motion.div
-                    className="text-xl mb-10 font-light"
+                    className="text-xl mb-10 font-light text-black dark:text-white/90"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}

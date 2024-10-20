@@ -28,8 +28,8 @@ const GradientCard: React.FC<{
                         }}
                     />
                     <div className="mt-2 text-center">
-                        <span className="text-gray-600 block text-sm font-serif font-semibold">{gradient.name}</span>
-                        {showCompany && <p className="text-xs text-gray-500 mt-1">from {company}</p>}
+                        <span className="text-zinc-600 block text-sm font-serif font-semibold">{gradient.name}</span>
+                        {showCompany && <p className="text-xs text-zinc-500 mt-1">from {company}</p>}
                     </div>
                 </div>
             </PopoverTrigger>

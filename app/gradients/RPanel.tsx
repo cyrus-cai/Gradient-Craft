@@ -152,7 +152,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
 
     return (
         <motion.div
-            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 dark:from-gray-800/75 dark:to-gray-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
+            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 dark:from-zinc-800/75 dark:to-zinc-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: isVisible ? 0 : '100%', opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -160,15 +160,15 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
                     <div className='mb-4 w-full flex items-center justify-between'>
-                        <h2 className="text-2xl font-serif font-semibold text-gray-800 dark:text-gray-200">{selectedGradientInfo.name}</h2>
+                        <h2 className="text-2xl font-serif font-semibold text-zinc-800 dark:text-zinc-200">{selectedGradientInfo.name}</h2>
                         <button
                             onClick={handleClose}
-                            className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200"
+                            className="text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-colors duration-200"
                         >
                             <X size={24} />
                         </button>
                     </div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 font-serif">
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-2 font-serif">
                         {selectedGradientInfo.type === 'album' ? (
                             <span className="flex items-center">
                                 <Music size={12} className="mr-1" />
@@ -179,14 +179,14 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                         )}
                     </p>
                     {selectedGradientInfo.type === 'album' && selectedGradientInfo.tags && (
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 font-serif flex items-center">
+                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-4 font-serif flex items-center">
                             <Tag size={12} className="mr-1" />
                             {selectedGradientInfo.tags.join(', ')}
                         </p>
                     )}
                     <GradientDisplay colors={selectedGradientInfo.colors} />
                 </div>
-                <Separator className="bg-gray-200 dark:bg-gray-700" />
+                <Separator className="bg-zinc-200 dark:bg-zinc-700" />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <div className="space-y-6">
                         <ColorPalette
