@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
 import BrandList from './LPanelComponents/BrandList';
+import Image from "next/image"
 import Link from 'next/link';
 import PannelHeader from './LPanelComponents/PannelHeader';
 import { Separator } from '@/components/ui/separator';
@@ -92,17 +93,26 @@ const LPanel: React.FC<LPanelProps> = ({
                 {showBanner && (
                     <div className='relative mt-4 mx-6'>
                         <button
-                            className='flex flex-col items-center justify-between px-4 py-6 gap-4 rounded-3xl text-white bg-[#55b1f6] w-full group hover:bg-[#54a7e6]'
+                            className='flex items-center justify-between px-3 pt-4 pb-4 rounded-3xl text-[#44a6f1] bg-[#55b1f6]/15 w-full group hover:bg-[#54a7e6]/15'
                             onClick={() => window.open("https://t.me/+jq2ARZn6BeI5ODJl")}
                         >
-                            <Send className="w-12 transition-transform duration-300 group-hover:animate-spin-hover" />
-                            <p className='text-md font-semibold'>
-                                Join telegram Dashboard for latest updates
-                            </p>
+                            <Image
+                                src='/tgchannel.png'
+                                width={96}
+                                height={96}
+                                alt='brandiconimage'
+                                className='rounded-2xl'
+                            />
+                            <div className='flex flex-col gap-2'>
+                                <Send className="w-16 transition-transform duration-300 group-hover:animate-spin-hover" />
+                                <p className='text-md font-semibold'>
+                                    Join telegram Dashboard for latest updates
+                                </p>
+                            </div>
                         </button>
                         <button
                             onClick={closeBanner}
-                            className="absolute top-2 right-2 text-white hover:text-gray-200"
+                            className="absolute top-2 right-2 text-[#54a7e6]"
                         >
                             <X size={20} />
                         </button>

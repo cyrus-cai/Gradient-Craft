@@ -36,6 +36,7 @@
     "react-spring": "^9.7.4",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
+    "use-debounce": "^10.0.4",
     "vercel": "^37.11.0"
   },
   "devDependencies": {
