@@ -12,13 +12,19 @@ const PannelHeader: React.FC = () => {
     return (
         <div className='w-full flex items-center justify-between gap-2'>
             <Link href="/">
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center justify-center gap-2'>
                     <Image
-                        src='/BrandIconText.png'
-                        width={144}
+                        src='/BrandIcon.png'
+                        width={24}
                         height={24}
                         alt='brandiconimage'
-                        className="dark:invert" // Invert colors for dark mode
+                    />
+                    <Image
+                        src='/BrandText.png'
+                        width={120}
+                        height={16}
+                        alt='brandiconimage'
+                        className='dark:invert'
                     />
                 </div>
             </Link>
