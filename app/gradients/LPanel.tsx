@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from 'react';
+import { ExternalLink, Plane, Send, X } from 'lucide-react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
 import BrandList from './LPanelComponents/BrandList';
-import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import PannelHeader from './LPanelComponents/PannelHeader';
 import { Separator } from '@/components/ui/separator';
@@ -28,6 +28,19 @@ const LPanel: React.FC<LPanelProps> = ({
     selectedCategory,
     onCategorySelect }) => {
     const [selectedType, setSelectedType] = useState<'all' | 'brands' | 'albums'>('all');
+    const [showBanner, setShowBanner] = useState(true);
+
+    useEffect(() => {
+        const bannerClosed = localStorage.getItem('telegramBannerClosed');
+        if (bannerClosed === 'true') {
+            setShowBanner(false);
+        }
+    }, []);
+
+    const closeBanner = () => {
+        setShowBanner(false);
+        localStorage.setItem('telegramBannerClosed', 'true');
+    };
 
     const getOptionColor = useCallback((option: ColorOption) => {
         if (option.name === 'All') return '#FFD700';
@@ -76,6 +89,25 @@ const LPanel: React.FC<LPanelProps> = ({
                     <PannelHeader />
                 </div>
                 <Separator className="dark:bg-zinc-700" />
+                {showBanner && (
+                    <div className='relative mt-4 mx-6'>
+                        <button
+                            className='flex flex-col items-center justify-between px-4 py-6 gap-4 rounded-3xl text-white bg-[#55b1f6] w-full group hover:bg-[#54a7e6]'
+                            onClick={() => window.open("https://t.me/+jq2ARZn6BeI5ODJl")}
+                        >
+                            <Send className="w-12 transition-transform duration-300 group-hover:animate-spin-hover" />
+                            <p className='text-md font-semibold'>
+                                Join telegram Dashboard for latest updates
+                            </p>
+                        </button>
+                        <button
+                            onClick={closeBanner}
+                            className="absolute top-2 right-2 text-white hover:text-gray-200"
+                        >
+                            <X size={20} />
+                        </button>
+                    </div>
+                )}
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
                     <BrandList
                         groupedOptions={groupedOptions}

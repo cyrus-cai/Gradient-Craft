@@ -61,12 +61,25 @@ const config: Config = {
 				'gradient-y': 'gradient-y 15s ease infinite',
 				'gradient-xy': 'gradient-xy 15s ease infinite',
 				'slide-left': 'slide-left 0.3s ease-out forwards',
+				'spin-slow': 'spin 3s linear infinite',
+				'spin-hover': 'spin 0.5s linear',
+				pulse: 'pulse var(--duration) ease-out infinite'
 			},
 			keyframes: {
 				'slide-left': {
-					'0%': { transform: 'translateX(0)' },
-					'50%': { transform: 'translateX(-8px)' },
-					'100%': { transform: 'translateX(-4px)' },
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'50%': {
+						transform: 'translateX(-8px)'
+					},
+					'100%': {
+						transform: 'translateX(-4px)'
+					}
+				},
+				spin: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
 				},
 				'gradient-y': {
 					'0%, 100%': {
@@ -97,11 +110,19 @@ const config: Config = {
 						'background-size': '200% 200%',
 						'background-position': 'right center'
 					}
+				},
+				pulse: {
+					'0%, 100%': {
+						boxShadow: '0 0 0 0 var(--pulse-color)'
+					},
+					'50%': {
+						boxShadow: '0 0 0 8px var(--pulse-color)'
+					}
 				}
 			},
 			backgroundImage: {
-				'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
-			},
+				'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))'
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
