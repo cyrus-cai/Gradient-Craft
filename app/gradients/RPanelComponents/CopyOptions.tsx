@@ -32,8 +32,6 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     const handleCopy = useCallback((text: string, label: string) => {
         onCopy(text, label);
         setCopiedStates(prev => ({ ...prev, [label]: true }));
-
-        // Set a timer to clear the "Copied!" state after 3 seconds
         setTimeout(() => {
             setCopiedStates(prev => ({ ...prev, [label]: false }));
         }, 1500);

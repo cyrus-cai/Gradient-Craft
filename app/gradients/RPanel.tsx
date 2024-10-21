@@ -198,7 +198,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             selectedFramework={selectedFramework}
                             frameworkOptions={frameworkOptions}
                             copyOptions={getCopyOptions()}
-                            copiedStates={copiedStates}
+                            // copiedStates={copiedStates}
                             onCopy={copyToClipboard}
                             onFrameworkChange={setSelectedFramework}
                         />

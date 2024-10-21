@@ -37,12 +37,12 @@ const Hero: React.FC = () => {
                     <span className='text-black/60 dark:text-white/80'>for Front-End.</span>
                 </motion.h1>
                 <motion.div
-                    className="text-xl mb-10 font-light text-black dark:text-white/90"
+                    className="text-xl mb-10 font-light text-black dark:invert dark:opacity-75"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <div className='flex items-center font-serif gap-2'>
+                    <div className='flex items-center font-serif gap-2 '>
                         Works with
                         {['Tailwind', 'CSS', 'SwiftUI', 'React Native', 'Flutter'].map((tech) => (
                             <Image

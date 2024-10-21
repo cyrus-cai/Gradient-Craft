@@ -40,7 +40,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onCh
                     height={16}
                     width={16}
                     alt=''
-                    className="mr-2"
+                    className="mr-2 dark:invert"
                 />
                 <span className="truncate">
                     {options.find(option => option.value === value)?.label}
