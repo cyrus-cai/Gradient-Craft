@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { CustomSelect } from './CustomSelect';
 import { Shortcut } from '@/components/ui/shortcut';
@@ -28,6 +28,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
 }) => {
     const [hoveredOption, setHoveredOption] = useState<string | null>(null);
     const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handleCopy = useCallback((text: string, label: string) => {
         onCopy(text, label);
@@ -39,6 +40,13 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
 
     const handleKeyPress = useCallback((event: KeyboardEvent) => {
         if (!copyOptions.length) return;
+
+        // 检查当前焦点是否在组件内部或者没有焦点元素
+        const activeElement = document.activeElement;
+        const isInsideComponent = containerRef.current?.contains(activeElement);
+        const isNoFocus = activeElement === document.body;
+
+        if (!isInsideComponent && !isNoFocus) return;
 
         const keyToIndex: { [key: string]: number } = {
             'Enter': 0,
@@ -62,6 +70,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
         if (index !== undefined && index < copyOptions.length) {
             const option = copyOptions[index];
             handleCopy(option.action(), option.label);
+            event.preventDefault(); // 防止默认行为
         }
     }, [copyOptions, handleCopy]);
 
@@ -73,7 +82,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     }, [handleKeyPress]);
 
     return (
-        <div>
+        <div ref={containerRef}>
             <div className='flex items-center justify-between py-4'>
                 <h3 className="font-semibold font-serif text-zinc-600 dark:text-zinc-300 text-sm">Copy Options</h3>
                 <CustomSelect
