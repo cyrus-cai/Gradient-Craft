@@ -1,3 +1,4 @@
+//CopyOptions.tsx
 import { AnimatePresence, motion } from 'framer-motion';
 import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';

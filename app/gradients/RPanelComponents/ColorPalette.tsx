@@ -1,3 +1,5 @@
+//ColorPalette.tsx
+
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { Copy } from 'lucide-react';

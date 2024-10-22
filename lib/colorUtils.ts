@@ -1,5 +1,4 @@
 import colors from 'tailwindcss/colors';
-import { useCallback } from 'react';
 
 // 将Tailwind颜色对象扁平化为 { [colorName: string]: string } 格式
 const flattenedColors = Object.entries(colors).reduce((acc, [key, value]) => {

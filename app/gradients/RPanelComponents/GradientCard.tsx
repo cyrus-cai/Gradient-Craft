@@ -1,3 +1,5 @@
+//GradientCard.tsx
+
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import React, { useState } from 'react';
 

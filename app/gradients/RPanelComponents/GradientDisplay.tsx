@@ -1,5 +1,4 @@
-import { ArrowDownToLine } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+//GreadientDisplay.tsx
 import React from 'react';
 
 interface GradientDisplayProps {

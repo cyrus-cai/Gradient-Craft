@@ -1,3 +1,4 @@
+//RPanel.tsx
 import { Layout, Monitor, Music, Smartphone, Tablet, Tag, User, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
