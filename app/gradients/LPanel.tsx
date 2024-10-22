@@ -86,7 +86,7 @@ const LPanel: React.FC<LPanelProps> = ({
     return (
         <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 dark:from-zinc-900/100 dark:to-zinc-800/75 shadow-lg rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
-                <div className="flex flex-col gap-6 sticky top-0 bg-white/25 backdrop-blur-2xl z-50">
+                <div className="flex flex-col gap-6 sticky top-0 bg-white/25 dark:bg-white/5 backdrop-blur-2xl z-50">
                     <div className='px-6 pt-6'>
                         <PannelHeader />
                     </div>
