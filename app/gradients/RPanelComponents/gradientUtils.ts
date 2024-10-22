@@ -8,24 +8,27 @@ interface Gradient {
 }
 
 // Tailwind utilities
-export const generateTailwindText = (gradient: Gradient): string => {
+export const generateTailwindText = (gradient: Gradient, angle: number): string => {
     const gradientClasses = gradient.colors.map((color, index) => {
         const closestColor = findClosestTailwindColor(color);
         if (index === 0) return `from-${closestColor}`;
         if (index === gradient.colors.length - 1) return `to-${closestColor}`;
         return `via-${closestColor}`;
     }).join(' ');
-    return `text-transparent bg-clip-text bg-gradient-to-r ${gradientClasses}`;
+
+    // 添加自定义角度支持a
+    return `text-transparent bg-clip-text bg-gradient-to-r ${gradientClasses} [background:linear-gradient(${angle}deg,var(--tw-gradient-stops))]`;
 };
 
-export const generateTailwindBackground = (gradient: Gradient): string => {
+export const generateTailwindBackground = (gradient: Gradient, angle: number = 90): string => {
     const gradientClasses = gradient.colors.map((color, index) => {
         const closestColor = findClosestTailwindColor(color);
         if (index === 0) return `from-${closestColor}`;
         if (index === gradient.colors.length - 1) return `to-${closestColor}`;
         return `via-${closestColor}`;
     }).join(' ');
-    return `bg-gradient-to-r ${gradientClasses}`;
+    // Note: Tailwind doesn't support custom angles directly, so we'll need to use CSS
+    return `bg-gradient-to-r ${gradientClasses} [background:linear-gradient(${angle}deg,var(--tw-gradient-stops))]`;
 };
 
 export const generateTailwindBorder = (gradient: Gradient): string => {
@@ -39,8 +42,10 @@ export const generateTailwindRing = (gradient: Gradient): string => {
 };
 
 // CSS utilities
-export const generateCSSGradient = (gradient: Gradient, type: 'background' | 'text' | 'both' = 'both'): string => {
-    const backgroundCode = `background: linear-gradient(to right, ${gradient.colors.join(', ')});`;
+// export const generateCSSGradient = (gradient: Gradient, type: 'background' | 'text' | 'both' = 'both'): string => {
+//     const backgroundCode = `background: linear-gradient(to right, ${gradient.colors.join(', ')});`;
+export const generateCSSGradient = (gradient: Gradient, type: 'background' | 'text' | 'both' = 'both', angle: number = 90): string => {
+    const backgroundCode = `background: linear-gradient(${angle}deg, ${gradient.colors.join(', ')});`;
     const gradientTextCode = `
 background: linear-gradient(to right, ${gradient.colors.join(', ')});
 -webkit-background-clip: text;

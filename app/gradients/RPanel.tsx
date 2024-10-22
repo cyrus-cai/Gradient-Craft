@@ -34,6 +34,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
     const isMounted = useRef(true);
+    const [gradientAngle, setGradientAngle] = useState(90);
 
     useEffect(() => {
         // 创建 canvas 元素
@@ -114,15 +115,31 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         switch (selectedFramework) {
             case 'tailwind':
                 return [
-                    { label: 'Text', action: () => generateTailwindText(selectedGradientInfo), shortcut: 'Enter' },
-                    { label: 'Background', action: () => generateTailwindBackground(selectedGradientInfo), shortcut: '⌘+Enter' },
+                    {
+                        label: 'Text',
+                        action: () => generateTailwindText(selectedGradientInfo, gradientAngle),
+                        shortcut: 'Enter'
+                    },
+                    {
+                        label: 'Background',
+                        action: () => generateTailwindBackground(selectedGradientInfo, gradientAngle),
+                        shortcut: '⌘+Enter'
+                    },
                     { label: 'Border', action: () => generateTailwindBorder(selectedGradientInfo), shortcut: '3' },
                     { label: 'Ring', action: () => generateTailwindRing(selectedGradientInfo), shortcut: '4' },
                 ];
             case 'css':
                 return [
-                    { label: 'Text', action: () => generateCSSGradient(selectedGradientInfo, 'text'), shortcut: 'Enter' },
-                    { label: 'Background', action: () => generateCSSGradient(selectedGradientInfo, 'background'), shortcut: '⌘+Enter' },
+                    {
+                        label: 'Text',
+                        action: () => generateCSSGradient(selectedGradientInfo, 'text', gradientAngle),
+                        shortcut: 'Enter'
+                    },
+                    {
+                        label: 'Background',
+                        action: () => generateCSSGradient(selectedGradientInfo, 'background', gradientAngle),
+                        shortcut: '⌘+Enter'
+                    },
                 ];
             case 'swiftui':
                 return [
@@ -132,7 +149,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
             default:
                 return [];
         }
-    }, [selectedGradientInfo, selectedFramework]);
+    }, [selectedGradientInfo, selectedFramework, gradientAngle]);
 
     const getExportOptions = [
         { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-amber-600' /> },
@@ -160,7 +177,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         >
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="p-6">
-                    <div className='mb-4 w-full flex items-center justify-between'>
+                    <div className='mb-2 w-full flex items-center justify-between'>
                         <h2 className="text-2xl font-serif font-semibold text-zinc-800 dark:text-zinc-200">{selectedGradientInfo.name}</h2>
                         <button
                             onClick={handleClose}
@@ -169,7 +186,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             <X size={24} />
                         </button>
                     </div>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-2 font-serif">
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
                         {selectedGradientInfo.type === 'album' ? (
                             <span className="flex items-center">
                                 <Music size={12} className="mr-1" />
@@ -185,7 +202,11 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             {selectedGradientInfo.tags.join(', ')}
                         </p>
                     )}
-                    <GradientDisplay colors={selectedGradientInfo.colors} />
+                    <GradientDisplay
+                        colors={selectedGradientInfo.colors}
+                        angle={gradientAngle}
+                        onAngleChange={setGradientAngle}
+                    />
                 </div>
                 <Separator className="bg-zinc-200 dark:bg-zinc-700" />
                 <div className="px-6 py-6 overflow-y-auto flex-grow">
