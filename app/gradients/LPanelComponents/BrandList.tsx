@@ -2,6 +2,7 @@ import { Album, Globe, Search, Twitter } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
 import BrandButton from './BrandButton';
+import { Separator } from '@/components/ui/separator';
 
 interface ColorOption {
     type: 'brand' | 'album';
@@ -64,24 +65,25 @@ const BrandList: React.FC<BrandListProps> = ({
     return (
         <div className="space-y-4">
             <div className="mb-4">
-                <div className="flex justify-between mb-4">
+                <div className="flex  justify-between mb-8 bg-amber-300/15 backdrop-blur-3xl p-1 w-fit font-semibold rounded-full fixed top-32">
                     {(['all', 'brands', 'albums'] as const).map((type) => {
                         const Icon = type === 'all' ? Globe : type === 'brands' ? Twitter : Album;
                         return (
                             <button
                                 key={type}
-                                className={`px-4 py-2 rounded-xl text-xs transition-all duration-300 flex items-center space-x-2 ${selectedType === type
-                                    ? 'bg-amber-400 text-white dark:bg-amber-600'
-                                    : 'bg-amber-100 text-zinc-700 dark:bg-zinc-700 dark:text-zinc-300'
+                                className={`px-4 py-2  text-xs transition-all duration-300 flex items-center space-x-2 rounded-full ${selectedType === type
+                                    ? 'bg-amber-500 text-white dark:bg-amber-600'
+                                    : ' text-zinc-700 dark:bg-zinc-700 dark:text-zinc-300'
                                     }`}
                                 onClick={() => onTypeSelect(type)}
                             >
-                                <Icon size={16} />
+                                {/* <Icon size={16} /> */}
                                 <span>{type.charAt(0).toUpperCase() + type.slice(1)}</span>
                             </button>
                         );
                     })}
                 </div>
+                <div className='pt-16'></div>
                 <BrandButton
                     option={allOption}
                     isSelected={selectedCategory === null}
