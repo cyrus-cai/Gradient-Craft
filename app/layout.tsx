@@ -13,16 +13,71 @@ const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+  display: 'swap', // 优化字体加载
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Gradient Craft",
-  description: "Gradient Craft is a gradients library for Front - End.",
+  metadataBase: new URL('https://www.gcraft.site/'),
+  title: {
+    default: "Gradient Craft - Frontend Gradients Library",
+    template: "%s | Gradient Craft"
+  },
+  description: "Gradient Craft is a comprehensive gradients library for Frontend developers, offering beautiful and customizable gradient designs for modern web applications.",
+  keywords: ["gradients", "frontend", "tailwind", "tailwind css", "css", "design", "web development", "frontend", "UI design"],
+  authors: [{ name: "Gradient Craft" }],
+  creator: "Gradient Craft",
+  publisher: "Gradient Craft",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.gcraft.site/',
+    title: 'Gradient Craft the Frontend Gradients Library',
+    description: 'Gradient Craft is an open-source and free gradient color library. It contains over 800 colors derived from classic designs and supports one-click property copying.',
+    siteName: 'Gradient Craft',
+    images: [
+      {
+        url: '/i1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Gradient Craft Preview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gradient Craft - Frontend Gradients Library',
+    description: 'Open-source and free gradient library with 800+ colors & one-click use.',
+    images: ['/i1.png'],
+    creator: '@gradientcraft',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // verification: {
+  //   google: '你的Google验证码',
+  //   yandex: '你的Yandex验证码',
+  //   yahoo: '你的Yahoo验证码',
+  // },
 };
 
 export default function RootLayout({
@@ -31,12 +86,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
