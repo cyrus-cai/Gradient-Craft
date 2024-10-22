@@ -86,53 +86,66 @@ const LPanel: React.FC<LPanelProps> = ({
     return (
         <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 dark:from-zinc-900/100 dark:to-zinc-800/75 shadow-lg rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
-                <div className="p-6">
-                    <PannelHeader />
-                </div>
-                <Separator className="dark:bg-zinc-700" />
-                {showBanner && (
-                    <div className='relative mt-4 mx-6'>
-                        <button
-                            className='flex items-center justify-between px-3 pt-4 pb-4 rounded-3xl text-[#44a6f1] bg-[#55b1f6]/15 w-full group hover:bg-[#54a7e6]/15'
-                            onClick={() => window.open("https://t.me/+jq2ARZn6BeI5ODJl")}
-                        >
-                            <Image
-                                src='/tgchannel.png'
-                                width={96}
-                                height={96}
-                                alt='brandiconimage'
-                                className='rounded-2xl'
-                            />
-                            <div className='flex flex-col gap-2'>
-                                <Send className="w-16 transition-transform duration-300 group-hover:animate-spin-hover" />
-                                <p className='text-md font-semibold'>
-                                    Join telegram Dashboard for latest updates
-                                </p>
-                            </div>
-                        </button>
-                        <button
-                            onClick={closeBanner}
-                            className="absolute top-2 right-2 text-[#54a7e6]"
-                        >
-                            <X size={20} />
-                        </button>
+                <div className="flex flex-col gap-6 sticky top-0 bg-white/25 backdrop-blur-2xl z-50">
+                    <div className='px-6 pt-6'>
+                        <PannelHeader />
                     </div>
-                )}
-                <div className="px-6 py-6 overflow-y-auto flex-grow">
-                    <BrandList
-                        groupedOptions={groupedOptions}
-                        selectedCategory={selectedCategory}
-                        selectedType={selectedType}
-                        onCategorySelect={onCategorySelect}
-                        onTypeSelect={setSelectedType}
-                        getOptionColor={getOptionColor}
-                        getTextColor={getTextColor}
-                    />
-                    <Link className='flex pt-12 w-full items-center justify-center' href={'https://x.com/gradientcraft/status/1845187126847209554'}>
-                        <Badge variant="secondary" className="dark:bg-zinc-700 dark:text-zinc-200">
-                            v0.1.2
-                            <ExternalLink className='w-3' />
-                        </Badge>
+                    <Separator className="dark:bg-zinc-700" />
+                </div>
+                <BrandList
+                    groupedOptions={groupedOptions}
+                    selectedCategory={selectedCategory}
+                    selectedType={selectedType}
+                    onCategorySelect={onCategorySelect}
+                    onTypeSelect={setSelectedType}
+                    getOptionColor={getOptionColor}
+                    getTextColor={getTextColor}
+                />
+                <div className='flex items-center justify-center gap-6 w-full p-12'>
+                    <Link
+                        href="https://github.com/cyrus-cai/Gradient-Craft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group"
+                    >
+                        <div className='flex items-center'>
+                            <Image
+                                src={`/Icons/Github.svg`}
+                                height={24}
+                                width={24}
+                                alt=''
+                                className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
+                            />
+                        </div>
+                    </Link>
+                    <Link
+                        href="https://github.com/cyrus-cai/Gradient-Craft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group"
+                    >
+                        <Image
+                            src={`/Icons/X.png`}
+                            height={20}
+                            width={20}
+                            alt=''
+                            className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
+                        />
+                    </Link>
+                    <Link
+                        href="https://t.me/+jq2ARZn6BeI5ODJl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group"
+                    >
+                        <Send />
+                        {/* <Image
+                            src={`/Icons/X.png`}
+                            height={20}
+                            width={20}
+                            alt=''
+                            className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
+                        /> */}
                     </Link>
                 </div>
             </div>
