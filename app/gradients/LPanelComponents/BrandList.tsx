@@ -72,10 +72,10 @@ const BrandList: React.FC<BrandListProps> = ({
                             return (
                                 <button
                                     key={type}
-                                    className={`group relative flex items-center gap-2 py-1 transition-all duration-300
+                                    className={`group relative flex items-center gap-2 py-1
                                         ${selectedType === type
                                             ? 'text-amber-600 dark:text-amber-500'
-                                            : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
+                                            : 'text-zinc-400 dark:text-zinc-500'
                                         }`}
                                     onClick={() => onTypeSelect(type)}
                                 >
@@ -85,8 +85,8 @@ const BrandList: React.FC<BrandListProps> = ({
                                             : 'text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-800 dark:group-hover:text-zinc-300'
                                         }`}
                                     /> */}
-                                    <span className={`text-sm font-medium tracking-wide transition-all duration-300
-                                        ${selectedType === type ? 'translate-x-0.5' : ''}`}>
+                                    <span className={`text-sm font-medium tracking-wide transition-all
+                                        ${selectedType === type ? '' : ''}`}>
                                         {type.charAt(0).toUpperCase() + type.slice(1)}
                                     </span>
                                     {selectedType === type && (
@@ -114,7 +114,7 @@ const BrandList: React.FC<BrandListProps> = ({
                 {Object.entries(filteredOptions).map(([letter, options], index) => (
                     <div key={letter} className={index !== 0 ? 'mt-8' : 'mt-3'}>
                         <h4 className="sticky top-[3.5rem] font-medium text-md text-zinc-800 font-serif dark:text-zinc-500
-                            px-1 py-2 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl z-30">
+                            px-1 py-2 backdrop-blur-xl z-30">
                             {letter}
                         </h4>
                         <div className="grid grid-cols-2 gap-3 mt-2">
