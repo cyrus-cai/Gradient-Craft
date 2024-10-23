@@ -4,6 +4,7 @@ import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { CustomSelect } from './CustomSelect';
+import Link from 'next/link';
 import { Shortcut } from '@/components/ui/shortcut';
 
 interface CopyOption {
@@ -140,6 +141,16 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                         )}
                     </motion.button>
                 ))}
+            </div>
+            <div className='pt-6 px-2 opacity-50'>
+                <p className='font-mono text-xs dark:text-zinc-300'>
+                    border or ring works incorrectly?
+                    <div className='hover:underline'>
+                        <Link href={'https://gcraft.notion.site/How-to-correctly-use-tailwind-border-or-ring-12870a0688948059b1d5fa7965a85755'}>
+                            Please check this example.
+                        </Link>
+                    </div>
+                </p>
             </div>
         </div>
     );
