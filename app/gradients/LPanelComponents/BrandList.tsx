@@ -2,7 +2,6 @@ import { Album, Globe, Twitter } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
 import BrandButton from './BrandButton';
-import { Separator } from '@/components/ui/separator';
 
 interface ColorOption {
     type: 'brand' | 'album';
@@ -63,37 +62,62 @@ const BrandList: React.FC<BrandListProps> = ({
     }, [groupedOptions, searchTerm, selectedType, selectedCategory]);
 
     return (
-        <div className="space-y-4 ">
-            <div className='px-6 py-2'>
-                <div className="flex justify-between p-1 gap-2 w-fit font-semibold rounded-full sticky top-0 z-40">
-                    {(['all', 'brands', 'albums'] as const).map((type) => {
-                        return (
-                            <button
-                                key={type}
-                                className={`px-4 py-1  text-xs transition-all duration-300 flex items-center space-x-2 rounded-full ${selectedType === type
-                                    ? 'bg-amber-500 text-white dark:bg-amber-600 border'
-                                    : ' text-zinc-700 dark:bg-zinc-700 dark:text-zinc-300 border border-amber-500'
-                                    }`}
-                                onClick={() => onTypeSelect(type)}
-                            >
-                                <span>{type.charAt(0).toUpperCase() + type.slice(1)}</span>
-                            </button>
-                        );
-                    })}
+        <div className="h-[calc(100vh-4rem)] overflow-y-auto relative">
+            {/* 优化顶部导航栏间距 */}
+            <div className="sticky top-0 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl z-40">
+                <div className="px-6 pt-4 pb-4">
+                    <div className="flex gap-6 w-fit">
+                        {(['all', 'brands', 'albums'] as const).map((type) => {
+                            const Icon = type === 'all' ? Globe : type === 'brands' ? Twitter : Album;
+                            return (
+                                <button
+                                    key={type}
+                                    className={`group relative flex items-center gap-2 py-1 transition-all duration-300
+                                        ${selectedType === type
+                                            ? 'text-amber-600 dark:text-amber-500'
+                                            : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
+                                        }`}
+                                    onClick={() => onTypeSelect(type)}
+                                >
+                                    {/* <Icon className={`w-4 h-4 transition-all duration-300
+                                        ${selectedType === type
+                                            ? 'text-amber-600 dark:text-amber-500'
+                                            : 'text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-800 dark:group-hover:text-zinc-300'
+                                        }`}
+                                    /> */}
+                                    <span className={`text-sm font-medium tracking-wide transition-all duration-300
+                                        ${selectedType === type ? 'translate-x-0.5' : ''}`}>
+                                        {type.charAt(0).toUpperCase() + type.slice(1)}
+                                    </span>
+                                    {selectedType === type && (
+                                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-500/0 via-amber-500 to-amber-500/0" />
+                                    )}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
-            <div className='px-6'>
-                <BrandButton
-                    option={allOption}
-                    isSelected={selectedCategory === null}
-                    onSelect={() => onCategorySelect(null)}
-                    getOptionColor={getOptionColor}
-                    getTextColor={getTextColor}
-                />
-                {Object.entries(filteredOptions).map(([letter, options]) => (
-                    <div key={letter}>
-                        <h4 className="font-semibold font-serif text-zinc-600 dark:text-zinc-400 px-4 pt-6 pb-1">{letter}</h4>
-                        <div className="grid grid-cols-2 gap-2">
+
+            {/* 优化内容区域间距 */}
+            <div className="px-6">
+                <div className="pt-2">
+                    <BrandButton
+                        option={allOption}
+                        isSelected={selectedCategory === null}
+                        onSelect={() => onCategorySelect(null)}
+                        getOptionColor={getOptionColor}
+                        getTextColor={getTextColor}
+                    />
+                </div>
+
+                {Object.entries(filteredOptions).map(([letter, options], index) => (
+                    <div key={letter} className={index !== 0 ? 'mt-8' : 'mt-3'}>
+                        <h4 className="sticky top-[3.5rem] font-medium text-md text-zinc-800 font-serif dark:text-zinc-500
+                            px-1 py-2 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl z-30">
+                            {letter}
+                        </h4>
+                        <div className="grid grid-cols-2 gap-3 mt-2">
                             {options.map((option) => (
                                 <BrandButton
                                     key={`${option.type}-${option.name}`}

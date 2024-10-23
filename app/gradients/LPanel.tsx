@@ -101,7 +101,7 @@ const LPanel: React.FC<LPanelProps> = ({
                     getOptionColor={getOptionColor}
                     getTextColor={getTextColor}
                 />
-                <div className='flex items-center justify-center gap-6 w-full p-12'>
+                <div className='flex items-center justify-center gap-6 w-full px-12 py-6'>
                     <Link
                         href="https://github.com/cyrus-cai/Gradient-Craft"
                         target="_blank"
@@ -136,16 +136,9 @@ const LPanel: React.FC<LPanelProps> = ({
                         href="https://t.me/+jq2ARZn6BeI5ODJl"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group"
+                        className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
                     >
                         <Send />
-                        {/* <Image
-                            src={`/Icons/X.png`}
-                            height={20}
-                            width={20}
-                            alt=''
-                            className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
-                        /> */}
                     </Link>
                 </div>
             </div>
