@@ -69,9 +69,25 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                         {hoveredOption === option.label && !exportedStates[option.label] && (
                             <ArrowDownToLine className="w-4 h-4 text-amber-600 dark:text-amber-400 absolute right-4 transition-colors duration-300" />
                         )}
+
                     </motion.button>
                 ))}
             </div>
-        </div>
+            {/* <div className='flex flex-col gap-1'>
+                <div className='relative border-transparent rounded-lg before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:p-[1px] before:bg-gradient-to-br before:from-green-500/80 before:to-green-500/80 before:content-[""]'>
+                    Test A
+                </div>
+                <div className='relative p-[1px] before:bg-gradient-to-br before:from-red-600/80 before:to-pink-300/80 before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:content-[""]'>
+                    <div className='bg-white'>
+                        Example Text 1
+                    </div>
+                </div>
+                <div className='relative p-[2px] before:bg-gradient-to-t before:from-lime-500/100 before:to-orange-600/100 before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:content-[""]'>
+                    <div className='bg-white'>
+                        Example Text
+                    </div>
+                </div>
+            </div > */}
+        </div >
     );
 };

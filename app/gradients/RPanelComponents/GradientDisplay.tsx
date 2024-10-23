@@ -1,27 +1,28 @@
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import { Badge } from '@/components/ui/badge';
+// GradientDisplay.tsx
 import React from 'react';
 import { Slider } from "@/components/ui/slider";
 
 interface GradientDisplayProps {
     colors: string[];
     angle: number;
+    opacity: number;
     onAngleChange: (angle: number) => void;
+    onOpacityChange: (opacity: number) => void;
 }
 
 export const GradientDisplay: React.FC<GradientDisplayProps> = ({
     colors,
     angle,
-    onAngleChange
+    opacity,
+    onAngleChange,
+    onOpacityChange
 }) => {
     const handleAngleChange = (value: number[]) => {
         onAngleChange(value[0]);
+    };
+
+    const handleOpacityChange = (value: number[]) => {
+        onOpacityChange(value[0]);
     };
 
     return (
@@ -30,46 +31,57 @@ export const GradientDisplay: React.FC<GradientDisplayProps> = ({
                 <div
                     className="h-64 rounded-xl shadow-inner transition-all duration-300"
                     style={{
-                        background: `linear-gradient(${angle}deg, ${colors.join(', ')})`
+                        background: `linear-gradient(${angle}deg, ${colors.map(color => {
+                            // Convert hex to rgba for opacity support
+                            const r = parseInt(color.slice(1, 3), 16);
+                            const g = parseInt(color.slice(3, 5), 16);
+                            const b = parseInt(color.slice(5, 7), 16);
+                            return `rgba(${r}, ${g}, ${b}, ${opacity / 100})`;
+                        }).join(', ')})`
                     }}
                 />
-                <div className="mt-4 space-y-2">
-                    <div className="flex justify-between items-center">
-                        <span className="flex items-center justify-center gap-1 text-sm text-zinc-600 dark:text-zinc-400">
-                            <p className="font-serif font-semibold">
-                                Angle
-                            </p>
-                            <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                    <TooltipTrigger>
-                                        <div>
-                                            <Badge variant="secondary" className="cursor">
-                                                Beta
-                                            </Badge>
-                                        </div>
-                                    </TooltipTrigger>
-                                    <TooltipContent side="right" className="max-w-[200px] p-2">
-                                        <p className="font-mono text-xs">Currently works with tailwind text & bg.</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </span>
-                        <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
-                            {angle}°
-                        </span>
+                <div className="mt-4 space-y-4">
+                    {/* Angle Control */}
+                    <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                            <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+                                Gradient Angle
+                            </span>
+                            <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+                                {angle}°
+                            </span>
+                        </div>
+                        <Slider
+                            value={[angle]}
+                            onValueChange={handleAngleChange}
+                            min={0}
+                            max={360}
+                            step={1}
+                            className="w-full"
+                        />
                     </div>
-                    <Slider
-                        value={[angle]}
-                        onValueChange={handleAngleChange}
-                        min={0}
-                        max={360}
-                        step={1}
-                        className="w-full"
-                    />
+
+                    {/* Opacity Control */}
+                    <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                            <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+                                Opacity
+                            </span>
+                            <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+                                {opacity}%
+                            </span>
+                        </div>
+                        <Slider
+                            value={[opacity]}
+                            onValueChange={handleOpacityChange}
+                            min={0}
+                            max={100}
+                            step={5}
+                            className="w-full"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
-
-export default GradientDisplay;

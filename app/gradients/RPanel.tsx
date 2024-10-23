@@ -35,6 +35,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     const [selectedFramework, setSelectedFramework] = useState<string>('tailwind');
     const isMounted = useRef(true);
     const [gradientAngle, setGradientAngle] = useState(90);
+    const [gradientOpacity, setGradientOpacity] = useState(100); // 添加透明度状态
 
     useEffect(() => {
         // 创建 canvas 元素
@@ -117,29 +118,47 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                 return [
                     {
                         label: 'Text',
-                        action: () => generateTailwindText(selectedGradientInfo, gradientAngle),
+                        action: () => generateTailwindText(selectedGradientInfo, gradientAngle, gradientOpacity),
                         shortcut: 'Enter'
                     },
                     {
                         label: 'Background',
-                        action: () => generateTailwindBackground(selectedGradientInfo, gradientAngle),
+                        action: () => generateTailwindBackground(selectedGradientInfo, gradientAngle, gradientOpacity),
                         shortcut: '⌘+Enter'
                     },
-                    { label: 'Border', action: () => generateTailwindBorder(selectedGradientInfo), shortcut: '3' },
-                    { label: 'Ring', action: () => generateTailwindRing(selectedGradientInfo), shortcut: '4' },
+                    {
+                        label: 'Border',
+                        action: () => generateTailwindBorder(selectedGradientInfo, gradientAngle, gradientOpacity),
+                        shortcut: '3'
+                    },
+                    {
+                        label: 'Ring',
+                        action: () => generateTailwindRing(selectedGradientInfo, gradientAngle, gradientOpacity),
+                        shortcut: '4'
+                    }
                 ];
             case 'css':
                 return [
                     {
                         label: 'Text',
-                        action: () => generateCSSGradient(selectedGradientInfo, 'text', gradientAngle),
+                        action: () => generateCSSGradient(selectedGradientInfo, 'text', gradientAngle, gradientOpacity),
                         shortcut: 'Enter'
                     },
                     {
                         label: 'Background',
-                        action: () => generateCSSGradient(selectedGradientInfo, 'background', gradientAngle),
+                        action: () => generateCSSGradient(selectedGradientInfo, 'background', gradientAngle, gradientOpacity),
                         shortcut: '⌘+Enter'
                     },
+                    {
+                        label: 'Border',
+                        action: () => generateCSSGradient(selectedGradientInfo, 'border', gradientAngle, gradientOpacity),
+                        shortcut: '3'
+                    },
+                    {
+                        label: 'Ring',
+                        action: () => generateCSSGradient(selectedGradientInfo, 'ring', gradientAngle, gradientOpacity),
+                        shortcut: '4'
+                    }
                 ];
             case 'swiftui':
                 return [
@@ -149,7 +168,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
             default:
                 return [];
         }
-    }, [selectedGradientInfo, selectedFramework, gradientAngle]);
+    }, [selectedGradientInfo, selectedFramework, gradientAngle, gradientOpacity]);
 
     const getExportOptions = [
         { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-amber-600' /> },
@@ -205,7 +224,9 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                     <GradientDisplay
                         colors={selectedGradientInfo.colors}
                         angle={gradientAngle}
+                        opacity={gradientOpacity}
                         onAngleChange={setGradientAngle}
+                        onOpacityChange={setGradientOpacity}
                     />
                 </div>
                 <Separator className="bg-zinc-200 dark:bg-zinc-700" />
