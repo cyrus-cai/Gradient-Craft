@@ -245,7 +245,7 @@ const Centre = () => {
                                 ? 'Similar Gradients'
                                 : (selectedCategory ? `${selectedCategory} ` : 'All Gradients')}
                         </h3>
-                        <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7 gap-4 px-4">
+                        <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-8 gap-4 px-4">
                             {(selectedColor ? findSimilarGradients(selectedColor) : searchFilteredGradients).map((gradient, index) =>
                                 renderGradient(gradient, index)
                             )}

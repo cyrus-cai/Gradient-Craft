@@ -26,11 +26,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gcraft.site/'),
   title: {
-    default: "Gradient Craft - Frontend Gradients Library",
+    default: "Gradient Craft - Frontend Gradients Library - Tailwind css",
     template: "%s | Gradient Craft"
   },
   description: "Gradient Craft is a comprehensive gradients library for Frontend developers, offering beautiful and customizable gradient designs for modern web applications.",
-  keywords: ["gradients", "frontend", "tailwind", "tailwind css", "css", "design", "web development", "frontend", "UI design"],
+  keywords: ["gradients", "gradient tailwind", "frontend", "tailwind", "tailwind css", "css", "design", "web development", "frontend", "UI design"],
   authors: [{ name: "Gradient Craft" }],
   creator: "Gradient Craft",
   publisher: "Gradient Craft",

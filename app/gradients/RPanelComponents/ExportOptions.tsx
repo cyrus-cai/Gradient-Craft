@@ -1,6 +1,9 @@
+//ExportOptions.ts
+
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowDownToLine, Copy, Layout, Monitor, Smartphone, Tablet, User } from 'lucide-react';
 import React, { useState } from 'react';
+
+import { ArrowDownToLine } from 'lucide-react';
 
 interface ExportOption {
     label: string;

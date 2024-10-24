@@ -75,20 +75,102 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         return () => clearTimeout(timer);
     }, []);
 
+    // const exportImage = useCallback((width: number, height: number, fileName: string) => {
+    //     if (canvasRef.current && selectedGradientInfo) {
+    //         const canvas = canvasRef.current;
+    //         canvas.width = width;
+    //         canvas.height = height;
+    //         const ctx = canvas.getContext('2d');
+    //         if (ctx) {
+    //             const gradient = ctx.createLinearGradient(0, 0, width, 0);
+    //             selectedGradientInfo.colors.forEach((color, index) => {
+    //                 gradient.addColorStop(index / (selectedGradientInfo.colors.length - 1), color);
+    //             });
+    //             ctx.fillStyle = gradient;
+    //             ctx.fillRect(0, 0, width, height);
+
+    //             const dataUrl = canvas.toDataURL('image/png');
+    //             const link = document.createElement('a');
+    //             link.href = dataUrl;
+    //             link.download = `${selectedGradientInfo.name.replace(/\s+/g, '-').toLowerCase()}-${fileName}.png`;
+    //             link.click();
+
+    //             setTimeout(() => {
+    //                 if (isMounted.current) {
+    //                     URL.revokeObjectURL(link.href);
+    //                 }
+    //             }, 100);
+    //         }
+    //     }
+    // }, [selectedGradientInfo]);
+
     const exportImage = useCallback((width: number, height: number, fileName: string) => {
         if (canvasRef.current && selectedGradientInfo) {
             const canvas = canvasRef.current;
             canvas.width = width;
             canvas.height = height;
             const ctx = canvas.getContext('2d');
+
             if (ctx) {
-                const gradient = ctx.createLinearGradient(0, 0, width, 0);
+                // 计算渐变的起点和终点
+                const angle = gradientAngle * (Math.PI / 180); // 转换为弧度
+                const centerX = width / 2;
+                const centerY = height / 2;
+
+                // 计算渐变线的长度（使用对角线长度确保覆盖整个画布）
+                const gradientLength = Math.sqrt(width * width + height * height);
+
+                // 计算渐变的起点和终点
+                const startX = centerX - Math.cos(angle) * gradientLength / 2;
+                const startY = centerY - Math.sin(angle) * gradientLength / 2;
+                const endX = centerX + Math.cos(angle) * gradientLength / 2;
+                const endY = centerY + Math.sin(angle) * gradientLength / 2;
+
+                // 创建线性渐变
+                const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+
+                // 添加颜色停止点，并应用不透明度
                 selectedGradientInfo.colors.forEach((color, index) => {
-                    gradient.addColorStop(index / (selectedGradientInfo.colors.length - 1), color);
+                    const r = parseInt(color.slice(1, 3), 16);
+                    const g = parseInt(color.slice(3, 5), 16);
+                    const b = parseInt(color.slice(5, 7), 16);
+                    const a = gradientOpacity / 100; // 转换百分比为小数
+                    const rgba = `rgba(${r}, ${g}, ${b}, ${a})`;
+                    gradient.addColorStop(index / (selectedGradientInfo.colors.length - 1), rgba);
                 });
+
+                // 填充渐变
                 ctx.fillStyle = gradient;
                 ctx.fillRect(0, 0, width, height);
 
+                // 如果透明度小于100%，需要添加透明背景
+                if (gradientOpacity < 100) {
+                    // 创建临时画布来组合背景
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = width;
+                    tempCanvas.height = height;
+                    const tempCtx = tempCanvas.getContext('2d');
+
+                    if (tempCtx) {
+                        // 绘制棋盘格背景表示透明度
+                        const squareSize = 10;
+                        for (let x = 0; x < width; x += squareSize) {
+                            for (let y = 0; y < height; y += squareSize) {
+                                tempCtx.fillStyle = ((x + y) / squareSize) % 2 === 0 ? '#ffffff' : '#f0f0f0';
+                                tempCtx.fillRect(x, y, squareSize, squareSize);
+                            }
+                        }
+
+                        // 绘制渐变
+                        tempCtx.drawImage(canvas, 0, 0);
+
+                        // 将临时画布的内容复制回主画布
+                        ctx.clearRect(0, 0, width, height);
+                        ctx.drawImage(tempCanvas, 0, 0);
+                    }
+                }
+
+                // 导出图片
                 const dataUrl = canvas.toDataURL('image/png');
                 const link = document.createElement('a');
                 link.href = dataUrl;
@@ -102,7 +184,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                 }, 100);
             }
         }
-    }, [selectedGradientInfo]);
+    }, [selectedGradientInfo, gradientAngle, gradientOpacity]);
 
     const frameworkOptions = [
         { value: 'tailwind', label: 'Tailwind' },
@@ -189,7 +271,7 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
 
     return (
         <motion.div
-            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/75 to-white/50 dark:from-zinc-800/75 dark:to-zinc-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
+            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/50 to-white/25 dark:from-zinc-800/75 dark:to-zinc-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: isVisible ? 0 : '100%', opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
