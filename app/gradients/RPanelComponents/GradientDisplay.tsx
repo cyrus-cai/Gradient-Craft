@@ -29,7 +29,7 @@ export const GradientDisplay: React.FC<GradientDisplayProps> = ({
         <div className="w-full max-w-md space-y-4">
             <div className="flex flex-col">
                 <div
-                    className="h-64 rounded-xl shadow-inner transition-all duration-300"
+                    className="h-60 rounded-xl shadow-inner transition-all duration-300"
                     style={{
                         background: `linear-gradient(${angle}deg, ${colors.map(color => {
                             // Convert hex to rgba for opacity support

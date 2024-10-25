@@ -39,7 +39,7 @@ const RefinedFlowingBackground: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <div className="absolute inset-0 bg-gradient-to-r from-stone-100 to-orange-100 dark:from-zinc-900 dark:to-amber-900"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-stone-100 to-orange-100 dark:from-zinc-900 dark:to-yellow-900"></div>
         </motion.div>
     );
 };

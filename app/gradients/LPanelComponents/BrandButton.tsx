@@ -29,9 +29,9 @@ const BrandButton: React.FC<BrandButtonProps> = ({ option, isSelected, onSelect,
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <button
-                            className={`w-full items-center justify-between flex px-4 py-2 mt-1 text-left rounded-xl text-xs transition-all duration-300 font-sans font-medium ${isSelected
+                            className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 font-sans font-medium ${isSelected
                                 ? `${textColor}`
-                                : 'bg-amber-100/25 text-zinc-700 hover:bg-amber-100 dark:bg-zinc-800/25 dark:text-zinc-300 dark:hover:bg-zinc-700'
+                                : 'bg-yellow-600/5 text-zinc-700 hover:bg-yellow-600/5 dark:bg-zinc-800/25 dark:text-zinc-300 dark:hover:bg-zinc-700'
                                 }`}
                             style={isSelected ? { backgroundColor: optionColor } : {}}
                             onClick={onSelect}

@@ -1,30 +1,27 @@
-//RPanel.tsx
-import { Layout, Monitor, Music, Smartphone, Tablet, Tag, User, X } from 'lucide-react';
+import { Layout, Monitor, Music, Send, Share, Smartphone, Tablet, Tag, User, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
 import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './RPanelComponents/gradientUtils';
 
+import { Button } from '@/components/ui/button';
 import { ColorPalette } from './RPanelComponents/ColorPalette';
 import { CopyOptions } from './RPanelComponents/CopyOptions';
 import { ExportOptions } from './RPanelComponents/ExportOptions';
 import { GradientDisplay } from './RPanelComponents/GradientDisplay';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
 
-interface Gradient {
-    name: string;
-    colors: string[];
-}
-
-interface SelectedGradientInfo extends Gradient {
-    type: 'brand' | 'album';
-    parentName: string;
-    artist?: string;
-    tags?: string[];
-}
-
 interface RPanelProps {
-    selectedGradientInfo: SelectedGradientInfo | null;
+    selectedGradientInfo: {
+        name: string;
+        colors: string[];
+        type: 'brand' | 'album';
+        parentName: string;
+        artist?: string;
+        tags?: string[];
+    } | null;
     onClose: () => void;
 }
 
@@ -253,11 +250,11 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     }, [selectedGradientInfo, selectedFramework, gradientAngle, gradientOpacity]);
 
     const getExportOptions = [
-        { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-amber-600' /> },
-        { label: 'iPad', action: () => exportImage(2048, 2732, 'ipad'), icon: <Tablet className='w-4 text-amber-600' /> },
-        { label: 'Mac', action: () => exportImage(2560, 1600, 'mac'), icon: <Monitor className='w-4 text-amber-600' /> },
-        { label: 'PPT', action: () => exportImage(1920, 1080, 'ppt'), icon: <Layout className='w-4 text-amber-600' /> },
-        { label: 'Avatar', action: () => exportImage(500, 500, 'avatar'), icon: <User className='w-4 text-amber-600' /> },
+        { label: 'iPhone', action: () => exportImage(1170, 2532, 'iphone'), icon: <Smartphone className='w-4 text-yellow-600' /> },
+        { label: 'iPad', action: () => exportImage(2048, 2732, 'ipad'), icon: <Tablet className='w-4 text-yellow-600' /> },
+        { label: 'Mac', action: () => exportImage(2560, 1600, 'mac'), icon: <Monitor className='w-4 text-yellow-600' /> },
+        { label: 'PPT', action: () => exportImage(1920, 1080, 'ppt'), icon: <Layout className='w-4 text-yellow-600' /> },
+        { label: 'Avatar', action: () => exportImage(500, 500, 'avatar'), icon: <User className='w-4 text-yellow-600' /> },
     ];
 
     const handleClose = useCallback(() => {
@@ -270,70 +267,157 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
     }
 
     return (
-        <motion.div
-            className="fixed right-4 top-4 bottom-4 lg:w-1/5 2xl:w-80 bg-gradient-to-r from-white/50 to-white/25 dark:from-zinc-800/75 dark:to-zinc-800/50 shadow-lg rounded-3xl overflow-hidden z-10"
-            initial={{ x: '100%', opacity: 0 }}
-            animate={{ x: isVisible ? 0 : '100%', opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-        >
-            <div className="h-full flex flex-col overflow-y-auto">
-                <div className="p-6">
-                    <div className='mb-2 w-full flex items-center justify-between'>
-                        <h2 className="text-2xl font-serif font-semibold text-zinc-800 dark:text-zinc-200">{selectedGradientInfo.name}</h2>
-                        <button
-                            onClick={handleClose}
-                            className="text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-colors duration-200"
-                        >
-                            <X size={24} />
-                        </button>
-                    </div>
-                    <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
-                        {selectedGradientInfo.type === 'album' ? (
-                            <span className="flex items-center">
-                                <Music size={12} className="mr-1" />
-                                {selectedGradientInfo.artist} - {selectedGradientInfo.parentName}
-                            </span>
-                        ) : (
-                            `from ${selectedGradientInfo.parentName}`
+        <>
+            {/* Social Links & Share Button */}
+            <motion.div
+                className="fixed right-4 top-4 z-50 flex items-center gap-2"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+            >
+                <div className="flex items-center bg-white/10 dark:bg-zinc-800/50 backdrop-blur-lg px-2 rounded-full">
+                    <Link
+                        href="https://t.me/+jq2ARZn6BeI5ODJl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group hover:bg-zinc-100 dark:hover:bg-zinc-700 p-3 rounded-xl transition-all"
+                    >
+                        <Image
+                            src="/Icons/tgLogo.svg"
+                            height={18}
+                            width={18}
+                            alt="Twitter"
+                            className="dark:invert group-hover:scale-110 transition-transform"
+                        />
+                    </Link>
+                    <Link
+                        href="https://x.com/gradientcraft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group hover:bg-zinc-100 dark:hover:bg-zinc-700 p-3 rounded-xl transition-all"
+                    >
+                        <Image
+                            src="/Icons/X.png"
+                            height={16}
+                            width={16}
+                            alt="Twitter"
+                            className="dark:invert group-hover:scale-110 transition-transform"
+                        />
+                    </Link>
+                    <Link
+                        href="https://github.com/cyrus-cai/Gradient-Craft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group hover:bg-zinc-100 dark:hover:bg-zinc-700 p-3 rounded-xl transition-all"
+                    >
+                        <Image
+                            src="/Icons/Github.svg"
+                            height={18}
+                            width={18}
+                            alt="GitHub"
+                            className="dark:invert group-hover:scale-110 transition-transform"
+                        />
+                    </Link>
+                    {/* <Separator orientation="vertical" className="h-4 mx-1 bg-zinc-300 dark:bg-zinc-600" />
+                    <Button
+                        variant="ghost"
+                        size="sm"
+                        className="gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-700"
+                    >
+                        <Share className="w-4 h-4" />
+                        Share
+                    </Button> */}
+                </div>
+            </motion.div>
+
+            {/* Main Panel */}
+            <motion.div
+                className="fixed right-4 top-16 bottom-4 w-1/8 2xl:w-80 bg-white/80 dark:bg-zinc-900/90 backdrop-blur-xl shadow-lg rounded-2xl overflow-hidden z-10 border border-zinc-200/50 dark:border-zinc-700/50"
+                initial={{ x: '100%', opacity: 0 }}
+                animate={{ x: isVisible ? 0 : '100%', opacity: isVisible ? 1 : 0 }}
+                transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
+            >
+                <div className="h-full flex flex-col">
+                    {/* Header Section */}
+                    <div className="px-6 pt-6 pb-4">
+                        <div className="flex items-start justify-between mb-2">
+                            <div>
+                                <h2 className="text-2xl font-serif font-semibold text-zinc-800 dark:text-zinc-100">
+                                    {selectedGradientInfo?.name}
+                                </h2>
+                                <div className="flex items-center gap-2 mt-2">
+                                    {selectedGradientInfo?.type === 'album' ? (
+                                        <div className="flex items-center gap-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+                                            <Music className="w-3.5 h-3.5" />
+                                            <span>{selectedGradientInfo.artist}</span>
+                                            <span className="text-zinc-300 dark:text-zinc-600">•</span>
+                                            <span>{selectedGradientInfo.parentName}</span>
+                                        </div>
+                                    ) : (
+                                        <span className="text-sm text-zinc-500 dark:text-zinc-400">
+                                            from {selectedGradientInfo?.parentName}
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
+                            {/* <button
+                                onClick={handleClose}
+                                className="p-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+                            >
+                                <X className="w-5 h-5 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300" />
+                            </button> */}
+                        </div>
+
+                        {selectedGradientInfo?.type === 'album' && selectedGradientInfo.tags && (
+                            <div className="flex flex-wrap gap-2 mt-3">
+                                {selectedGradientInfo.tags.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-full"
+                                    >
+                                        <Tag className="w-3 h-3" />
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
                         )}
-                    </p>
-                    {selectedGradientInfo.type === 'album' && selectedGradientInfo.tags && (
-                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-4 font-serif flex items-center">
-                            <Tag size={12} className="mr-1" />
-                            {selectedGradientInfo.tags.join(', ')}
-                        </p>
-                    )}
-                    <GradientDisplay
-                        colors={selectedGradientInfo.colors}
-                        angle={gradientAngle}
-                        opacity={gradientOpacity}
-                        onAngleChange={setGradientAngle}
-                        onOpacityChange={setGradientOpacity}
-                    />
-                </div>
-                <Separator className="bg-zinc-200 dark:bg-zinc-700" />
-                <div className="px-6 py-6 overflow-y-auto flex-grow">
-                    <div className="space-y-6">
-                        <ColorPalette
-                            colors={selectedGradientInfo.colors}
-                            copiedStates={copiedStates}
-                            onCopy={copyToClipboard}
-                        />
-                        <CopyOptions
-                            selectedFramework={selectedFramework}
-                            frameworkOptions={frameworkOptions}
-                            copyOptions={getCopyOptions()}
-                            // copiedStates={copiedStates}
-                            onCopy={copyToClipboard}
-                            onFrameworkChange={setSelectedFramework}
-                        />
-                        <ExportOptions
-                            exportOptions={getExportOptions}
-                        />
+
+                        <div className="mt-4">
+                            <GradientDisplay
+                                colors={selectedGradientInfo?.colors || []}
+                                angle={gradientAngle}
+                                opacity={gradientOpacity}
+                                onAngleChange={setGradientAngle}
+                                onOpacityChange={setGradientOpacity}
+                            />
+                        </div>
+                    </div>
+
+                    <Separator className="bg-zinc-200 dark:bg-zinc-800" />
+
+                    {/* Content Section */}
+                    <div className="flex-grow overflow-y-auto px-6 py-4">
+                        <div className="space-y-6">
+                            <ColorPalette
+                                colors={selectedGradientInfo?.colors || []}
+                                copiedStates={copiedStates}
+                                onCopy={copyToClipboard}
+                            />
+                            <CopyOptions
+                                selectedFramework={selectedFramework}
+                                frameworkOptions={frameworkOptions}
+                                copyOptions={getCopyOptions()}
+                                onCopy={copyToClipboard}
+                                onFrameworkChange={setSelectedFramework}
+                            />
+                            <ExportOptions
+                                exportOptions={getExportOptions}
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </>
     );
 };
 

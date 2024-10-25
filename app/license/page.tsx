@@ -14,7 +14,7 @@ function Header(): JSX.Element {
                         alt='brandiconimage'
                     />
                 </Link>
-                <div className="flex font-semibold items-center space-x-8 py-2 px-4 rounded-xl  hover:bg-gradient-to-r from-amber-500 to-red-500">
+                <div className="flex font-semibold items-center space-x-8 py-2 px-4 rounded-xl  hover:bg-gradient-to-r from-yellow-500 to-red-500">
                     <Link href="/gradients" className="text-sm transition-colors">Gradients Park</Link>
                 </div>
             </nav>
@@ -24,7 +24,7 @@ function Header(): JSX.Element {
 
 const LicensePage = () => {
     return (
-        <div className="min-h-screen bg-amber-50 p-8">
+        <div className="min-h-screen bg-yellow-600/5/15 p-8">
             <Header />
             <div className="max-w-6xl mx-auto py-16">
                 {/* <h1 className="text-4xl font-bold text-zinc-800 mb-8">All Licenses</h1> */}

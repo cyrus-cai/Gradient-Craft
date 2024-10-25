@@ -19,7 +19,7 @@ const GradientCard: React.FC<{
         <Popover>
             <PopoverTrigger asChild>
                 <div
-                    className={`relative w-full h-36 rounded-3xl bg-amber-400/10 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-amber-500' : ''
+                    className={`relative w-full h-36 rounded-3xl bg-[#FFFCF9] flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500' : ''
                         }`}
                     onClick={() => setIsSelected(!isSelected)}
                 >
@@ -40,7 +40,7 @@ const GradientCard: React.FC<{
                     {copyOptions.map((option, idx) => (
                         <button
                             key={idx}
-                            className="flex items-center w-full gap-2 px-4 py-3 hover:bg-gradient-to-r hover:from-amber-100/50 hover:to-amber-200/50 rounded-2xl transition-all duration-300 ease-in-out text-left group focus:outline-none"
+                            className="flex items-center w-full gap-2 px-4 py-3 hover:bg-gradient-to-r hover:from-yellow-600/5/50 hover:to-yellow-600/5/50 rounded-2xl transition-all duration-300 ease-in-out text-left group focus:outline-none"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 option.action();
@@ -52,7 +52,7 @@ const GradientCard: React.FC<{
                                 width={16}
                                 alt=''
                             />
-                            <span className="text-sm font-medium text-amber-900 group-hover:text-amber-950 transition-colors duration-300">{option.label}</span>
+                            <span className="text-sm font-medium text-yellow-900 group-hover:text-yellow-950 transition-colors duration-300">{option.label}</span>
                         </button>
                     ))}
                 </div>

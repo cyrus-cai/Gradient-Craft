@@ -968,7 +968,7 @@
                 ]
             },
             {
-                "name": "Amber Glow",
+                "name": "yellow Glow",
                 "colors": [
                     "#FF9A00",
                     "#FFC266"
@@ -1403,7 +1403,7 @@
                 ]
             },
             {
-                "name": "Amber Glow",
+                "name": "yellow Glow",
                 "colors": [
                     "#FFBF00",
                     "#FFE5B4"
@@ -1845,7 +1845,7 @@
                 ]
             },
             {
-                "name": "Amber Gold",
+                "name": "yellow Gold",
                 "colors": [
                     "#FFBF00",
                     "#FFE5B4"
@@ -4516,7 +4516,7 @@
                 ]
             },
             {
-                "name": "Dropbox Amber",
+                "name": "Dropbox yellow",
                 "colors": [
                     "#FFC107",
                     "#FFA000"
@@ -5017,7 +5017,7 @@
                 ]
             },
             {
-                "name": "Asana Amber",
+                "name": "Asana yellow",
                 "colors": [
                     "#FFBF00",
                     "#FFC107"

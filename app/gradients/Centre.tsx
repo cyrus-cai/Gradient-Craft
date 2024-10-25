@@ -133,7 +133,7 @@ const Centre = () => {
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             const gradients = selectedColor ? findSimilarGradients(selectedColor) : searchFilteredGradients;
-            const cols = window.innerWidth >= 1536 ? 7 : window.innerWidth >= 1280 ? 5 : window.innerWidth >= 1024 ? 3 : 1;
+            const cols = window.innerWidth >= 1536 ? 8 : window.innerWidth >= 1280 ? 6 : window.innerWidth >= 1024 ? 3 : 1;
 
             let newIndex = focusedGradientIndex;
             let arrowKeyPressed = false;
@@ -196,7 +196,7 @@ const Centre = () => {
         return (
             <div
                 key={index}
-                className={`relative w-full h-36 rounded-3xl bg-amber-400/10 dark:bg-amber-600/10 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-amber-500 bg-amber-400/20 dark:bg-amber-600/20' : ''} ${isFocused ? 'ring-2 ring-amber-500 dark:ring-amber-400' : ''}`}
+                className={`relative w-full h-36 rounded-3xl bg-[#FFFCF9] dark:bg-yellow-600/5 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500 bg-yellow-400/20 dark:bg-yellow-600/5' : ''} ${isFocused ? 'ring-2 ring-yellow-500 dark:ring-yellow-400' : ''}`}
                 onClick={() => handleGradientSelect(gradient, gradient.type, gradient.parentName, index, gradient.artist)}
             >
                 <div
@@ -217,7 +217,7 @@ const Centre = () => {
 
     return (
         <ToastProvider>
-            <div className="flex bg-amber-50 dark:bg-zinc-900 min-h-screen overflow-hidden px-96">
+            <div className="flex bg-yellow-600/5/15 dark:bg-zinc-900 min-h-screen overflow-hidden px-96">
                 <LPanel
                     colorOptions={colorOptions}
                     selectedCategory={selectedCategory}

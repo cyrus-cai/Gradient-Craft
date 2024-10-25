@@ -42,30 +42,17 @@ const PannelHeader: React.FC = () => {
                     </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
-                    <DropdownMenuItem asChild>
+                    {/* <DropdownMenuItem asChild>
                         <Link href="https://gcraft.notion.site/Gradient-Craft-Releasing-Note-12870a068894800392c4c4e520dffd31?pvs=73" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
                             <Newspaper className='w-4' />
                             <span>Releasing Note</span>
                             <Badge>updated today</Badge>
                         </Link>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
                     <DropdownMenuItem asChild>
                         <Link href="/license" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
                             <Scale className="w-4 h-4" />
                             <span>License</span>
-                        </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                        <Link href="https://github.com/cyrus-cai/Gradient-Craft" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                            <Github className="w-4 h-4" />
-                            <span>Github</span>
-                            <Badge variant='secondary' className="dark:bg-zinc-700 dark:text-zinc-300">Opensource</Badge>
-                        </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                        <Link href="https://x.com/gradientcraft" className="flex items-center gap-2 w-full hover:bg-zinc-100 dark:hover:bg-zinc-700">
-                            <Twitter className="w-4 h-4" />
-                            <span>Follow us on X</span>
                         </Link>
                     </DropdownMenuItem>
                 </DropdownMenuContent>

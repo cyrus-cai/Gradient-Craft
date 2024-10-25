@@ -1,10 +1,7 @@
-import { ExternalLink, Plane, Send, X } from 'lucide-react';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { Badge } from '@/components/ui/badge';
+import AnimatedGradientTextDemo from '@/components/ui/agt';
 import BrandList from './LPanelComponents/BrandList';
-import Image from "next/image"
-import Link from 'next/link';
 import PannelHeader from './LPanelComponents/PannelHeader';
 import { Separator } from '@/components/ui/separator';
 import { pinyin } from 'pinyin-pro';
@@ -84,12 +81,13 @@ const LPanel: React.FC<LPanelProps> = ({
     }, {} as Record<string, ColorOption[]>);
 
     return (
-        <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-80 bg-gradient-to-r from-white/100 to-white/75 shadow-md dark:from-zinc-900/100 dark:to-zinc-800/75 rounded-3xl overflow-hidden z-10">
+        <div className="fixed left-4 top-4 bottom-4 w-1/5 2xl:w-72 bg-gradient-to-r from-white/100 to-white/75 shadow-md dark:from-zinc-900/100 dark:to-zinc-800/75 rounded-3xl overflow-hidden z-10">
             <div className="h-full flex flex-col overflow-y-auto">
                 <div className="flex flex-col gap-6 sticky top-0 bg-white/25 dark:bg-white/5 backdrop-blur-2xl z-50">
                     <div className='px-6 pt-6'>
                         <PannelHeader />
                     </div>
+                    <AnimatedGradientTextDemo />
                     <Separator className="dark:bg-zinc-700" />
                 </div>
                 <BrandList
@@ -101,7 +99,7 @@ const LPanel: React.FC<LPanelProps> = ({
                     getOptionColor={getOptionColor}
                     getTextColor={getTextColor}
                 />
-                <div className='flex items-center justify-center gap-6 w-full px-12 py-6'>
+                {/* <div className='flex items-center justify-center gap-6 w-full px-12 py-6'>
                     <Link
                         href="https://github.com/cyrus-cai/Gradient-Craft"
                         target="_blank"
@@ -140,7 +138,7 @@ const LPanel: React.FC<LPanelProps> = ({
                     >
                         <Send />
                     </Link>
-                </div>
+                </div> */}
             </div>
         </div>
     );

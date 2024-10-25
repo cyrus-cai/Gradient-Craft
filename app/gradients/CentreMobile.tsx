@@ -219,7 +219,7 @@ const CentreMobile = () => {
                                             onClick={() => copyColor(color)}
                                         >
                                             {copiedColor === color ? <Check size={12} /> :
-                                                <div className='flex items-center justify-center w-6 h-6 bg-gradient-to-r from-amber-500/75 to-red-500/75 backdrop-blur-3xl rounded-full text-white'>
+                                                <div className='flex items-center justify-center w-6 h-6 bg-gradient-to-r from-yellow-500/75 to-red-500/75 backdrop-blur-3xl rounded-full text-white'>
                                                     <Copy className='w-3' />
                                                 </div>
 

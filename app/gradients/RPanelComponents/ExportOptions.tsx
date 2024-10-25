@@ -35,8 +35,8 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                     <motion.button
                         key={idx}
                         className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 relative ${exportedStates[option.label]
-                            ? 'bg-amber-200 text-amber-800 dark:bg-amber-800 dark:text-amber-200 font-medium'
-                            : 'bg-amber-100/25 text-amber-700 hover:bg-amber-100 dark:bg-amber-900/25 dark:text-amber-300 dark:hover:bg-amber-800/50'
+                            ? 'bg-yellow-600/5 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-600/5 font-medium'
+                            : 'bg-yellow-600/5 text-yellow-700 hover:bg-yellow-600/5 dark:bg-yellow-900/25 dark:text-yellow-600/50 dark:hover:bg-yellow-800/50'
                             } font-serif focus:outline-none outline-none`}
                         onClick={() => handleExport(option.label, option.action)}
                         onMouseEnter={() => setHoveredOption(option.label)}
@@ -46,7 +46,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                     >
                         <span className="flex items-center gap-2">
                             {React.cloneElement(option.icon as React.ReactElement, {
-                                className: 'w-4 h-4 text-amber-600 dark:text-amber-400'
+                                className: 'w-4 h-4 text-yellow-600 dark:text-yellow-400'
                             })}
                             <AnimatePresence>
                                 {exportedStates[option.label] ? (
@@ -54,7 +54,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
-                                        className="text-amber-800 dark:text-amber-200 font-semibold"
+                                        className="text-yellow-800 dark:text-yellow-600/5 font-semibold"
                                     >
                                         Exported!
                                     </motion.span>
@@ -70,7 +70,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                             </AnimatePresence>
                         </span>
                         {hoveredOption === option.label && !exportedStates[option.label] && (
-                            <ArrowDownToLine className="w-4 h-4 text-amber-600 dark:text-amber-400 absolute right-4 transition-colors duration-300" />
+                            <ArrowDownToLine className="w-4 h-4 text-yellow-600 dark:text-yellow-400 absolute right-4 transition-colors duration-300" />
                         )}
 
                     </motion.button>
@@ -85,7 +85,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                         Example Text 1
                     </div>
                 </div>
-                <div className='relative p-[2px] before:bg-gradient-to-t before:from-lime-500/100 before:to-orange-600/100 before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:content-[""]'>
+                <div className='relative p-[2px] before:bg-gradient-to-t before:from-lime-500/100 before:to-orange-600/50 before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:content-[""]'>
                     <div className='bg-white'>
                         Example Text
                     </div>

@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                     />
                 </div>
                 <div className="flex items-center space-x-8">
-                    <div className="font-semibold py-2 px-4 rounded-xl hover:bg-gradient-to-r from-amber-500 to-red-500 hover:text-white dark:hover:text-white transition-all duration-300">
+                    <div className="font-semibold py-2 px-4 rounded-xl hover:bg-gradient-to-r from-yellow-500 to-red-500 hover:text-white dark:hover:text-white transition-all duration-300">
                         <Link href="/gradients" className="text-sm transition-colors text-zinc-800 dark:text-zinc-200">
                             Gradients Park
                         </Link>
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                         </div>
                     </Link>
                     <Link
-                        href="https://github.com/cyrus-cai/Gradient-Craft"
+                        href="https://x.com/gradientcraft"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group"

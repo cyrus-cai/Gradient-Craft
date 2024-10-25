@@ -10,17 +10,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-amber-500/25 text-amber-900 hover:bg-amber-500/50 dark:bg-amber-700/25 dark:text-amber-100 dark:hover:bg-amber-700/50",
+          "bg-yellow-600/5 text-yellow-700 hover:bg-yellow-600/5 dark:bg-yellow-700/25 dark:text-yellow-600/5 dark:hover:bg-yellow-500/75",
         destructive:
           "bg-red-500 text-white shadow-sm hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800",
         outline:
-          "border border-amber-200 bg-transparent shadow-sm hover:bg-amber-100 hover:text-amber-900 dark:border-amber-700 dark:hover:bg-amber-900 dark:hover:text-amber-100",
+          "border border-yellow-600/5 bg-transparent shadow-sm hover:bg-yellow-600/5 hover:text-yellow-900 dark:border-yellow-700 dark:hover:bg-yellow-900 dark:hover:text-yellow-600/5",
         secondary:
-          "bg-amber-200 text-amber-900 shadow-sm hover:bg-amber-300 dark:bg-amber-800 dark:text-amber-100 dark:hover:bg-amber-700",
+          "bg-yellow-600/5 text-yellow-900 shadow-sm hover:bg-yellow-600/50 dark:bg-yellow-800 dark:text-yellow-600/5 dark:hover:bg-yellow-700",
         ghost:
-          "hover:bg-amber-100 hover:text-amber-900 dark:hover:bg-amber-900 dark:hover:text-amber-100",
+          "hover:bg-yellow-600/5 hover:text-yellow-900 dark:hover:bg-yellow-900 dark:hover:text-yellow-600/5",
         link:
-          "text-amber-600 underline-offset-4 hover:underline dark:text-amber-400",
+          "text-yellow-600 underline-offset-4 hover:underline dark:text-yellow-400",
       },
       size: {
         default: "h-9 px-4 py-2",

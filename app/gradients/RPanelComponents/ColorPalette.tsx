@@ -19,7 +19,7 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({ colors, copiedStates
                 {colors.map((color, index) => (
                     <motion.div
                         key={index}
-                        className="flex items-center rounded-xl text-zinc-700 dark:text-zinc-200 cursor-pointer hover:bg-amber-100/50 dark:hover:bg-amber-800/30 p-2 relative overflow-hidden"
+                        className="flex items-center rounded-xl text-zinc-700 dark:text-zinc-200 cursor-pointer hover:bg-yellow-600/5/50 dark:hover:bg-yellow-800/30 p-2 relative overflow-hidden"
                         onClick={() => onCopy(color, `Color ${index + 1}`)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -31,7 +31,7 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({ colors, copiedStates
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
-                                    className="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold"
+                                    className="text-xs font-mono text-yellow-600 dark:text-yellow-400 font-semibold"
                                 >
                                     Copied!
                                 </motion.span>
@@ -51,7 +51,7 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({ colors, copiedStates
                             initial={{ opacity: 0 }}
                             whileHover={{ opacity: 1 }}
                         >
-                            <Copy className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                            <Copy className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
                         </motion.div>
                     </motion.div>
                 ))}

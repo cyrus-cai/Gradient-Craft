@@ -81,7 +81,7 @@
                 ]
             },
             {
-                "name": "Amber Reflection",
+                "name": "yellow Reflection",
                 "colors": [
                     "#FFD700",
                     "#FFA500"
@@ -398,6 +398,447 @@
                 "colors": [
                     "#191970",
                     "#000080"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Dark Side of the Moon",
+        "artist": "Pink Floyd",
+        "labels": "Harvest Records",
+        "priority": 1,
+        "tags": [
+            "Progressive Rock",
+            "Psychedelic",
+            "Prism",
+            "Rainbow",
+            "Black Background",
+            "Geometric",
+            "Minimalist",
+            "Light Spectrum",
+            "Iconic Design"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Space",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Rainbow Red",
+                "colors": [
+                    "#FF0000",
+                    "#FF4500"
+                ]
+            },
+            {
+                "name": "Rainbow Orange",
+                "colors": [
+                    "#FF4500",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "Rainbow Yellow",
+                "colors": [
+                    "#FFD700",
+                    "#FFFF00"
+                ]
+            },
+            {
+                "name": "Rainbow Green",
+                "colors": [
+                    "#00FF00",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "Rainbow Blue",
+                "colors": [
+                    "#0000FF",
+                    "#4169E1"
+                ]
+            },
+            {
+                "name": "Rainbow Violet",
+                "colors": [
+                    "#8A2BE2",
+                    "#9400D3"
+                ]
+            },
+            {
+                "name": "Crystal Prism",
+                "colors": [
+                    "#87CEEB",
+                    "#B0E0E6"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Blonde",
+        "artist": "Frank Ocean",
+        "labels": "Boys Don't Cry",
+        "priority": 1,
+        "tags": [
+            "R&B",
+            "Alternative",
+            "Portrait",
+            "Minimalist",
+            "Green Hair",
+            "Shower Tiles",
+            "Intimate",
+            "Hand Gesture",
+            "Typography"
+        ],
+        "gradients": [
+            {
+                "name": "Warm Skin",
+                "colors": [
+                    "#8B4513",
+                    "#CD853F"
+                ]
+            },
+            {
+                "name": "Mint Hair",
+                "colors": [
+                    "#98FF98",
+                    "#90EE90"
+                ]
+            },
+            {
+                "name": "Tile White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Typography Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Abbey Road",
+        "artist": "The Beatles",
+        "labels": "Apple Records",
+        "priority": 1,
+        "tags": [
+            "Rock",
+            "Street Photography",
+            "Iconic Crossing",
+            "Urban Scene",
+            "Natural Light",
+            "Group Portrait",
+            "London Street",
+            "Summer Day",
+            "Trees"
+        ],
+        "gradients": [
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#87CEEB",
+                    "#B0E0E6"
+                ]
+            },
+            {
+                "name": "Street Gray",
+                "colors": [
+                    "#808080",
+                    "#696969"
+                ]
+            },
+            {
+                "name": "Foliage Green",
+                "colors": [
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "White Suit",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Black Suit",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Denim Blue",
+                "colors": [
+                    "#4169E1",
+                    "#1E90FF"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Blood on the Tracks",
+        "artist": "Bob Dylan",
+        "labels": "Columbia Records",
+        "priority": 1,
+        "tags": [
+            "Folk Rock",
+            "Profile Portrait",
+            "Burgundy",
+            "Textured",
+            "Side Profile",
+            "Typography",
+            "Minimalist Design",
+            "Contrast",
+            "Atmospheric"
+        ],
+        "gradients": [
+            {
+                "name": "Burgundy Base",
+                "colors": [
+                    "#800020",
+                    "#8B0000"
+                ]
+            },
+            {
+                "name": "Portrait Blue",
+                "colors": [
+                    "#483D8B",
+                    "#4B0082"
+                ]
+            },
+            {
+                "name": "Shadow Depth",
+                "colors": [
+                    "#2F4F4F",
+                    "#363636"
+                ]
+            },
+            {
+                "name": "Skin Tone",
+                "colors": [
+                    "#DEB887",
+                    "#D2B48C"
+                ]
+            },
+            {
+                "name": "Typography White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Miseducation of Lauryn Hill",
+        "artist": "Lauryn Hill",
+        "labels": "Columbia Records",
+        "priority": 1,
+        "tags": [
+            "Neo Soul",
+            "Hip Hop",
+            "R&B",
+            "Wood Carving",
+            "Portrait",
+            "Sepia",
+            "Textured",
+            "Natural",
+            "Organic"
+        ],
+        "gradients": [
+            {
+                "name": "Wood Grain",
+                "colors": [
+                    "#DEB887",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "Deep Mahogany",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D"
+                ]
+            },
+            {
+                "name": "Light Maple",
+                "colors": [
+                    "#F4A460",
+                    "#CD853F"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Thriller",
+        "artist": "Michael Jackson",
+        "labels": "Epic Records",
+        "priority": 1,
+        "tags": [
+            "Pop",
+            "R&B",
+            "Portrait",
+            "White Suit",
+            "Black Background",
+            "Gradient Typography",
+            "Signature",
+            "Studio Light",
+            "Iconic"
+        ],
+        "gradients": [
+            {
+                "name": "Pure White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "Deep Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Signature Glow",
+                "colors": [
+                    "#FFA07A",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "Warm Skin",
+                "colors": [
+                    "#8B4513",
+                    "#CD853F"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Fantasy",
+        "artist": "Jay Chou",
+        "labels": "Alpha Music",
+        "priority": 1,
+        "tags": [
+            "Mandopop",
+            "R&B",
+            "Portrait",
+            "Red Hood",
+            "Dramatic Light",
+            "Fashion",
+            "Modern",
+            "Minimalist"
+        ],
+        "gradients": [
+            {
+                "name": "Vibrant Red",
+                "colors": [
+                    "#FF0000",
+                    "#DC143C"
+                ]
+            },
+            {
+                "name": "Shadow Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Warm Skin",
+                "colors": [
+                    "#DEB887",
+                    "#D2B48C"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Rock 'n' Roll on the New Long March",
+        "artist": "Cui Jian",
+        "labels": "China Record Corporation",
+        "priority": 1,
+        "tags": [
+            "Rock",
+            "Alternative",
+            "Portrait",
+            "Red Theme",
+            "Political",
+            "High Contrast",
+            "Propaganda Style",
+            "Bold Typography"
+        ],
+        "gradients": [
+            {
+                "name": "Revolutionary Red",
+                "colors": [
+                    "#FF0000",
+                    "#8B0000"
+                ]
+            },
+            {
+                "name": "Shadow Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Queen's Road East",
+        "artist": "Lo Ta-yu",
+        "labels": "Rock Records",
+        "priority": 1,
+        "tags": [
+            "Cantopop",
+            "Folk Rock",
+            "Urban Scene",
+            "Vintage Photo",
+            "Historical",
+            "City View",
+            "Sepia",
+            "Nostalgic"
+        ],
+        "gradients": [
+            {
+                "name": "Vintage Sepia",
+                "colors": [
+                    "#8B4513",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "Sky Tone",
+                "colors": [
+                    "#87CEEB",
+                    "#B0E0E6"
+                ]
+            },
+            {
+                "name": "Building Stone",
+                "colors": [
+                    "#A9A9A9",
+                    "#808080"
+                ]
+            },
+            {
+                "name": "Aged Photo",
+                "colors": [
+                    "#DEB887",
+                    "#D2B48C"
                 ]
             }
         ]
