@@ -196,7 +196,7 @@ const Centre = () => {
         return (
             <div
                 key={index}
-                className={`relative w-full h-36 rounded-3xl bg-[#FFFCF9] dark:bg-yellow-600/5 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500 bg-yellow-400/20 dark:bg-yellow-600/5' : ''} ${isFocused ? 'ring-2 ring-yellow-500 dark:ring-yellow-400' : ''}`}
+                className={`relative w-full h-36 rounded-3xl bg-yellow-600/5 dark:bg-yellow-600/5 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500 bg-yellow-400/20 dark:bg-yellow-600/5' : ''} ${isFocused ? 'ring-2 ring-yellow-500 dark:ring-yellow-400' : ''}`}
                 onClick={() => handleGradientSelect(gradient, gradient.type, gradient.parentName, index, gradient.artist)}
             >
                 <div

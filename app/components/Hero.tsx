@@ -21,13 +21,13 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-start overflow-hidden px-4">
+        <section className="relative pt-40 flex items-center justify-start overflow-hidden px-4">
             <motion.div className="absolute inset-0 z-0" style={{ y, opacity }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/10" />
             </motion.div>
-            <div className="relative z-10 text-start max-w-3xl mx-auto">
+            <div className="relative z-10 text-start mx-auto">
                 <motion.h1
-                    className="text-7xl font-bold mb-12 tracking-tighter flex flex-col gap-1"
+                    className="text-8xl font-semibold mb-8 tracking-tighter flex flex-col items-center gap-2"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -37,12 +37,12 @@ const Hero: React.FC = () => {
                     <span className='text-black/60 dark:text-white/80'>for Front-End.</span>
                 </motion.h1>
                 <motion.div
-                    className="text-xl mb-10 font-light text-black dark:invert dark:opacity-75"
+                    className="flex text-xl mb-8 font-light text-black dark:invert dark:opacity-75 items-center justify-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <div className='flex items-center font-serif gap-2 '>
+                    <div className='flex items-center font-serif gap-2 justify-center'>
                         Works with
                         {['Tailwind', 'CSS', 'SwiftUI', 'React Native', 'Flutter'].map((tech) => (
                             <Image
@@ -60,6 +60,7 @@ const Hero: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
+                    className='flex items-center justify-center'
                 >
                     <Link href="/gradients" passHref legacyBehavior>
                         <motion.div
@@ -76,6 +77,52 @@ const Hero: React.FC = () => {
                         </motion.div>
                     </Link>
                 </motion.div>
+
+                {/* Updated horizontal scrollable container */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="overflow-x-scroll py-16 no-scrollbar"
+                >
+                    <div className="flex flex-row gap-8 min-w-min px-24">
+                        <motion.div
+                            className="flex-none"
+                            initial={{ x: 20 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            <Image src={'/i1.png'} width={800} height={800} alt={''} className='rounded-3xl' />
+                        </motion.div>
+                        <motion.div
+                            className="flex-none"
+                            initial={{ x: 20 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            <Image src={'/i2.png'} width={800} height={800} alt={''} className='rounded-3xl' />
+                        </motion.div>
+                        <motion.div
+                            className="flex-none"
+                            initial={{ x: 20 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            <Image src={'/i3.png'} width={800} height={800} alt={''} className='rounded-3xl' />
+                        </motion.div>
+                    </div>
+                </motion.div>
+
+                {/* Add custom scrollbar hiding styles */}
+                <style jsx global>{`
+                    .no-scrollbar::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .no-scrollbar {
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
+                `}</style>
             </div>
         </section>
     );

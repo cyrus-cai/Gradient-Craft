@@ -19,7 +19,7 @@ const GradientCard: React.FC<{
         <Popover>
             <PopoverTrigger asChild>
                 <div
-                    className={`relative w-full h-36 rounded-3xl bg-[#FFFCF9] flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500' : ''
+                    className={`relative w-full h-36 rounded-3xl bg-yellow-600/5 flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isSelected ? 'ring-2 ring-yellow-500' : ''
                         }`}
                     onClick={() => setIsSelected(!isSelected)}
                 >
