@@ -842,5 +842,1601 @@
                 ]
             }
         ]
+    },
+    {
+        "album": "淚橋",
+        "artist": "伍佰 & China Blue",
+        "labels": "華成唱片",
+        "year": 2003,
+        "priority": 2,
+        "tags": [
+            "華語搖滾",
+            "Alternative Rock",
+            "Black and White",
+            "Portrait",
+            "Close-up",
+            "High Contrast",
+            "Intense Gaze",
+            "Dramatic",
+            "Monochrome",
+            "Typography Mix"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Black",
+                "colors": [
+                    "#000000",
+                    "#141414",
+                    "#1C1C1C"
+                ]
+            },
+            {
+                "name": "Silver Highlights",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5",
+                    "#E8E8E8",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Mid Tones",
+                "colors": [
+                    "#4A4A4A",
+                    "#666666",
+                    "#808080"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "愛情的盡頭",
+        "artist": "伍佰 & China Blue",
+        "labels": "華成唱片",
+        "year": 1996,
+        "priority": 2,
+        "tags": [
+            "華語搖滾",
+            "Alternative Rock",
+            "Blue Tone",
+            "Portrait",
+            "Artistic",
+            "Ethereal",
+            "Atmospheric",
+            "Minimalist",
+            "Cool Tones"
+        ],
+        "gradients": [
+            {
+                "name": "Dominant Blue",
+                "colors": [
+                    "#1E90FF",
+                    "#4682B4",
+                    "#5F9EA0"
+                ]
+            },
+            {
+                "name": "Light Blue",
+                "colors": [
+                    "#B0C4DE",
+                    "#87CEEB",
+                    "#ADD8E6"
+                ]
+            },
+            {
+                "name": "Deep Blue",
+                "colors": [
+                    "#000080",
+                    "#00008B",
+                    "#191970"
+                ]
+            },
+            {
+                "name": "Shadow Blue",
+                "colors": [
+                    "#2F4F4F",
+                    "#4B6773"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Viva La Vida",
+        "artist": "Coldplay",
+        "labels": "Parlophone",
+        "year": 2008,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "Art Rock",
+            "Classical Elements",
+            "Historical Painting",
+            "Revolutionary",
+            "Artistic",
+            "Graffiti Style",
+            "Liberty Theme"
+        ],
+        "gradients": [
+            {
+                "name": "Revolutionary Red",
+                "colors": [
+                    "#FF0000",
+                    "#DC143C",
+                    "#8B0000"
+                ]
+            },
+            {
+                "name": "Aged Canvas",
+                "colors": [
+                    "#F5DEB3",
+                    "#DEB887",
+                    "#D2B48C"
+                ]
+            },
+            {
+                "name": "Deep Navy",
+                "colors": [
+                    "#000080",
+                    "#191970"
+                ]
+            },
+            {
+                "name": "Graffiti White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5",
+                    "#DCDCDC"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "思念是一種病",
+        "artist": "張震嶽",
+        "labels": "相信音樂",
+        "year": 2007,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Folk Rock",
+            "Acoustic",
+            "Portrait",
+            "Guitar",
+            "Classic Hat",
+            "Blue Tones",
+            "Formal Wear"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Black",
+                "colors": [
+                    "#000000",
+                    "#191919"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#87CEEB",
+                    "#00BFFF",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Suit Navy",
+                "colors": [
+                    "#000080",
+                    "#191970",
+                    "#000000"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "無與倫比的美麗",
+        "artist": "蘇打綠",
+        "labels": "林暐哲音樂社",
+        "year": 2007,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "indie Rock",
+            "Folk",
+            "Sunset",
+            "Group Photo",
+            "Warm Tones",
+            "Nature",
+            "Outdoor"
+        ],
+        "gradients": [
+            {
+                "name": "Golden Hour",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500",
+                    "#FF8C00"
+                ]
+            },
+            {
+                "name": "Earth Tones",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D",
+                    "#6B4423"
+                ]
+            },
+            {
+                "name": "Warm Sky",
+                "colors": [
+                    "#FFB6C1",
+                    "#FFA07A"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Moment",
+        "artist": "孫燕姿",
+        "labels": "華納音樂",
+        "year": 2003,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Pop",
+            "Portrait",
+            "Close-up",
+            "Minimalist",
+            "Fresh",
+            "Bright",
+            "Smile"
+        ],
+        "gradients": [
+            {
+                "name": "Mint Green",
+                "colors": [
+                    "#98FF98",
+                    "#90EE90",
+                    "#7CCD7C"
+                ]
+            },
+            {
+                "name": "Skin Tone",
+                "colors": [
+                    "#FFE4C4",
+                    "#F5DEB3"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "菊次郎の夏",
+        "artist": "久石讓",
+        "labels": "德間音樂",
+        "year": 1999,
+        "priority": 2,
+        "tags": [
+            "Soundtrack",
+            "Classical",
+            "Piano",
+            "Summer Theme",
+            "Blue Sky",
+            "Uplifting",
+            "Outdoor",
+            "Nature"
+        ],
+        "gradients": [
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#87CEEB",
+                    "#00BFFF",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0F8FF"
+                ]
+            },
+            {
+                "name": "Warm Tone",
+                "colors": [
+                    "#FFE4C4",
+                    "#DEB887"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "H³M",
+        "artist": "陳奕迅",
+        "labels": "英皇娛樂",
+        "year": 2009,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Cantopop",
+            "Portrait",
+            "Monochrome",
+            "Minimalist",
+            "Typography",
+            "Clean Design",
+            "Black and White"
+        ],
+        "gradients": [
+            {
+                "name": "Pure White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F8F8F8"
+                ]
+            },
+            {
+                "name": "Deep Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Gray Tone",
+                "colors": [
+                    "#A9A9A9",
+                    "#808080",
+                    "#696969"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "生如夏花",
+        "artist": "朴樹",
+        "labels": "魔岩唱片",
+        "year": 2003,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Folk Rock",
+            "Alternative",
+            "Portrait",
+            "Rain Effect",
+            "Dramatic",
+            "Moody",
+            "Text Overlay"
+        ],
+        "gradients": [
+            {
+                "name": "Dark Gold",
+                "colors": [
+                    "#8B7355",
+                    "#CD853F"
+                ]
+            },
+            {
+                "name": "Shadow Black",
+                "colors": [
+                    "#000000",
+                    "#1C1C1C",
+                    "#2F4F4F"
+                ]
+            },
+            {
+                "name": "Red Accent",
+                "colors": [
+                    "#DC143C",
+                    "#8B0000"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "OK Computer",
+        "artist": "Radiohead",
+        "labels": "Parlophone",
+        "year": 1997,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "Art Rock",
+            "Experimental",
+            "Abstract",
+            "Highway",
+            "Urban",
+            "Cold Tones",
+            "Dystopian"
+        ],
+        "gradients": [
+            {
+                "name": "Ice Blue",
+                "colors": [
+                    "#B0E0E6",
+                    "#87CEEB",
+                    "#4682B4"
+                ]
+            },
+            {
+                "name": "Winter White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F0F8FF",
+                    "#E6E6FA"
+                ]
+            },
+            {
+                "name": "Steel Blue",
+                "colors": [
+                    "#4682B4",
+                    "#5F9EA0",
+                    "#008B8B"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "神的孩子都在跳舞",
+        "artist": "五月天",
+        "labels": "相信音樂",
+        "year": 2004,
+        "priority": 2,
+        "tags": [
+            "華語搖滾",
+            "Alternative Rock",
+            "Forest Theme",
+            "Band Photo",
+            "Mysterious",
+            "Green Tones",
+            "Atmospheric",
+            "Group Portrait"
+        ],
+        "gradients": [
+            {
+                "name": "Forest Green",
+                "colors": [
+                    "#228B22",
+                    "#2E8B57",
+                    "#3CB371"
+                ]
+            },
+            {
+                "name": "Mist Effect",
+                "colors": [
+                    "#E6E6FA",
+                    "#F0FFF0",
+                    "#F5FFFA"
+                ]
+            },
+            {
+                "name": "Dark Forest",
+                "colors": [
+                    "#006400",
+                    "#008000",
+                    "#228B22"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "離開地球表面",
+        "artist": "五月天",
+        "labels": "相信音樂",
+        "year": 2007,
+        "priority": 2,
+        "tags": [
+            "華語搖滾",
+            "Alternative Rock",
+            "Space Theme",
+            "Surreal",
+            "Monochrome",
+            "Fantasy",
+            "Moon",
+            "Youth"
+        ],
+        "gradients": [
+            {
+                "name": "Moon Gray",
+                "colors": [
+                    "#D3D3D3",
+                    "#A9A9A9",
+                    "#808080"
+                ]
+            },
+            {
+                "name": "Cloud White",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5",
+                    "#DCDCDC"
+                ]
+            },
+            {
+                "name": "Deep Space",
+                "colors": [
+                    "#1A1A1A",
+                    "#2F4F4F",
+                    "#000000"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Legend of 1900",
+        "artist": "Ennio Morricone",
+        "labels": "Sony Classical",
+        "year": 1999,
+        "priority": 2,
+        "tags": [
+            "Soundtrack",
+            "Classical",
+            "Film Score",
+            "Ocean Theme",
+            "Purple Sky",
+            "Silhouette",
+            "Nostalgic",
+            "Cinematic",
+            "Moon"
+        ],
+        "gradients": [
+            {
+                "name": "Twilight Sky",
+                "colors": [
+                    "#4B0082",
+                    "#483D8B",
+                    "#6A5ACD"
+                ]
+            },
+            {
+                "name": "Ocean Dark",
+                "colors": [
+                    "#191970",
+                    "#000080",
+                    "#00008B"
+                ]
+            },
+            {
+                "name": "Moon Glow",
+                "colors": [
+                    "#E6E6FA",
+                    "#D8BFD8"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "魔杰座",
+        "artist": "周杰倫",
+        "labels": "杰威爾音樂",
+        "year": 2008,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "R&B",
+            "Fantasy",
+            "Gothic",
+            "Dragons",
+            "Golden Hour",
+            "Dramatic",
+            "Epic"
+        ],
+        "gradients": [
+            {
+                "name": "Sunset Gold",
+                "colors": [
+                    "#FFD700",
+                    "#FFA500",
+                    "#FF8C00",
+                    "#DAA520"
+                ]
+            },
+            {
+                "name": "Castle Dark",
+                "colors": [
+                    "#2F4F4F",
+                    "#1A1A1A",
+                    "#000000"
+                ]
+            },
+            {
+                "name": "Light Rays",
+                "colors": [
+                    "#FFFF00",
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Time Flies",
+        "artist": "陳奕迅",
+        "labels": "英皇娛樂",
+        "year": 2010,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Cantopop",
+            "Portrait",
+            "Monochrome",
+            "Dramatic",
+            "Dark",
+            "Artistic",
+            "Black and White"
+        ],
+        "gradients": [
+            {
+                "name": "Deep Black",
+                "colors": [
+                    "#000000",
+                    "#1A1A1A"
+                ]
+            },
+            {
+                "name": "Silver Gray",
+                "colors": [
+                    "#808080",
+                    "#696969",
+                    "#A9A9A9"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "平凡之路",
+        "artist": "朴樹",
+        "labels": "北京普樹音樂",
+        "year": 2014,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Film Song",
+            "Desert",
+            "Road",
+            "Journey",
+            "Minimalist",
+            "Landscape",
+            "Sepia"
+        ],
+        "gradients": [
+            {
+                "name": "Desert Sand",
+                "colors": [
+                    "#F4A460",
+                    "#DEB887",
+                    "#D2B48C"
+                ]
+            },
+            {
+                "name": "Road Gray",
+                "colors": [
+                    "#A9A9A9",
+                    "#D3D3D3"
+                ]
+            },
+            {
+                "name": "Sky Blue",
+                "colors": [
+                    "#87CEEB",
+                    "#B0C4DE",
+                    "#778899"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "認了吧",
+        "artist": "陳奕迅",
+        "labels": "英皇娛樂",
+        "year": 2007,
+        "priority": 2,
+        "tags": [
+            "華語流行",
+            "Cantopop",
+            "Portrait",
+            "Casual",
+            "Urban",
+            "Bench",
+            "Street Style",
+            "Natural Light"
+        ],
+        "gradients": [
+            {
+                "name": "Wood Brown",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D",
+                    "#6B4423"
+                ]
+            },
+            {
+                "name": "Concrete Wall",
+                "colors": [
+                    "#A9A9A9",
+                    "#808080",
+                    "#696969"
+                ]
+            },
+            {
+                "name": "Denim Blue",
+                "colors": [
+                    "#4169E1",
+                    "#1E90FF"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Young For You",
+        "artist": "GALA",
+        "labels": "摩登天空",
+        "year": 2004,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "Chinese Rock",
+            "Indie Rock",
+            "Playful",
+            "Artistic",
+            "Illustrative",
+            "Typography",
+            "Hand-drawn",
+            "Vibrant",
+            "Energetic",
+            "Youth"
+        ],
+        "gradients": [
+            {
+                "name": "neon_nature",
+                "colors": [
+                    "#000000",
+                    "#97FF00",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "grass_glow",
+                "colors": [
+                    "#85FF4D",
+                    "#2B4D00"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "黑梦",
+        "artist": "窦唯",
+        "labels": "魔岩唱片",
+        "year": 1994,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "Chinese Rock",
+            "Experimental",
+            "Dark",
+            "Atmospheric",
+            "Monochrome",
+            "High Contrast",
+            "Photography",
+            "Dramatic",
+            "Melancholic",
+            "Industrial"
+        ],
+        "gradients": [
+            {
+                "name": "railway_fog",
+                "colors": [
+                    "#1A1A1A",
+                    "#4D4D4D",
+                    "#999999",
+                    "#E6E6E6"
+                ]
+            },
+            {
+                "name": "dark_perspective",
+                "colors": [
+                    "#000000",
+                    "#333333",
+                    "#666666"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Goodbye & Hello",
+        "artist": "蔡健雅",
+        "labels": "亚神音乐",
+        "year": 2007,
+        "priority": 2,
+        "tags": [
+            "Mandarin Pop",
+            "Urban",
+            "Contemporary",
+            "Portrait",
+            "Silhouette",
+            "Photography",
+            "Typography",
+            "Modern",
+            "Minimalist",
+            "Ethereal",
+            "Cityscape"
+        ],
+        "gradients": [
+            {
+                "name": "urban_sunset",
+                "colors": [
+                    "#FFFFFF",
+                    "#FF99CC",
+                    "#660066"
+                ]
+            },
+            {
+                "name": "city_twilight",
+                "colors": [
+                    "#1A1A1A",
+                    "#4D0066",
+                    "#FF99CC"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "安和桥北",
+        "artist": "宋冬野",
+        "labels": "独立发行",
+        "year": 2013,
+        "priority": 2,
+        "tags": [
+            "Folk",
+            "Chinese Folk",
+            "Indie Folk",
+            "Vintage",
+            "Portrait",
+            "Photography",
+            "Retro",
+            "Nostalgic",
+            "Warm",
+            "Personal",
+            "Memory"
+        ],
+        "gradients": [
+            {
+                "name": "crimson_nostalgia",
+                "colors": [
+                    "#8B0000",
+                    "#CC0000",
+                    "#FF0000"
+                ]
+            },
+            {
+                "name": "sepia_memory",
+                "colors": [
+                    "#8B4513",
+                    "#D2691E",
+                    "#F4A460"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Yellow",
+        "artist": "Coldplay",
+        "labels": "Parlophone",
+        "year": 2000,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "British Rock",
+            "Indie Rock",
+            "Minimalist",
+            "Abstract",
+            "Monochromatic",
+            "Typography",
+            "Silhouette",
+            "Nature",
+            "Warm",
+            "Solar"
+        ],
+        "gradients": [
+            {
+                "name": "solar_burst",
+                "colors": [
+                    "#FF8C00",
+                    "#FFA500",
+                    "#FFD700"
+                ]
+            },
+            {
+                "name": "sunset_glow",
+                "colors": [
+                    "#FF4500",
+                    "#FF8C00",
+                    "#FFA500"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "U87",
+        "artist": "陈奕迅",
+        "labels": "英皇娱乐",
+        "year": 2005,
+        "priority": 2,
+        "tags": [
+            "Cantopop",
+            "Contemporary Pop",
+            "Electronic",
+            "Portrait",
+            "Digital",
+            "Technical",
+            "Modern",
+            "High Tech",
+            "Urban",
+            "Experimental",
+            "Electronic Visualization"
+        ],
+        "gradients": [
+            {
+                "name": "digital_forest",
+                "colors": [
+                    "#006400",
+                    "#228B22",
+                    "#32CD32"
+                ]
+            },
+            {
+                "name": "tech_overlay",
+                "colors": [
+                    "#000000",
+                    "#FF0000",
+                    "#00FF00"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "天空の城ラピュタ サウンドトラック",
+        "artist": "久石譲",
+        "labels": "徳間ジャパンコミュニケーションズ",
+        "year": 1993,
+        "priority": 2,
+        "tags": [
+            "Soundtrack",
+            "Orchestral",
+            "Animation",
+            "Adventure",
+            "Fantasy",
+            "Illustration",
+            "Anime",
+            "Studio Ghibli",
+            "Artistic",
+            "Whimsical",
+            "Nostalgic"
+        ],
+        "gradients": [
+            {
+                "name": "sky_adventure",
+                "colors": [
+                    "#87CEEB",
+                    "#4682B4",
+                    "#1E90FF"
+                ]
+            },
+            {
+                "name": "forest_mystery",
+                "colors": [
+                    "#228B22",
+                    "#006400",
+                    "#2E8B57"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "爱爱爱",
+        "artist": "方大同",
+        "labels": "映艺娱乐",
+        "year": 2006,
+        "priority": 2,
+        "tags": [
+            "R&B",
+            "Soul",
+            "Contemporary R&B",
+            "Portrait",
+            "Black and White",
+            "Fashion",
+            "Retro",
+            "Monochrome",
+            "High Contrast",
+            "Stylish",
+            "Urban"
+        ],
+        "gradients": [
+            {
+                "name": "noir_contrast",
+                "colors": [
+                    "#000000",
+                    "#333333",
+                    "#FFFFFF"
+                ]
+            },
+            {
+                "name": "stripe_pattern",
+                "colors": [
+                    "#1A1A1A",
+                    "#FFFFFF",
+                    "#000000"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "十年一刻",
+        "artist": "苏打绿",
+        "labels": "林暐哲音乐社",
+        "year": 2010,
+        "priority": 2,
+        "tags": [
+            "Indie Rock",
+            "Alternative",
+            "Taiwanese Pop",
+            "Nature",
+            "Abstract",
+            "Typography",
+            "Artistic",
+            "Atmospheric",
+            "Organic",
+            "Dreamy",
+            "Golden Hour"
+        ],
+        "gradients": [
+            {
+                "name": "golden_bokeh",
+                "colors": [
+                    "#DAA520",
+                    "#FFD700",
+                    "#FFA500"
+                ]
+            },
+            {
+                "name": "nature_glow",
+                "colors": [
+                    "#556B2F",
+                    "#BDB76B",
+                    "#FFD700"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "黑豹",
+        "artist": "黑豹",
+        "labels": "魔岩唱片",
+        "year": 1992,
+        "priority": 2,
+        "tags": [
+            "Chinese Rock",
+            "Hard Rock",
+            "Heavy Metal",
+            "Illustration",
+            "Mascot",
+            "Bold",
+            "High Contrast",
+            "Iconic",
+            "Symbol",
+            "Aggressive",
+            "Powerful"
+        ],
+        "gradients": [
+            {
+                "name": "panther_glow",
+                "colors": [
+                    "#FF0000",
+                    "#CC0000",
+                    "#990000"
+                ]
+            },
+            {
+                "name": "neon_eyes",
+                "colors": [
+                    "#000000",
+                    "#FFFF00",
+                    "#FFFF66"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Bends",
+        "artist": "Radiohead",
+        "labels": "Parlophone",
+        "year": 1995,
+        "priority": 2,
+        "tags": [
+            "Alternative Rock",
+            "Art Rock",
+            "Experimental Rock",
+            "Portrait",
+            "Distorted",
+            "Surreal",
+            "Medical",
+            "Clinical",
+            "Unsettling",
+            "Artistic",
+            "Experimental"
+        ],
+        "gradients": [
+            {
+                "name": "clinical_tone",
+                "colors": [
+                    "#FFE4C4",
+                    "#DEB887",
+                    "#8B4513"
+                ]
+            },
+            {
+                "name": "distorted_reality",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5DEB3",
+                    "#D2691E"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "人生海海",
+        "artist": "五月天",
+        "labels": "相信音乐",
+        "year": 2001,
+        "priority": 2,
+        "tags": [
+            "Taiwanese Rock",
+            "Alternative Rock",
+            "Pop Rock",
+            "Group Portrait",
+            "Casual",
+            "Urban",
+            "Street Style",
+            "Youth",
+            "Natural Light",
+            "Documentary",
+            "Candid"
+        ],
+        "gradients": [
+            {
+                "name": "street_scene",
+                "colors": [
+                    "#4682B4",
+                    "#87CEEB",
+                    "#F5F5F5"
+                ]
+            },
+            {
+                "name": "urban_youth",
+                "colors": [
+                    "#2F4F4F",
+                    "#708090",
+                    "#A9A9A9"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Let It Be",
+        "artist": "The Beatles",
+        "labels": "Apple Records",
+        "year": 1990,
+        "priority": 2,
+        "tags": [
+            "Rock",
+            "Classic Rock",
+            "Pop Rock",
+            "Portrait",
+            "Grid Layout",
+            "Black and White",
+            "Iconic",
+            "Classic",
+            "Historic",
+            "Vintage",
+            "Documentary"
+        ],
+        "gradients": [
+            {
+                "name": "classic_portrait",
+                "colors": [
+                    "#000000",
+                    "#404040",
+                    "#808080"
+                ]
+            },
+            {
+                "name": "vintage_tone",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D",
+                    "#CD853F"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "知足",
+        "artist": "五月天",
+        "labels": "相信音乐",
+        "year": 2006,
+        "priority": 2,
+        "tags": [
+            "Taiwanese Pop",
+            "Pop Rock",
+            "Mandarin Pop",
+            "Collage",
+            "Portrait",
+            "Documentary",
+            "Personal",
+            "Multiple Images",
+            "Casual",
+            "Natural",
+            "Memory"
+        ],
+        "gradients": [
+            {
+                "name": "memory_blue",
+                "colors": [
+                    "#B0C4DE",
+                    "#87CEEB",
+                    "#F0F8FF"
+                ]
+            },
+            {
+                "name": "photo_collection",
+                "colors": [
+                    "#FFFFFF",
+                    "#F5F5F5",
+                    "#E6E6FA"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "第二人生",
+        "artist": "五月天",
+        "labels": "相信音乐",
+        "year": 2011,
+        "priority": 2,
+        "tags": [
+            "Taiwanese Rock",
+            "Alternative Rock",
+            "Pop Rock",
+            "Illustration",
+            "Surreal",
+            "Urban",
+            "Artistic",
+            "Modern",
+            "Dynamic",
+            "Stylized",
+            "Contemporary"
+        ],
+        "gradients": [
+            {
+                "name": "urban_dream",
+                "colors": [
+                    "#006064",
+                    "#00BCD4",
+                    "#FF1744"
+                ]
+            },
+            {
+                "name": "night_city",
+                "colors": [
+                    "#1A237E",
+                    "#0D47A1",
+                    "#01579B"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "我们是五月天",
+        "artist": "五月天",
+        "labels": "滚石唱片",
+        "year": 2003,
+        "priority": 2,
+        "tags": [
+            "Taiwanese Pop",
+            "Pop Rock",
+            "Group Portrait",
+            "Clean",
+            "Minimalist",
+            "Typography",
+            "Fresh",
+            "Youth",
+            "Modern",
+            "Bright",
+            "Simple"
+        ],
+        "gradients": [
+            {
+                "name": "sky_blue",
+                "colors": [
+                    "#03A9F4",
+                    "#29B6F6",
+                    "#81D4FA"
+                ]
+            },
+            {
+                "name": "clean_white",
+                "colors": [
+                    "#E3F2FD",
+                    "#BBDEFB",
+                    "#90CAF9"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "The Miseducation Of Lauryn Hill",
+        "artist": "Lauryn Hill",
+        "labels": "Columbia Records",
+        "year": 1998,
+        "priority": 2,
+        "tags": [
+            "R&B",
+            "Hip Hop",
+            "Neo Soul",
+            "Portrait",
+            "Carved",
+            "Wooden",
+            "Artistic",
+            "Textured",
+            "Organic",
+            "Crafted",
+            "Classic"
+        ],
+        "gradients": [
+            {
+                "name": "wooden_carving",
+                "colors": [
+                    "#8B4513",
+                    "#A0522D",
+                    "#D2691E"
+                ]
+            },
+            {
+                "name": "natural_texture",
+                "colors": [
+                    "#CD853F",
+                    "#DEB887",
+                    "#F4A460"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Purple Rain",
+        "artist": "Prince & the Revolution",
+        "labels": "Warner Bros. Records",
+        "year": 1990,
+        "priority": 2,
+        "tags": [
+            "R&B",
+            "Funk Rock",
+            "Pop Rock",
+            "Portrait",
+            "Dramatic",
+            "Theatrical",
+            "Iconic",
+            "Night Scene",
+            "Motorcycle",
+            "Gothic",
+            "Floral Frame"
+        ],
+        "gradients": [
+            {
+                "name": "purple_night",
+                "colors": [
+                    "#4A148C",
+                    "#6A1B9A",
+                    "#7B1FA2"
+                ]
+            },
+            {
+                "name": "mystic_fog",
+                "colors": [
+                    "#000000",
+                    "#311B92",
+                    "#4527A0"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Songs In The Key Of Life",
+        "artist": "Stevie Wonder",
+        "labels": "Tamla",
+        "year": 1976,
+        "priority": 2,
+        "tags": [
+            "Soul",
+            "R&B",
+            "Funk",
+            "Circular",
+            "Psychedelic",
+            "Spiral",
+            "Typography",
+            "Abstract",
+            "Iconic",
+            "Warm",
+            "Classic"
+        ],
+        "gradients": [
+            {
+                "name": "solar_spiral",
+                "colors": [
+                    "#FF3D00",
+                    "#FF6D00",
+                    "#FF9100"
+                ]
+            },
+            {
+                "name": "warm_radial",
+                "colors": [
+                    "#FFFFFF",
+                    "#FFB74D",
+                    "#FF5722"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "good kid, m.A.A.d city",
+        "artist": "Kendrick Lamar",
+        "labels": "Top Dawg Entertainment",
+        "year": 2012,
+        "priority": 2,
+        "tags": [
+            "Hip Hop",
+            "West Coast Hip Hop",
+            "Conscious Rap",
+            "Vintage",
+            "Polaroid",
+            "Documentary",
+            "Personal",
+            "Raw",
+            "Nostalgic",
+            "Memory",
+            "Urban"
+        ],
+        "gradients": [
+            {
+                "name": "vintage_memory",
+                "colors": [
+                    "#D4C4A8",
+                    "#B8A99A",
+                    "#8B7355"
+                ]
+            },
+            {
+                "name": "polaroid_fade",
+                "colors": [
+                    "#F5F5DC",
+                    "#E8E4C9",
+                    "#D3CAB0"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Back to Black",
+        "artist": "Amy Winehouse",
+        "labels": "Island Records",
+        "year": 2006,
+        "priority": 2,
+        "tags": [
+            "Soul",
+            "R&B",
+            "Jazz",
+            "Portrait",
+            "Retro",
+            "Art Deco",
+            "Typography",
+            "Vintage",
+            "Glamour",
+            "Classic",
+            "Elegant"
+        ],
+        "gradients": [
+            {
+                "name": "noir_elegance",
+                "colors": [
+                    "#1A1A1A",
+                    "#2D2D2D",
+                    "#404040"
+                ]
+            },
+            {
+                "name": "vintage_blue",
+                "colors": [
+                    "#2C3E50",
+                    "#34495E",
+                    "#415B76"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Nevermind",
+        "artist": "Nirvana",
+        "labels": "DGC Records",
+        "year": 1991,
+        "priority": 2,
+        "tags": [
+            "Grunge",
+            "Alternative Rock",
+            "Rock",
+            "Underwater",
+            "Iconic",
+            "Controversial",
+            "Bold",
+            "Symbolic",
+            "Provocative",
+            "Subversive",
+            "Classic"
+        ],
+        "gradients": [
+            {
+                "name": "underwater_blue",
+                "colors": [
+                    "#00CED1",
+                    "#20B2AA",
+                    "#008B8B"
+                ]
+            },
+            {
+                "name": "pool_depths",
+                "colors": [
+                    "#48D1CC",
+                    "#40E0D0",
+                    "#00CED1"
+                ]
+            }
+        ]
+    },
+    {
+        "album": "Lemonade",
+        "artist": "Beyoncé",
+        "labels": "Parkwood Entertainment",
+        "year": 2016,
+        "priority": 2,
+        "tags": [
+            "R&B",
+            "Contemporary R&B",
+            "Soul",
+            "Portrait",
+            "Artistic",
+            "Fashion",
+            "Luxury",
+            "Dramatic",
+            "Powerful",
+            "Intimate",
+            "Visual Album"
+        ],
+        "gradients": [
+            {
+                "name": "luxury_fur",
+                "colors": [
+                    "#2C3E50",
+                    "#34495E",
+                    "#95A5A6"
+                ]
+            },
+            {
+                "name": "teal_mood",
+                "colors": [
+                    "#2B5876",
+                    "#4E4376",
+                    "#2C3E50"
+                ]
+            }
+        ]
     }
 ]

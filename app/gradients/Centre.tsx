@@ -7,7 +7,7 @@ import ColorSwatchInfo from './RPanel';
 import { EnhancedInput } from '@/components/ui/input';
 import FloatingFeedback from '@/components/feedback';
 import LPanel from './LPanel';
-import albumGradients from '../data/albumColors.json'; // 假设有这个文件
+import albumGradients from '../data/albumColors.json';
 import brandGradients from '../data/brandColors.json';
 import { colorDifference } from '../../lib/colorUtils';
 import countUniqueColors from '@/lib/uniqueColors';

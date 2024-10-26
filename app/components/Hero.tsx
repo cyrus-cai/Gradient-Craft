@@ -7,6 +7,7 @@ import { EnhancedInput } from '@/components/ui/input';
 import GAReport from './GAReport';
 import Image from 'next/image';
 import Link from 'next/link';
+import albumGradients from '../data/albumColors.json';
 import brandGradients from '../data/brandColors.json';
 import countUniqueColors from '@/lib/uniqueColors';
 
@@ -17,7 +18,7 @@ const Hero: React.FC = () => {
     const opacity: MotionValue<number> = useTransform(scrollY, [0, 300], [1, 0]);
 
     useEffect(() => {
-        const uniqueColorCount = countUniqueColors(brandGradients);
+        const uniqueColorCount = countUniqueColors([...brandGradients, ...albumGradients]);
         setTotalUniqueColors(uniqueColorCount);
     }, []);
 

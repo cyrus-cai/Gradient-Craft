@@ -76,7 +76,7 @@ export const ExportOptions: React.FC<ExportOptionsProps> = ({ exportOptions }) =
                     </motion.button>
                 ))}
             </div>
-            {/* <div className='flex flex-col gap-1'>
+            {/* <div className='flex flex-col gap-1 bg-gradient-to-r from-slate-300/100 via-sky-300/100 to-sky-200/100 [background:linear-gradient(90deg,var(--tw-gradient-stops))]'>
                 <div className='relative border-transparent rounded-lg before:absolute before:inset-0 before:rounded-[inherit] before:-z-10 before:p-[1px] before:bg-gradient-to-br before:from-green-500/80 before:to-green-500/80 before:content-[""]'>
                     Test A
                 </div>
