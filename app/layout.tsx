@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head';
 import type { Metadata } from "next";
-import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
@@ -110,11 +109,11 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <GoogleAnalytics gaId="G-6NJG1481VQ" />
-        <Script
+        {/* <Script
           src="https://vaugroar.com/act/files/tag.min.js?z=8416776"
           strategy="afterInteractive"
           data-cfasync="false"
-        />
+        /> */}
       </body>
     </html>
   );
