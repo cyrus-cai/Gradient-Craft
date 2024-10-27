@@ -1,6 +1,6 @@
-import { Music, Tag } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
+import { Music } from 'lucide-react';
 import React from 'react';
 
 interface ColorOption {

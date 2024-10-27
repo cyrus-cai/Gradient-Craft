@@ -6,6 +6,7 @@ import { Toast, ToastProvider } from "@/components/ui/toast"
 import ColorSwatchInfo from './RPanel';
 import { EnhancedInput } from '@/components/ui/input';
 import FloatingFeedback from '@/components/feedback';
+import Fuse from 'fuse.js'
 import LPanel from './LPanel';
 import albumGradients from '../data/albumColors.json';
 import brandGradients from '../data/brandColors.json';

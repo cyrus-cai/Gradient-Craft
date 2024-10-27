@@ -1,9 +1,8 @@
-import { Layout, Monitor, Music, Send, Share, Smartphone, Tablet, Tag, User, X } from 'lucide-react';
+import { Layout, Monitor, Music, Smartphone, Tablet, Tag, User } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { generateCSSGradient, generateSwiftUIGradient } from './RPanelComponents/gradientUtils';
 import { generateTailwindBackground, generateTailwindBorder, generateTailwindRing, generateTailwindText } from './RPanelComponents/gradientUtils';
 
-import { Button } from '@/components/ui/button';
 import { ColorPalette } from './RPanelComponents/ColorPalette';
 import { CopyOptions } from './RPanelComponents/CopyOptions';
 import { ExportOptions } from './RPanelComponents/ExportOptions';
