@@ -1,4 +1,3 @@
-//CopyOptions.tsx
 import { AnimatePresence, motion } from 'framer-motion';
 import { CircleDashed, Copy, Images, Square, Type } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
@@ -43,7 +42,6 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     const handleKeyPress = useCallback((event: KeyboardEvent) => {
         if (!copyOptions.length) return;
 
-        // 检查当前焦点是否在组件内部或者没有焦点元素
         const activeElement = document.activeElement;
         const isInsideComponent = containerRef.current?.contains(activeElement);
         const isNoFocus = activeElement === document.body;
@@ -72,7 +70,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
         if (index !== undefined && index < copyOptions.length) {
             const option = copyOptions[index];
             handleCopy(option.action(), option.label);
-            event.preventDefault(); // 防止默认行为
+            event.preventDefault();
         }
     }, [copyOptions, handleCopy]);
 
@@ -84,7 +82,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
     }, [handleKeyPress]);
 
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} className="bg-white dark:bg-zinc-900">
             <div className='flex items-center justify-between py-4'>
                 <h3 className="font-semibold font-serif text-zinc-600 dark:text-zinc-300 text-sm">Copy Options</h3>
                 <CustomSelect
@@ -97,10 +95,11 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                 {copyOptions.map((option, idx) => (
                     <motion.button
                         key={idx}
-                        className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 relative ${copiedStates[option.label]
-                            ? 'bg-yellow-600/5 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-600/5 font-medium'
-                            : 'bg-yellow-600/5 text-yellow-700 hover:bg-yellow-600/5 dark:bg-yellow-900/25 dark:text-yellow-600/50 dark:hover:bg-yellow-800/50'
-                            } font-serif focus:outline-none outline-none`}
+                        className={`w-full items-center justify-between flex px-4 py-2 text-left rounded-xl text-xs transition-all duration-300 relative
+                            ${copiedStates[option.label]
+                                ? 'bg-yellow-400/50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-200/90 font-medium'
+                                : 'bg-yellow-600/5 text-amber-700 hover:bg-yellow-600/10 dark:bg-zinc-800/80 dark:text-zinc-300 dark:hover:bg-zinc-800'
+                            } font-mono focus:outline-none outline-none focus:ring-2 focus:ring-amber-200/20 dark:focus:ring-amber-300/10`}
                         onClick={() => handleCopy(option.action(), option.label)}
                         onMouseEnter={() => setHoveredOption(option.label)}
                         onMouseLeave={() => setHoveredOption(null)}
@@ -108,18 +107,18 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                         whileTap={{ scale: 0.98 }}
                     >
                         <span className="flex items-center gap-2">
-                            {option.label === 'Text' && <Type className='w-4 text-yellow-600 dark:text-yellow-400' />}
-                            {option.label === 'Foreground' && <Type className='w-4 text-yellow-600 dark:text-yellow-400' />}
-                            {option.label === 'Background' && <Images className='w-4 text-yellow-600 dark:text-yellow-400' />}
-                            {option.label === 'Border' && <Square className='w-4 text-yellow-600 dark:text-yellow-400' />}
-                            {option.label === 'Ring' && <CircleDashed className='w-4 text-yellow-600 dark:text-yellow-400' />}
+                            {option.label === 'Text' && <Type className='w-4 text-amber-600/80 dark:text-amber-400/60' />}
+                            {option.label === 'Foreground' && <Type className='w-4 text-amber-600/80 dark:text-amber-400/60' />}
+                            {option.label === 'Background' && <Images className='w-4 text-amber-600/80 dark:text-amber-400/60' />}
+                            {option.label === 'Border' && <Square className='w-4 text-amber-600/80 dark:text-amber-400/60' />}
+                            {option.label === 'Ring' && <CircleDashed className='w-4 text-amber-600/80 dark:text-amber-400/60' />}
                             <AnimatePresence>
                                 {copiedStates[option.label] ? (
                                     <motion.span
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
-                                        className="text-yellow-800 dark:text-yellow-600/5 font-semibold"
+                                        className="text-amber-700 dark:text-amber-200/90"
                                     >
                                         Copied!
                                     </motion.span>
@@ -128,6 +127,7 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 10 }}
+                                        className="text-amber-700 dark:text-amber-400/75"
                                     >
                                         {option.label}
                                     </motion.span>
@@ -135,18 +135,19 @@ export const CopyOptions: React.FC<CopyOptionsProps> = ({
                             </AnimatePresence>
                         </span>
                         {hoveredOption === option.label && !copiedStates[option.label] ? (
-                            <Copy className="w-4 h-4 text-yellow-600 dark:text-yellow-400 absolute right-4 transition-colors duration-300" />
+                            <Copy className="w-4 h-4 text-amber-600/80 dark:text-amber-400/60 absolute right-4 transition-colors duration-300" />
                         ) : (
                             <Shortcut>{option.shortcut}</Shortcut>
                         )}
                     </motion.button>
                 ))}
             </div>
-            <div className='pt-6 px-2 opacity-50'>
-                <p className='font-mono text-xs dark:text-zinc-300'>
+            <div className='pt-6 px-2'>
+                <p className='font-mono text-xs text-zinc-500 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors'>
                     border or ring works incorrectly?
                     <div className='hover:underline'>
-                        <Link href={'https://gcraft.notion.site/How-to-correctly-use-tailwind-border-or-ring-12870a0688948059b1d5fa7965a85755'}>
+                        <Link href={'https://gcraft.notion.site/How-to-correctly-use-tailwind-border-or-ring-12870a0688948059b1d5fa7965a85755'}
+                            className="text-zinc-500 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">
                             Please check this example.
                         </Link>
                     </div>
