@@ -1,9 +1,11 @@
 import "./globals.css";
 
+import { AdScript } from "./components/adScript";
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head';
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
@@ -113,6 +115,50 @@ export default function RootLayout({
           src="https://vaugroar.com/act/files/tag.min.js?z=8416776"
           strategy="afterInteractive"
           data-cfasync="false"
+        /> */}
+        {/* <Script
+          id="external-tracker"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function(){
+        const lastLoaded = localStorage.getItem('adScriptLastLoaded');
+        const now = Date.now();
+
+        // 检查是否在24小时内已经加载过
+        if (lastLoaded && (now - parseInt(lastLoaded)) < 24 * 60 * 60 * 1000) {
+          return;
+        }
+
+        // 更新最后加载时间
+        localStorage.setItem('adScriptLastLoaded', now.toString());
+
+        (function(d,z,s){
+          s.src='https://'+d+'/400/'+z;
+          try{
+            (document.body||document.documentElement).appendChild(s)
+          }catch(e){}
+        })('vemtoutcheeg.com',8432530,document.createElement('script'));
+      })();
+    `
+          }}
+        /> */}
+        {/* <AdScript /> */}
+        {/* <Script
+          id="external-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,z,s,c){
+                s.src='//'+d+'/400/'+z;
+                s.onerror=s.onload=E;
+                function E(){c&&c();c=null}
+                try{
+                  (document.body||document.documentElement).appendChild(s)
+                }catch(e){E()}
+              })('rouwhapt.com',8420218,document.createElement('script'),_qietv)
+            `
+          }}
         /> */}
       </body>
     </html>
