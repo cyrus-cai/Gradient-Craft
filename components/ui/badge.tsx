@@ -11,7 +11,7 @@ const badgeVariants = cva(
         default:
           "bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow hover:from-purple-600 hover:to-pink-700",
         secondary:
-          "bg-gradient-to-r from-gray-700 to-gray-800 text-gray-200 hover:from-gray-600 hover:to-gray-700",
+          "bg-gray-200 text-gray-800 hover:from-gray-600 hover:to-gray-700",
         outline:
           "bg-transparent border border-purple-500 text-purple-300 hover:bg-purple-900/30",
         destructive:

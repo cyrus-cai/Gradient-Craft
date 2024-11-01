@@ -11,9 +11,14 @@ const AnimatedGradientTextDemo = () => {
             >
                 <span className="text-xs">🎉</span>
                 <hr className="h-2 w-px shrink-0 bg-gray-200 dark:bg-zinc-600" />
-                <span className="bg-gradient-to-r from-amber-500 via-fuchsia-500 to-amber-500 bg-clip-text font-semibold text-transparent dark:from-amber-400 dark:via-fuchsia-400 dark:to-amber-400">
-                    Introducing v0.18
-                </span>
+                <div className="flex flex-col">
+                    <span className="bg-gradient-to-r from-amber-500 via-fuchsia-500 to-amber-500 bg-clip-text font-semibold text-transparent dark:from-amber-400 dark:via-fuchsia-400 dark:to-amber-400">
+                        Introducing v0.2.0
+                    </span>
+                    <span className=" font-semibold text-transparent bg-clip-text bg-gradient-to-tl from-sky-300/100 via-slate-300/100 to-slate-500/100">
+                        Advance Search
+                    </span>
+                </div>
                 <ChevronRight className="h-3 w-3 text-gray-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:text-gray-700 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
             </Link>
         </div>
