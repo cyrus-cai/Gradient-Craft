@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Search } from 'lucide-react';
+import Image from 'next/image';
 import { Shortcut } from './shortcut';
 
 interface EnhancedInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -77,36 +77,38 @@ const EnhancedInput = React.forwardRef<HTMLInputElement, EnhancedInputProps>(
           </>
         )}
         <div className="relative">
-          <Search
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-800/50 dark:text-yellow-600/50/70 z-10"
-            size={20}
+          <Image
+            src='/Icons/advanced_search.png'
+            width={18}
+            height={18}
+            alt='brandiconimage'
+            className="absolute left-4 top-3 transform z-10"
           />
+
           <input
             type={type}
             className={`
-  relative flex h-12 w-full rounded-full border px-10 py-1 text-sm shadow-sm
+  relative flex h-12 w-full rounded-full px-12 py-1 text-sm shadow-sm
   transition-all duration-300 ease-in-out
-  file:border-0 file:bg-transparent file:text-sm file:font-medium
+  border-0 file:bg-transparent file:text-sm file:font-medium
 
   /* Light Mode */
   bg-white/40
-  border-orange-600/50
   text-yellow-900
   placeholder:text-yellow-800/50
-  ring-orange-400/50
+  ring-0
 
   /* Dark Mode - 优化后 */
   dark:bg-yellow-950/40
-  dark:border-yellow-600/50
-  dark:text-yellow-100
-  dark:placeholder:text-yellow-400/50
-  dark:ring-yellow-500/50
+  dark:text-slate-400
+  dark:placeholder:text-slate-400/50
+  dark:ring-0
 
   /* 其他状态 */
   backdrop-blur-3xl
-  focus:outline-none focus:ring-2
   disabled:cursor-not-allowed disabled:opacity-50
-  ${isFocused ? 'ring-2' : ''}
+  focus:ring-0
+  focus:outline-none
   ${className}
 `}
             onFocus={() => {
