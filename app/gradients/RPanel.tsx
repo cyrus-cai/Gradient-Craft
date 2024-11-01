@@ -71,35 +71,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         return () => clearTimeout(timer);
     }, []);
 
-    // const exportImage = useCallback((width: number, height: number, fileName: string) => {
-    //     if (canvasRef.current && selectedGradientInfo) {
-    //         const canvas = canvasRef.current;
-    //         canvas.width = width;
-    //         canvas.height = height;
-    //         const ctx = canvas.getContext('2d');
-    //         if (ctx) {
-    //             const gradient = ctx.createLinearGradient(0, 0, width, 0);
-    //             selectedGradientInfo.colors.forEach((color, index) => {
-    //                 gradient.addColorStop(index / (selectedGradientInfo.colors.length - 1), color);
-    //             });
-    //             ctx.fillStyle = gradient;
-    //             ctx.fillRect(0, 0, width, height);
-
-    //             const dataUrl = canvas.toDataURL('image/png');
-    //             const link = document.createElement('a');
-    //             link.href = dataUrl;
-    //             link.download = `${selectedGradientInfo.name.replace(/\s+/g, '-').toLowerCase()}-${fileName}.png`;
-    //             link.click();
-
-    //             setTimeout(() => {
-    //                 if (isMounted.current) {
-    //                     URL.revokeObjectURL(link.href);
-    //                 }
-    //             }, 100);
-    //         }
-    //     }
-    // }, [selectedGradientInfo]);
-
     const exportImage = useCallback((width: number, height: number, fileName: string) => {
         if (canvasRef.current && selectedGradientInfo) {
             const canvas = canvasRef.current;
@@ -256,11 +227,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
         { label: 'Avatar', action: () => exportImage(500, 500, 'avatar'), icon: <User className='w-4 text-yellow-600' /> },
     ];
 
-    const handleClose = useCallback(() => {
-        setIsVisible(false);
-        setTimeout(onClose, 300);
-    }, [onClose]);
-
     if (!selectedGradientInfo) {
         return null;
     }
@@ -317,15 +283,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                             className="dark:invert group-hover:scale-110 transition-transform"
                         />
                     </Link>
-                    {/* <Separator orientation="vertical" className="h-4 mx-1 bg-zinc-300 dark:bg-zinc-600" />
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        className="gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-700"
-                    >
-                        <Share className="w-4 h-4" />
-                        Share
-                    </Button> */}
                 </div>
             </motion.div>
 
@@ -359,12 +316,6 @@ const RPanel: React.FC<RPanelProps> = ({ selectedGradientInfo, onClose }) => {
                                     )}
                                 </div>
                             </div>
-                            {/* <button
-                                onClick={handleClose}
-                                className="p-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
-                            >
-                                <X className="w-5 h-5 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300" />
-                            </button> */}
                         </div>
 
                         {selectedGradientInfo?.type === 'album' && selectedGradientInfo.tags && (

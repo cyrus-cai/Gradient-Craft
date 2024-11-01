@@ -35,11 +35,6 @@ const LPanel: React.FC<LPanelProps> = ({
         }
     }, []);
 
-    const closeBanner = () => {
-        setShowBanner(false);
-        localStorage.setItem('telegramBannerClosed', 'true');
-    };
-
     const getOptionColor = useCallback((option: ColorOption) => {
         if (option.name === 'All') return '#FFD700';
         if (option.gradients && option.gradients.length > 0) {
@@ -99,46 +94,6 @@ const LPanel: React.FC<LPanelProps> = ({
                     getOptionColor={getOptionColor}
                     getTextColor={getTextColor}
                 />
-                {/* <div className='flex items-center justify-center gap-6 w-full px-12 py-6'>
-                    <Link
-                        href="https://github.com/cyrus-cai/Gradient-Craft"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group"
-                    >
-                        <div className='flex items-center'>
-                            <Image
-                                src={`/Icons/Github.svg`}
-                                height={24}
-                                width={24}
-                                alt=''
-                                className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
-                            />
-                        </div>
-                    </Link>
-                    <Link
-                        href="https://github.com/cyrus-cai/Gradient-Craft"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group"
-                    >
-                        <Image
-                            src={`/Icons/X.png`}
-                            height={20}
-                            width={20}
-                            alt=''
-                            className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
-                        />
-                    </Link>
-                    <Link
-                        href="https://t.me/+jq2ARZn6BeI5ODJl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mr-2 dark:invert group-hover:scale-110 transition-transform duration-200"
-                    >
-                        <Send />
-                    </Link>
-                </div> */}
             </div>
         </div>
     );
